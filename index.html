@@ -183,7 +183,8 @@
 <p><font color="red">属性值：</font>属性上的取值</p>
 <p><font color="red">属性空间(样本空间，输入空间)：</font>属性张成的空间</p>
 <p><font color="red">特征向量：</font>样本空间中的每个点，其实就是<font color="red">示例(样本)</font></p>
-<p><font color="red">维数：</font>属性的个数<br>$$<br>包含m个示例的数据集：<br>D = { \boldsymbol x_1,\boldsymbol x_2, …\boldsymbol x_m }<br>$$<br>$$<br>每个示例d个维度：<br>\boldsymbol x_i = (x_{i1}; x_{i2}; …x_{id})<br>$$</p>
+<p><font color="red">维数：</font>属性的个数<br>$$<br>包含m个示例的数据集：<br>D = { \boldsymbol x_1,\boldsymbol x_2, …\boldsymbol x_m }<br>$$</p>
+<p>$$<br>每个示例d个维度：<br>\boldsymbol x_i = (x_{i1}; x_{i2}; …x_{id})<br>$$</p>
 <p><font color="red">学习(训练)：</font>从数据中学到模型的过程</p>
 <p><font color="red">训练数据：</font>训练过程中使用到的数据</p>
 <p><font color="red">训练样本：</font>其中<font color="red">(训练数据)</font>中的每个样本</p>
@@ -195,7 +196,19 @@
 <p>有时将模型成为“学习器”</p>
 </blockquote>
 <p><font color="red">标记：</font>关于示例结果的信息</p>
-<p><font color="red">样例：</font>拥有标记信息的示例<br>$$<br>( \boldsymbol x_i, y_i)表示第i个样例<br>$$<br><font color="red">标记空间：</font>所有标记的集合</p>
+<p><font color="red">样例：</font>拥有标记信息的示例<br>$$<br>( \boldsymbol x_i, y_i)表示第i个样例<br>$$<br><font color="red">标记空间(输出空间)：</font>所有标记的集合</p>
+<p><font color="red">分类：</font>预测值为离散值的学习任务，分为<strong>二分类</strong>(正类，负类(反类))和<strong>多分类</strong>任务</p>
+<p><font color="red">回归：</font>预测值为连续值的学习任务</p>
+<p><font color="red">测试：</font>使用模型进行预测的过程</p>
+<p><font color="red">测试样本：</font>被预测的样本</p>
+<p><font color="red">聚类：</font>将训练集中的数据分成若干组，每组成为一个簇</p>
+<blockquote>
+<p>聚类学习中，分类的结果事先是不知道的</p>
+</blockquote>
+<p><font color="red">监督学习：</font>训练数据集有标记信息，如分类，回归</p>
+<p><font color="red">无监督学习：</font>训练数据集有无标记信息，如聚类</p>
+<p><font color="red">“泛化”能力：</font>学习模型适用于新样本的能力</p>
+<p><font color="red">独立同分布：</font>通常假设样本空间中的全体样本服从一个未知“分布”D，我们获得的每个样本都是独立地从这个分布上采集获得的</p>
 
       
 
