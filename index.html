@@ -43,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/wxx.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">i-love-linux</a></h1>
@@ -101,7 +101,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/wxx.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">i-love-linux</h1>
@@ -151,6 +151,108 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-2-机器学习-模型评估与选择" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/03/2-机器学习-模型评估与选择/">2-机器学习-模型评估与选择</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/03/2-机器学习-模型评估与选择/" class="archive-article-date">
+  	<time datetime="2019-09-03T10:25:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="机器学习-周志华"><a href="#机器学习-周志华" class="headerlink" title="机器学习(周志华)"></a>机器学习(周志华)</h1><h2 id="第二章-模型评估与选择"><a href="#第二章-模型评估与选择" class="headerlink" title="第二章  模型评估与选择"></a>第二章  模型评估与选择</h2><h3 id="2-1-经验误差与过拟合"><a href="#2-1-经验误差与过拟合" class="headerlink" title="2.1 经验误差与过拟合"></a>2.1 经验误差与过拟合</h3><p><font color="red">错误率：</font>分类错误的样本数/样本总数</p>
+<p><font color="red">精度：</font>1 - <font color="red">错误率</font></p>
+<p><font color="red">误差：</font>学习器的实际预测输出与样本的真实输出之间的误差</p>
+<p><font color="red">训练误差(经验误差)：</font>学习器在训练集上的误差</p>
+<p><font color="red">泛化误差：</font>学习器在新样本上的误差</p>
+<blockquote>
+<p>我们希望泛化误差越小越好</p>
+</blockquote>
+<p><font color="red">过拟合：</font>学习器把训练样本学得”太好了”；很有可能把训练样本自身的特点当做了所有潜在样本都会具有的一般性质(实际上潜在样本并没有这些性质)</p>
+<p><font color="red">欠拟合：</font>学习器对训练样本学习欠佳；就连一般的性质(潜在样本就具有的性质)都没学好</p>
+<blockquote>
+<p>过拟合是无法彻底避免的，我们所能做的就是减小其风险</p>
+</blockquote>
+<p><font color="red">模型选择：</font>针对某个具体任务，选择哪种<strong>学习算法</strong>，使用哪一种<strong>参数配置</strong></p>
+<h3 id="2-2-评估方法"><a href="#2-2-评估方法" class="headerlink" title="2.2 评估方法"></a>2.2 评估方法</h3><p><font color="red">测试集：</font>为了评价学习器的泛化误差而产生的集合，一般从数据集中产生</p>
+<blockquote>
+<p>数据集可以被划分为：训练集S，测试集T</p>
+<p>之后还会提到验证集，可以按下图这样理解：</p>
+</blockquote>
+<pre class="mermaid">graph TD
+数据集 --> 训练数据
+数据集 --> 测试集
+训练数据 --> 训练集
+训练数据 --> 验证集</pre>
+
+<blockquote>
+<p>训练集用于训练模型参数，测试集用于估计模型对样本的泛化误差，验证集用于“训练”模型的超参数。</p>
+<p>很多文章和书籍并不涉及验证集，只是将数据集分为<strong>训练集</strong>和<strong>测试集</strong></p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/03/2-机器学习-模型评估与选择/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-1-机器学习-绪论" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -590,6 +692,8 @@
     </div>
   </div>
 </footer>
+
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -633,6 +737,15 @@ MathJax.Hub.Queue(function() {
 <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
