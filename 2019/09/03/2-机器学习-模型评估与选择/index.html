@@ -20,7 +20,8 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/2.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/3.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/4.jpg">
-<meta property="og:updated_time" content="2019-09-03T15:19:17.219Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/5.jpg">
+<meta property="og:updated_time" content="2019-09-03T20:21:34.809Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2-机器学习-模型评估与选择">
 <meta name="twitter:description" content="机器学习(周志华)第二章  模型评估与选择2.1 经验误差与过拟合错误率：分类错误的样本数/样本总数 精度：1 - 错误率 误差：学习器的实际预测输出与样本的真实输出之间的误差 训练误差(经验误差)：学习器在训练集上的误差 泛化误差：学习器在新样本上的误差  我们希望泛化误差越小越好  过拟合：学习器把训练样本学得”太好了”；很有可能把训练样本自身的特点当做了所有潜在样本都会具有的一般性质(实际上">
@@ -276,6 +277,19 @@
 <p><font color="red">代价敏感错误率：</font>…</p>
 <p><font color="red">代价曲线：</font></p>
 <p><img src="/2019/09/03/2-机器学习-模型评估与选择/4.jpg" alt="img"></p>
+<h3 id="2-4-比较检验"><a href="#2-4-比较检验" class="headerlink" title="2.4 比较检验"></a>2.4 比较检验</h3><p><strong>假设检验：</strong>针对单个学习器泛化性能的假设进行检验</p>
+<p><strong>交叉验证t检验：</strong>针对两个学习器的性能进行比较</p>
+<p><strong>McNemar检验：</strong>针对两个学习器的性能进行比较</p>
+<p><strong>Friedman检验 与 Nemenyi后续检验：</strong>在多个数据集上对多个算法进行比较</p>
+<h3 id="2-5-偏差与方差"><a href="#2-5-偏差与方差" class="headerlink" title="2.5 偏差与方差"></a>2.5 偏差与方差</h3><p>$$<br>E(f; \ D) = bias^2(\boldsymbol x) + var(\boldsymbol x) + \varepsilon^2<br>$$</p>
+<blockquote>
+<p>泛化误差可分解为偏差，方差与噪声之和</p>
+<p>偏差刻画了学习算法本身的拟合能力；方差刻画了数据扰动造成的影响；噪声刻画了学习问题本身的难度。</p>
+<p>一般来说，偏差和方差是有冲突的，这称为<strong>偏差-方差窘境</strong>，如下图：</p>
+</blockquote>
+<p><img src="/2019/09/03/2-机器学习-模型评估与选择/5.jpg" alt="img"></p>
+<center>end</center>
+
 
       
 
