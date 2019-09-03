@@ -152,6 +152,87 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-3-机器学习-线性模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/03/3-机器学习-线性模型/">3-机器学习-线性模型</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/03/3-机器学习-线性模型/" class="archive-article-date">
+  	<time datetime="2019-09-03T21:09:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="机器学习-周志华"><a href="#机器学习-周志华" class="headerlink" title="机器学习(周志华)"></a>机器学习(周志华)</h1><h2 id="第三章-线性模型"><a href="#第三章-线性模型" class="headerlink" title="第三章 线性模型"></a>第三章 线性模型</h2><h3 id="3-1-基本形式"><a href="#3-1-基本形式" class="headerlink" title="3.1 基本形式"></a>3.1 基本形式</h3><p>$$<br>f(\boldsymbol x) = \omega_1x_1 + \omega_2x_2 + … + \omega_dx_d + b<br>$$</p>
+<p>$$<br>f(\boldsymbol x) = \boldsymbol \omega^T \boldsymbol x + b<br>$$</p>
+<blockquote>
+<p>线性模型具有很好的可解释性</p>
+</blockquote>
+<h3 id="3-2-线性回归"><a href="#3-2-线性回归" class="headerlink" title="3.2 线性回归"></a>3.2 线性回归</h3><p><strong>首先考虑一种最简单的情形：输入属性只有一个</strong><br>$$<br>f(x_i) = \omega x_i + b<br>$$<br>我们的目的是求均方误差最小时的 w 和 b ，即：<br>$$<br>(\omega^<em>, \ b^</em>) = \arg\min_{(\omega, \ b)}\sum_{i=1}^{m}\bigl (f(x_i) - y_i \bigr) = \arg\min_{(\omega, \ b)}\sum_{i=1}^{m}\bigl (f(x_i) - \omega x_i - b \bigr)<br>$$<br>求导计算后可以得到：<br>$$<br>\omega = \frac{\displaystyle \sum_{i=1}^{m}y_i(x_i - \overline x)}{\displaystyle \sum_{i=1}^{m}x_i^2 - \frac{1}{m}(\displaystyle \sum_{i=1}^{m}x_i^2)}<br>$$</p>
+<p>$$<br>b = \frac{1}{m}\sum_{i=1}^{m}(y_i - \omega x_i)<br>$$</p>
+<p><strong>之后，考虑”多元线性回归”</strong><br>$$<br>f(\boldsymbol x) = \boldsymbol \omega^T \boldsymbol x + b<br>$$<br>我们的目的是使下式最小：<br>$$<br>\widehat \omega ^ *<br>$$</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/03/3-机器学习-线性模型/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2-机器学习-模型评估与选择" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
