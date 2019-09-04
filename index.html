@@ -179,7 +179,50 @@
 </blockquote>
 <h3 id="3-2-线性回归"><a href="#3-2-线性回归" class="headerlink" title="3.2 线性回归"></a>3.2 线性回归</h3><p><strong>首先考虑一种最简单的情形：输入属性只有一个</strong><br>$$<br>f(x_i) = \omega x_i + b<br>$$<br>我们的目的是求均方误差最小时的 w 和 b ，即：<br>$$<br>(\omega ^ *, \ b ^ *) = \arg\min_{(\omega, \ b)}\sum_{i=1}^{m}\bigl (f(x_i) - y_i \bigr) = \arg\min_{(\omega, \ b)}\sum_{i=1}^{m}\bigl (f(x_i) - \omega x_i - b \bigr)<br>$$<br>求导计算后可以得到：<br>$$<br>\omega = \frac{\displaystyle \sum_{i=1}^{m}y_i(x_i - \overline x)}{\displaystyle \sum_{i=1}^{m}x_i^2 - \frac{1}{m}(\displaystyle \sum_{i=1}^{m}x_i^2)}<br>$$</p>
 <p>$$<br>b = \frac{1}{m}\sum_{i=1}^{m}(y_i - \omega x_i)<br>$$</p>
-<p><strong>之后，考虑”多元线性回归”</strong><br>$$<br>f(\boldsymbol x) = \boldsymbol \omega^T \boldsymbol x + b<br>$$<br>我们的目的是使下式最小：<br>$$<br>\widehat \omega ^ * = \arg \min_\widehat\omega(\boldsymbol y - \boldsymbol X\widehat\omega)^T(\boldsymbol y - \boldsymbol X\widehat\omega)<br>$$</p>
+<p><strong>之后，考虑”多元线性回归”</strong><br>$$<br>f(\boldsymbol x) = \boldsymbol \omega^T \boldsymbol x + b<br>$$<br>我们的目的是使下式最小：<br>$$<br>\widehat \omega ^ * = \arg \min_\widehat\omega(\boldsymbol y - \boldsymbol X\widehat\omega)^T(\boldsymbol y - \boldsymbol X\widehat\omega)<br>$$<br>求导后可以得到：<br>$$<br>\widehat \omega ^ * = (\boldsymbol X ^ T \boldsymbol X) ^ {-1} \boldsymbol X ^ T \boldsymbol y \quad (\boldsymbol X ^ T \boldsymbol X为满秩矩阵)<br>$$</p>
+<blockquote>
+<p>若不为满秩矩阵，则会有多解都能使方差最小，选择哪一个作为输出，将由学习算法的归纳偏好决定，常见的做法是引入正则化。</p>
+</blockquote>
+<p><strong>之后，考虑引入对数线性回归</strong><br>$$<br>\ln y = \boldsymbol \omega^T \boldsymbol x + b<br>$$<br>即：<br>$$<br>y = e ^ {\boldsymbol \omega^T \boldsymbol x + b}<br>$$<br><strong>最后，考虑单调可微函数</strong><br>$$<br>y = g ^ {-1} (\boldsymbol \omega^T \boldsymbol x + b)<br>$$</p>
+<h3 id="3-3-对数几率回归"><a href="#3-3-对数几率回归" class="headerlink" title="3.3 对数几率回归"></a>3.3 对数几率回归</h3><p>$$<br>g ^ {-1}(.) = \frac{1}{1 + e ^ {-z}}<br>$$</p>
+<p>图像如下：</p>
+<p><img src="/2019/09/03/3-机器学习-线性模型/1.jpg" alt="img"><br>$$<br>y = \frac{1}{1 + e ^ {-(\boldsymbol \omega^T \boldsymbol x + b)}}<br>$$</p>
+<p>$$<br>\ln {\frac{y}{1-y}} = \boldsymbol \omega^T \boldsymbol x + b<br>$$</p>
+<h3 id="3-4-线性判别分析-LDA"><a href="#3-4-线性判别分析-LDA" class="headerlink" title="3.4 线性判别分析(LDA)"></a>3.4 线性判别分析(LDA)</h3><p><strong>思想：</strong>给定训练样例集，设法将样例投影到一条直线上，使得同类样例的投影点尽可能接近、异类样例的投影点尽可能远离；再对新样本进行分类时，将其投影到同样的这条直线上，再根据投影点的位置来确定新样本的类别。示意图如下：</p>
+<p><img src="/2019/09/03/3-机器学习-线性模型/2.jpg" alt="img"></p>
+<h3 id="3-5-多分类学习"><a href="#3-5-多分类学习" class="headerlink" title="3.5 多分类学习"></a>3.5 多分类学习</h3><p><strong>基本思想：</strong>将多分类任务拆解为若干二分类任务求解</p>
+<p><strong>经典拆分策略：</strong></p>
+<ul>
+<li>“一对一”(One vs One，简称OvO)</li>
+<li>“一对其余”(One vs Rest，简称OvR)</li>
+<li>“多对多”(Many vs Many，简称MvM)</li>
+</ul>
+<blockquote>
+<p>“一对一”：训练时，两两结合，一共训练出N(N+1)/2个分类器f；预测时，将新样本提交给这N(N+1)/2个分类器，最终结果通过投票选出（把预测最多的类别作为最终分类结果）</p>
+<p>“一对其余”：每次将一个类的样例作为正例，其他所有类的样例作为反例，最终训练出N各分类器；预测时，将新样本提交给这N个分类器，如果最终预测结果只有一个正类，则为预测结果，若有多个正类，选择置信度大的为预测结果。</p>
+<p>“多对多”：若干正类，若干反类。常用技术是“纠错输出码”（ECOC），其工作过程有两步：编码，解码。具体过程见书本，此处附上一张与ECOC相关的图（编码矩阵）</p>
+</blockquote>
+<p><img src="/2019/09/03/3-机器学习-线性模型/3.jpg" alt="img"></p>
+<blockquote>
+<p>计算理论最优码值是一个NP难的问题</p>
+</blockquote>
+<h3 id="3-6-类别不平衡问题"><a href="#3-6-类别不平衡问题" class="headerlink" title="3.6 类别不平衡问题"></a>3.6 类别不平衡问题</h3><p><font color="red">类别不平衡：</font>分类任务中不同类别的训练样例数目差别很大的情况</p>
+<p><strong>再缩放</strong>是类别不平衡学习的一个基本策略</p>
+<blockquote>
+<p>再缩放思想简单，但实际操作缺不平凡，因为：“训练集是真实样本总体的无偏采样”这个假设往往不成立。</p>
+</blockquote>
+<p><strong>解决累不平衡问题的三种策略：</strong></p>
+<p><font color="red">欠采样：</font>除去一些反例使得正反例数目接近，然后再进行学习</p>
+<blockquote>
+<p>欠采样开销小；但可能丢失一些重要信息；代表算法为EasyEnsemble</p>
+</blockquote>
+<p><font color="red">过采样：</font>增加一些正例使得正反例数目接近，然后再进行学习</p>
+<blockquote>
+<p>过采样开销大；不能简单的对初始样例进行重复采样，否则会导致严重的过拟合；代表算法为SMOTE</p>
+</blockquote>
+<p><font color="red">阈值移动：</font>直接用原始数据训练，但在预测时，使用<strong>再缩放</strong>策略</p>
+<center>end</center>
+
 
       
 
