@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>1-机器学习-绪论 | i-love-linux</title>
+  <title>machine-learning(吴恩达)随笔 | i-love-linux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="机器学习(周志华)第一章  绪论1.1 引言机器学习(通俗定义):   致力于研究如何通过计算的手段，利用经验来改善系统自身的性能。 机器学习(形式化定义):  假设用P来评估计算机程序在某任务类T上的性能，若一个程序通过利用经验E在T中任务上获得性能改善，则我们就说关于T和P，该程序对E进行了学习。  本书中“模型”泛指从数据中学到的结果  1.2 基本术语数据集：一组记录的集合 示例(样本)：">
+  <meta name="description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
 <meta name="keywords" content="machine learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1-机器学习-绪论">
-<meta property="og:url" content="http://yoursite.com/2019/09/02/1-机器学习-绪论/index.html">
+<meta property="og:title" content="machine-learning(吴恩达)随笔">
+<meta property="og:url" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/index.html">
 <meta property="og:site_name" content="i-love-linux">
-<meta property="og:description" content="机器学习(周志华)第一章  绪论1.1 引言机器学习(通俗定义):   致力于研究如何通过计算的手段，利用经验来改善系统自身的性能。 机器学习(形式化定义):  假设用P来评估计算机程序在某任务类T上的性能，若一个程序通过利用经验E在T中任务上获得性能改善，则我们就说关于T和P，该程序对E进行了学习。  本书中“模型”泛指从数据中学到的结果  1.2 基本术语数据集：一组记录的集合 示例(样本)：">
+<meta property="og:description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-02T21:15:52.635Z">
+<meta property="og:updated_time" content="2019-09-05T12:35:55.813Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1-机器学习-绪论">
-<meta name="twitter:description" content="机器学习(周志华)第一章  绪论1.1 引言机器学习(通俗定义):   致力于研究如何通过计算的手段，利用经验来改善系统自身的性能。 机器学习(形式化定义):  假设用P来评估计算机程序在某任务类T上的性能，若一个程序通过利用经验E在T中任务上获得性能改善，则我们就说关于T和P，该程序对E进行了学习。  本书中“模型”泛指从数据中学到的结果  1.2 基本术语数据集：一组记录的集合 示例(样本)：">
+<meta name="twitter:title" content="machine-learning(吴恩达)随笔">
+<meta name="twitter:description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
   
     <link rel="alternative" href="/atom.xml" title="i-love-linux" type="application/atom+xml">
   
@@ -155,94 +155,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-1-机器学习-绪论" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-machine-learning-吴恩达-随笔" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      1-机器学习-绪论
+      machine-learning(吴恩达)随笔
     </h1>
   
 
         
-        <a href="/2019/09/02/1-机器学习-绪论/" class="archive-article-date">
-  	<time datetime="2019-09-02T06:42:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+        <a href="/2019/09/05/machine-learning-吴恩达-随笔/" class="archive-article-date">
+  	<time datetime="2019-09-05T12:35:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="机器学习-周志华"><a href="#机器学习-周志华" class="headerlink" title="机器学习(周志华)"></a>机器学习(周志华)</h1><h2 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章  绪论"></a>第一章  绪论</h2><h3 id="1-1-引言"><a href="#1-1-引言" class="headerlink" title="1.1 引言"></a>1.1 引言</h3><p><font color="red">机器学习(通俗定义):</font>   致力于研究如何通过计算的手段，利用经验来改善系统自身的性能。</p>
-<p><font color="red">机器学习(形式化定义):</font>  假设用<strong><em>P</em></strong>来评估计算机程序在某<strong><em>任务类T</em></strong>上的性能，若一个程序通过利用<strong><em>经验E</em></strong>在<strong><em>T</em></strong>中任务上获得性能改善，则我们就说关于<strong><em>T</em></strong>和<strong><em>P</em></strong>，该程序对<strong><em>E</em></strong>进行了学习。</p>
+        <h2 id="2-2-Cost-Function"><a href="#2-2-Cost-Function" class="headerlink" title="2.2 Cost Function"></a>2.2 Cost Function</h2><p><font color="red">代价函数(平方误差函数，平方误差代价函数)：</font><br>$$<br>J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2<br>$$<br>其中：<br>$$<br>h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x<br>$$<br>linear regression的目的是求出使上式最小时的$ \theta _0 $和$ \theta _ 1$</p>
 <blockquote>
-<p>本书中“模型”泛指从数据中学到的结果</p>
+<p>需要指出的是，代价函数不止这一种，但对大多数问题，特别是回归问题，上面的代价函数都是一个合理的选择</p>
 </blockquote>
-<h3 id="1-2-基本术语"><a href="#1-2-基本术语" class="headerlink" title="1.2 基本术语"></a>1.2 基本术语</h3><p><font color="red">数据集：</font>一组记录的集合</p>
-<p><font color="red">示例(样本)：</font>数据集中的每条记录</p>
-<p><font color="red">属性(特征)：</font>事件或对象在某方面的表现或性质的事项</p>
-<p><font color="red">属性值：</font>属性上的取值</p>
-<p><font color="red">属性空间(样本空间，输入空间)：</font>属性张成的空间</p>
-<p><font color="red">特征向量：</font>样本空间中的每个点，其实就是<font color="red">示例(样本)</font></p>
-<p><font color="red">维数：</font>属性的个数<br>$$<br>包含m个示例的数据集：<br>D = { \boldsymbol x_1,\boldsymbol x_2, …\boldsymbol x_m }<br>$$</p>
-<p>$$<br>每个示例d个维度：<br>\boldsymbol x_i = (x_{i1}; x_{i2}; …x_{id})<br>$$</p>
-<p><font color="red">学习(训练)：</font>从数据中学到模型的过程</p>
-<p><font color="red">训练数据：</font>训练过程中使用到的数据</p>
-<p><font color="red">训练样本：</font>其中<font color="red">(训练数据)</font>中的每个样本</p>
-<p><font color="red">训练集：</font>训练样本组成的集合</p>
-<p><font color="red">假设：</font>学得模型对应了关于数据的某种潜在的规律</p>
-<p><font color="red">真实(真相)：</font>潜在的规律本身</p>
+<h2 id="2-5-Gradient-Descent"><a href="#2-5-Gradient-Descent" class="headerlink" title="2.5 Gradient Descent"></a>2.5 Gradient Descent</h2><p><font color="red">梯度下降公式：</font><br>$$<br>\theta _ j = \theta _ j - \alpha \frac{\partial}{\partial \theta _ j}(\theta _ 0, \ \theta _1)<br>$$</p>
 <blockquote>
-<p>学习过程就是为了找出或逼近真相</p>
-<p>有时将模型成为“学习器”</p>
+<p>$ \alpha $为learning rate(学习率)，值越大学习越快</p>
 </blockquote>
-<p><font color="red">标记：</font>关于示例结果的信息</p>
-<p><font color="red">样例：</font>拥有标记信息的<font color="red">示例</font><br>$$<br>( \boldsymbol x_i, y_i)表示第i个样例<br>$$<br><font color="red">标记空间(输出空间)：</font>所有标记的集合</p>
-<p><font color="red">分类：</font>预测值为离散值的学习任务，分为<strong>二分类</strong>(正类，负类(反类))和<strong>多分类</strong>任务</p>
-<p><font color="red">回归：</font>预测值为连续值的学习任务</p>
-<p><font color="red">测试：</font>使用模型进行预测的过程</p>
-<p><font color="red">测试样本：</font>被预测的样本</p>
-<p><font color="red">聚类：</font>将训练集中的数据分成若干组，每组成为一个簇</p>
-<blockquote>
-<p>聚类学习中，分类的结果事先是不知道的</p>
-</blockquote>
-<p><font color="red">监督学习：</font>训练数据集有标记信息，如分类，回归</p>
-<p><font color="red">无监督学习：</font>训练数据集有无标记信息，如聚类</p>
-<p><font color="red">“泛化”能力：</font>学习模型适用于新样本的能力</p>
-<p><font color="red">独立同分布：</font>通常假设样本空间中的全体样本服从一个未知“分布”D，我们获得的每个样本都是独立地从这个分布上采集获得的</p>
-<h3 id="1-3-假设空间"><a href="#1-3-假设空间" class="headerlink" title="1.3 假设空间"></a>1.3 假设空间</h3><p><font color="red">归纳：</font>特殊到一般的“泛化”</p>
-<p><font color="red">演绎：</font>一般到特殊的“特化”</p>
-<p><font color="red">假设空间：</font>所有属性可能取值的组合的集合</p>
-<p><font color="red">版本空间：</font>与训练集一致的假设集合（即为”好瓜”对应的可能的属性的组合，可能不唯一）</p>
-<h3 id="1-4-归纳偏好"><a href="#1-4-归纳偏好" class="headerlink" title="1.4 归纳偏好"></a>1.4 归纳偏好</h3><p><font color="red">归纳偏好：</font>机器学习算法在学习过程中对某种类型假设的偏好</p>
-<blockquote>
-<p>为什么存在归纳偏好？</p>
-<p>这是因为：对于一个具体的学习算法来说，它必须要产生一个模型，但如果没有归纳偏好，可能造成预测结果不唯一！</p>
-</blockquote>
-<p><font color="blue">奥卡姆剃刀原则：</font>若有多个观察与假设一致，则选择最简单的那个</p>
-<blockquote>
-<p>往往并不容易说出什么才算”简单”</p>
-</blockquote>
-<p><font color="blue">“没有免费的午餐”(NFL)定理：</font>无论学习算法多聪明，多笨拙，它们的期望性能相同</p>
-<blockquote>
-<p>这个定理告诉我们：谈论算法的优劣，必须针对具体的学习问题</p>
-</blockquote>
-<h3 id="1-5-发展历程"><a href="#1-5-发展历程" class="headerlink" title="1.5 发展历程"></a>1.5 发展历程</h3><p>​        二十世纪五十年代到七十年代，人工智能处于”推理期”;</p>
-<p>​        二十世纪八十年代，”从样例中学习”的一大主流是符号主义学习，其代表是决策树，基于逻辑的学习(代表是归纳逻辑程序设计(ILP));</p>
-<p>​        二十世纪九十年代中期之前，”从样例中学习”的另一大主流是基于神经网络的连接主义学习，代表是<strong>BP算法</strong>;</p>
-<p>​        二十世纪九十年代中期，”统计学习”登场并迅速占据主流，代表技术是<strong>支持向量机</strong>以及更一般的<strong>核方法</strong>;</p>
-<p>​        二十一世纪初，连接主义卷土重来，掀起了以”深度学习”为名的热潮;</p>
-<h3 id="1-6-应用-现状"><a href="#1-6-应用-现状" class="headerlink" title="1.6 应用 现状"></a>1.6 应用 现状</h3><ul>
-<li><p>计算机视觉，自然语言处理(NLP)，生物信息学…</p>
-</li>
-<li><p>深入研究和整合大数据时代的三大关键技术：机器学习、云计算、众包</p>
-</li>
-</ul>
-<p>…</p>
-<center>end</center>
-
 
       
 
@@ -333,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/02/1-机器学习-绪论/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -347,18 +287,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/03/2-机器学习-模型评估与选择/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          2-机器学习-模型评估与选择
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/02/0-机器学习-序言/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">0-机器学习-序言</div>
+    <a href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">R语言中vector、matrix、array、dataframe、list的区别与联系</div>
       <i class="icon-circle-right"></i>
     </a>
   
