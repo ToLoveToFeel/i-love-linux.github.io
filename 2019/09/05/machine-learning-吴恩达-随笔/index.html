@@ -19,7 +19,8 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/2.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/3.png">
-<meta property="og:updated_time" content="2019-09-06T03:18:49.932Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/4.png">
+<meta property="og:updated_time" content="2019-09-06T06:26:38.022Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="machine-learning(吴恩达)随笔">
 <meta name="twitter:description" content="machine learning（吴恩达）随笔2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta">
@@ -215,6 +216,30 @@
 <p>数学上可以证明，只要$\alpha$足够小，cost function每次迭代都会减小；但是$\alpha$太小会导致收敛很慢</p>
 <p>针对不同的问题，需获得比较好的参数要迭代的次数差异可能很大，比如有些问题需要迭代30次，而一些问题可能需要30000次</p>
 <p>如何选择学习率$\alpha$?常见的做法是从0.001开始取值，每次增大大约三倍，比如如下序列：…， 0.001， 0.003， 0.01， 0.03， 0.1， 0.3， 1， …观察不同$\alpha$下代价函数和迭代次数关系曲线，选择一个收敛且学习率的值较大的$\alpha$作为最终的学习率 </p>
+</blockquote>
+<h2 id="4-6-Normal-Equation-标准方程法"><a href="#4-6-Normal-Equation-标准方程法" class="headerlink" title="4.6 Normal Equation(标准方程法)"></a>4.6 Normal Equation(标准方程法)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/4.png" alt="img"><br>$$<br>\theta = (X ^ T X) ^ {-1} X ^ T y<br>$$<br><strong>如何确定用<font color="red">梯度下降法</font>还是<font color="red">标准方程法</font>？</strong></p>
+<table>
+<thead>
+<tr>
+<th>梯度下降法</th>
+<th>标准方程法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>需要选择$ \alpha $</td>
+<td>不需要选择$ \alpha $</td>
+</tr>
+<tr>
+<td>需要大量迭代</td>
+<td>不需要迭代</td>
+</tr>
+<tr>
+<td>n很大时仍能正常运行</td>
+<td>需要计算$(X ^ T X) ^{-1}$</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>当n特别大的时候$(X ^ T X) ^{-1}$的计算量很大$(O(n ^ 3))$，一般以10000作为临界点，当n小于10000是推荐使用<strong>标准方程法</strong>，但注意：不是所有的算法都可以使用<strong>标准方程法</strong></p>
 </blockquote>
 
       
