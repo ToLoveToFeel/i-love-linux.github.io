@@ -172,14 +172,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="2-2-Cost-Function"><a href="#2-2-Cost-Function" class="headerlink" title="2.2 Cost Function"></a>2.2 Cost Function</h2><p><font color="red">代价函数(平方误差函数，平方误差代价函数)：</font><br>$$<br>J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2<br>$$<br>其中：<br>$$<br>h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x<br>$$<br>linear regression的目的是求出使上式最小时的$ \theta _0 $和$ \theta _ 1$</p>
+        <h1 id="machine-learning（吴恩达）随笔"><a href="#machine-learning（吴恩达）随笔" class="headerlink" title="machine learning（吴恩达）随笔"></a>machine learning（吴恩达）随笔</h1><h2 id="2-2-Cost-Function"><a href="#2-2-Cost-Function" class="headerlink" title="2.2 Cost Function"></a>2.2 Cost Function</h2><p><font color="red">代价函数(平方误差函数，平方误差代价函数)：</font><br>$$<br>J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2<br>$$<br>其中：<br>$$<br>h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x<br>$$<br>linear regression的目的是求出使上式最小时的$ \theta _0 $和$ \theta _ 1$</p>
 <blockquote>
 <p>需要指出的是，代价函数不止这一种，但对大多数问题，特别是回归问题，上面的代价函数都是一个合理的选择</p>
 </blockquote>
 <h2 id="2-5-Gradient-Descent"><a href="#2-5-Gradient-Descent" class="headerlink" title="2.5 Gradient Descent"></a>2.5 Gradient Descent</h2><p><font color="red">梯度下降公式：</font><br>$$<br>\theta _ j = \theta _ j - \alpha \frac{\partial}{\partial \theta _ j}(\theta _ 0, \ \theta _1)<br>$$</p>
 <blockquote>
-<p>$ \alpha $为learning rate(学习率)，值越大学习越快</p>
+<p>$ \alpha $(&gt;0)为learning rate(学习率)，值越大学习越快</p>
 </blockquote>
+<h2 id="3-6-Inverse-and-Transpose"><a href="#3-6-Inverse-and-Transpose" class="headerlink" title="3.6 Inverse and Transpose"></a>3.6 Inverse and Transpose</h2><p><font color="red">奇异矩阵(退化矩阵)：</font>不存在逆矩阵的矩阵</p>
         
           <a class="article-more-a" href="/2019/09/05/machine-learning-吴恩达-随笔/#more">more >></a>
         
