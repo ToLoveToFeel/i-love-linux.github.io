@@ -152,6 +152,547 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-machine-learning-吴恩达-随笔" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/05/machine-learning-吴恩达-随笔/">machine-learning(吴恩达)随笔</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/05/machine-learning-吴恩达-随笔/" class="archive-article-date">
+  	<time datetime="2019-09-05T12:35:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="2-2-Cost-Function"><a href="#2-2-Cost-Function" class="headerlink" title="2.2 Cost Function"></a>2.2 Cost Function</h2><p><font color="red">代价函数(平方误差函数，平方误差代价函数)：</font><br>$$<br>J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2<br>$$<br>其中：<br>$$<br>h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x<br>$$<br>linear regression的目的是求出使上式最小时的$ \theta _0 $和$ \theta _ 1$</p>
+<blockquote>
+<p>需要指出的是，代价函数不止这一种，但对大多数问题，特别是回归问题，上面的代价函数都是一个合理的选择</p>
+</blockquote>
+<h2 id="2-5-Gradient-Descent"><a href="#2-5-Gradient-Descent" class="headerlink" title="2.5 Gradient Descent"></a>2.5 Gradient Descent</h2><p><font color="red">梯度下降公式：</font><br>$$<br>\theta _ j = \theta _ j - \alpha \frac{\partial}{\partial \theta _ j}(\theta _ 0, \ \theta _1)<br>$$</p>
+<blockquote>
+<p>$ \alpha $(&gt;0)为learning rate(学习率)，值越大学习越快</p>
+</blockquote>
+<h2 id="3-6-Inverse-and-Transpose"><a href="#3-6-Inverse-and-Transpose" class="headerlink" title="3.6 Inverse and Transpose"></a>3.6 Inverse and Transpose</h2><p><font color="red">奇异矩阵(退化矩阵)：</font>不存在逆矩阵的矩阵</p>
+        
+          <a class="article-more-a" href="/2019/09/05/machine-learning-吴恩达-随笔/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/05/machine-learning-吴恩达-随笔/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-R语言中vector、matrix、array、dataframe、list的区别与联系" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/">R语言中vector、matrix、array、dataframe、list的区别与联系</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/" class="archive-article-date">
+  	<time datetime="2019-09-05T03:21:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>这几者的关系如下（为相互包含关系）：</strong></p>
+<p><img src="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/1.png" alt="img"></p>
+<hr>
+<p><strong>演示代码如下：</strong></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="literal">FALSE</span>)&#123;</span><br><span class="line">  <span class="string">"R语言中vector、matrix、array、dataframe、list的区别与联系"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># vector</span></span><br><span class="line">a &lt;- c(<span class="number">1</span>:<span class="number">6</span>)</span><br><span class="line">cat(<span class="string">"vector : "</span>, <span class="string">"\n"</span>, a , <span class="string">"\n"</span>)</span><br><span class="line">print(class(a))</span><br><span class="line">cat(<span class="string">"\n"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># matrix</span></span><br><span class="line">b &lt;- matrix(a, nrow = <span class="number">2</span>, ncol = <span class="number">3</span>)</span><br><span class="line">cat(<span class="string">"matrix : "</span>, <span class="string">"\n"</span>)</span><br><span class="line">print(b)</span><br><span class="line">print(class(b))</span><br><span class="line">cat(<span class="string">"\n"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># array</span></span><br><span class="line">c &lt;- array(b, dim = c(<span class="number">2</span>, <span class="number">3</span>, <span class="number">2</span>))</span><br><span class="line">cat(<span class="string">"array : "</span>, <span class="string">"\n"</span>)</span><br><span class="line">print(c)</span><br><span class="line">print(class(c))</span><br><span class="line">cat(<span class="string">"\n"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># data.frame</span></span><br><span class="line">d &lt;- data.frame(c)</span><br><span class="line">cat(<span class="string">"data.frame : "</span>, <span class="string">"\n"</span>)</span><br><span class="line">print(d)</span><br><span class="line">print(class(d))</span><br><span class="line">cat(<span class="string">"\n"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># list</span></span><br><span class="line">e &lt;- list(d)</span><br><span class="line">cat(<span class="string">"list : "</span>, <span class="string">"\n"</span>)</span><br><span class="line">print(e)</span><br><span class="line">print(class(e))</span><br><span class="line">cat(<span class="string">"\n"</span>)</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">R</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-3-机器学习-线性模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/03/3-机器学习-线性模型/">3-机器学习-线性模型</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/03/3-机器学习-线性模型/" class="archive-article-date">
+  	<time datetime="2019-09-03T13:09:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="机器学习-周志华"><a href="#机器学习-周志华" class="headerlink" title="机器学习(周志华)"></a>机器学习(周志华)</h1><h2 id="第三章-线性模型"><a href="#第三章-线性模型" class="headerlink" title="第三章 线性模型"></a>第三章 线性模型</h2><h3 id="3-1-基本形式"><a href="#3-1-基本形式" class="headerlink" title="3.1 基本形式"></a>3.1 基本形式</h3><p>$$<br>f(\boldsymbol x) = \omega_1x_1 + \omega_2x_2 + … + \omega_dx_d + b<br>$$</p>
+<p>$$<br>f(\boldsymbol x) = \boldsymbol \omega^T \boldsymbol x + b<br>$$</p>
+<blockquote>
+<p>线性模型具有很好的可解释性</p>
+</blockquote>
+<h3 id="3-2-线性回归"><a href="#3-2-线性回归" class="headerlink" title="3.2 线性回归"></a>3.2 线性回归</h3><p><strong>首先考虑一种最简单的情形：输入属性只有一个</strong><br>$$<br>f(x_i) = \omega x_i + b<br>$$<br>我们的目的是求均方误差最小时的 w 和 b ，即：<br>$$<br>(\omega ^ *, \ b ^ *) = \arg\min_{(\omega, \ b)}\sum_{i=1}^{m}\bigl (f(x_i) - y_i \bigr) = \arg\min_{(\omega, \ b)}\sum_{i=1}^{m}\bigl (f(x_i) - \omega x_i - b \bigr)<br>$$<br>求导计算后可以得到：<br>$$<br>\omega = \frac{\displaystyle \sum_{i=1}^{m}y_i(x_i - \overline x)}{\displaystyle \sum_{i=1}^{m}x_i^2 - \frac{1}{m}(\displaystyle \sum_{i=1}^{m}x_i^2)}<br>$$</p>
+<p>$$<br>b = \frac{1}{m}\sum_{i=1}^{m}(y_i - \omega x_i)<br>$$</p>
+        
+          <a class="article-more-a" href="/2019/09/03/3-机器学习-线性模型/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/03/3-机器学习-线性模型/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2-机器学习-模型评估与选择" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/03/2-机器学习-模型评估与选择/">2-机器学习-模型评估与选择</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/03/2-机器学习-模型评估与选择/" class="archive-article-date">
+  	<time datetime="2019-09-03T02:25:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="机器学习-周志华"><a href="#机器学习-周志华" class="headerlink" title="机器学习(周志华)"></a>机器学习(周志华)</h1><h2 id="第二章-模型评估与选择"><a href="#第二章-模型评估与选择" class="headerlink" title="第二章  模型评估与选择"></a>第二章  模型评估与选择</h2><h3 id="2-1-经验误差与过拟合"><a href="#2-1-经验误差与过拟合" class="headerlink" title="2.1 经验误差与过拟合"></a>2.1 经验误差与过拟合</h3><p><font color="red">错误率：</font>分类错误的样本数/样本总数</p>
+<p><font color="red">精度：</font>1 - <font color="red">错误率</font></p>
+<p><font color="red">误差：</font>学习器的实际预测输出与样本的真实输出之间的误差</p>
+<p><font color="red">训练误差(经验误差)：</font>学习器在训练集上的误差</p>
+<p><font color="red">泛化误差：</font>学习器在新样本上的误差</p>
+<blockquote>
+<p>我们希望泛化误差越小越好</p>
+</blockquote>
+<p><font color="red">过拟合：</font>学习器把训练样本学得”太好了”；很有可能把训练样本自身的特点当做了所有潜在样本都会具有的一般性质(实际上潜在样本并没有这些性质)</p>
+<p><font color="red">欠拟合：</font>学习器对训练样本学习欠佳；就连一般的性质(潜在样本就具有的性质)都没学好</p>
+<blockquote>
+<p>过拟合是无法彻底避免的，我们所能做的就是减小其风险</p>
+</blockquote>
+<p><font color="red">模型选择：</font>针对某个具体任务，选择哪种<strong>学习算法</strong>，使用哪一种<strong>参数配置</strong></p>
+<h3 id="2-2-评估方法"><a href="#2-2-评估方法" class="headerlink" title="2.2 评估方法"></a>2.2 评估方法</h3><p><font color="red">测试集：</font>为了评价学习器的泛化误差而产生的集合，一般从数据集中产生</p>
+<blockquote>
+<p>数据集可以被划分为：训练集S，测试集T，两者尽可能互斥</p>
+<p>之后还会提到验证集，可以按下图这样理解：</p>
+</blockquote>
+<pre class="mermaid">graph TD
+数据集 --> 训练数据
+数据集 --> 测试集
+训练数据 --> 训练集
+训练数据 --> 验证集</pre>
+
+<blockquote>
+<p>训练集用于训练模型参数，测试集用于估计模型对样本的泛化误差，验证集用于“训练”模型的超参数。</p>
+<p>很多文章和书籍并不涉及验证集，只是将数据集分为<strong>训练集</strong>和<strong>测试集</strong></p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2019/09/03/2-机器学习-模型评估与选择/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/03/2-机器学习-模型评估与选择/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-1-机器学习-绪论" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/1-机器学习-绪论/">1-机器学习-绪论</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/02/1-机器学习-绪论/" class="archive-article-date">
+  	<time datetime="2019-09-02T06:42:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="机器学习-周志华"><a href="#机器学习-周志华" class="headerlink" title="机器学习(周志华)"></a>机器学习(周志华)</h1><h2 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章  绪论"></a>第一章  绪论</h2><h3 id="1-1-引言"><a href="#1-1-引言" class="headerlink" title="1.1 引言"></a>1.1 引言</h3><p><font color="red">机器学习(通俗定义):</font>   致力于研究如何通过计算的手段，利用经验来改善系统自身的性能。</p>
+<p><font color="red">机器学习(形式化定义):</font>  假设用<strong><em>P</em></strong>来评估计算机程序在某<strong><em>任务类T</em></strong>上的性能，若一个程序通过利用<strong><em>经验E</em></strong>在<strong><em>T</em></strong>中任务上获得性能改善，则我们就说关于<strong><em>T</em></strong>和<strong><em>P</em></strong>，该程序对<strong><em>E</em></strong>进行了学习。</p>
+<blockquote>
+<p>本书中“模型”泛指从数据中学到的结果</p>
+</blockquote>
+<h3 id="1-2-基本术语"><a href="#1-2-基本术语" class="headerlink" title="1.2 基本术语"></a>1.2 基本术语</h3><p><font color="red">数据集：</font>一组记录的集合</p>
+<p><font color="red">示例(样本)：</font>数据集中的每条记录</p>
+<p><font color="red">属性(特征)：</font>事件或对象在某方面的表现或性质的事项</p>
+<p><font color="red">属性值：</font>属性上的取值</p>
+<p><font color="red">属性空间(样本空间，输入空间)：</font>属性张成的空间</p>
+<p><font color="red">特征向量：</font>样本空间中的每个点，其实就是<font color="red">示例(样本)</font></p>
+<p><font color="red">维数：</font>属性的个数<br>$$<br>包含m个示例的数据集：<br>D = { \boldsymbol x_1,\boldsymbol x_2, …\boldsymbol x_m }<br>$$</p>
+<p>$$<br>每个示例d个维度：<br>\boldsymbol x_i = (x_{i1}; x_{i2}; …x_{id})<br>$$</p>
+        
+          <a class="article-more-a" href="/2019/09/02/1-机器学习-绪论/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/02/1-机器学习-绪论/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-0-机器学习-序言" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/0-机器学习-序言/">0-机器学习-序言</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/02/0-机器学习-序言/" class="archive-article-date">
+  	<time datetime="2019-09-02T03:48:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="机器学习-周志华"><a href="#机器学习-周志华" class="headerlink" title="机器学习(周志华)"></a>机器学习(周志华)</h1><h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><ol>
+<li><p>早期，机器学习技术内涵几乎全部是<strong><em>符号学习</em></strong>，从二十世纪九十年代开始，<strong><em>统计学习</em></strong>出现，符号学习是否被忽视了?</p>
+<p><strong>答：</strong>观点1：<strong><em>符号学习</em></strong>会退出历史舞台</p>
+<p>​        观点2：两者会结合</p>
+<p>​        观点3：技术是有周期的，<strong><em>符号学习</em></strong>会有翻身的一天</p>
+</li>
+<li><p><strong><em>统计机器学习</em></strong>算法都是基于“独立同分布”假设的，但这是必须的吗？</p>
+<p><strong>答：</strong>无独立条件分布条件下的机器学习也许只是一个难题，而不是不可解问题。“迁移学习”可能是解决这一问题的一线曙光。</p>
+</li>
+<li><p><strong><em>深度学习</em></strong>真的代表机器学习的新的方向吗？</p>
+<p><strong>答：</strong>不能片面的这样认为，虽然最近<strong><em>深度学习</em></strong>很火。理由有三：一是<strong><em>深度学习</em></strong>“理论创新”还不明显；二是<strong><em>深度学习</em></strong>目前只适用于神经网路；三是<strong><em>统计学习</em></strong>在机器学习中仍然被普遍采用。</p>
+</li>
+<li><p>数学之大，难道只有统计方法适合机器学习？</p>
+<p><strong>答：</strong>目前来说是这样的，所以期待以后有更多数学家参与开辟机器学习新模式、新理论、新方向。</p>
+</li>
+<li><p><strong><em>符号机器学习</em></strong>以离散方法处理问题，<strong><em>统计机器学习</em></strong>以连续方法处理问题，这两种方法是否有鸿沟？</p>
+<p><strong>答：</strong>应该没有，然而现有的方法在数学上并不完美。</p>
+</li>
+<li><p>大数据时代的出现，有没有给机器学习带来本质的影响？</p>
+<p><strong>答：</strong>似乎”大数据“个<strong><em>统计机器学习</em></strong>提供了更多的机遇；量变到质变的辩证法似乎是一个普遍的规律。</p>
+</li>
+</ol>
+<hr>
+<h2 id="如何使用这本书？"><a href="#如何使用这本书？" class="headerlink" title="如何使用这本书？"></a>如何使用这本书？</h2><ol>
+<li>这是一本教科书</li>
+<li>这是一本入门级的教科书</li>
+<li>这是一门面向理工科高年级本科生和研究生的教科书</li>
+<li>这本书不妨多读几遍</li>
+</ol>
+<center>end</center>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/02/0-机器学习-序言/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -461,7 +1002,31 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Visual Stdio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">R</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">

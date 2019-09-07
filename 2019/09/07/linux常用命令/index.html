@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | i-love-linux</title>
+  <title>linux常用命令 | i-love-linux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="i-love-linux">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="ls：显示文件或目录 mkdir：创建新目录（-p递归创建） cd：切换目录 pwd：显示当前目录绝对路径 rmdir：删除空目录 cp：复制文件或目录（-r复制目录 -p保留文件属性） mv：剪切文件，改名 rm：删除文件或目录（-r删除目录 -f强制执行） touch：创建空文件 cat：显示文件内容（-n显示行号） tac：反向显示文件内容 more：分页显示文件内容 less：分页显示文件">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux常用命令">
+<meta property="og:url" content="http://yoursite.com/2019/09/07/linux常用命令/index.html">
 <meta property="og:site_name" content="i-love-linux">
+<meta property="og:description" content="ls：显示文件或目录 mkdir：创建新目录（-p递归创建） cd：切换目录 pwd：显示当前目录绝对路径 rmdir：删除空目录 cp：复制文件或目录（-r复制目录 -p保留文件属性） mv：剪切文件，改名 rm：删除文件或目录（-r删除目录 -f强制执行） touch：创建空文件 cat：显示文件内容（-n显示行号） tac：反向显示文件内容 more：分页显示文件内容 less：分页显示文件">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-07T10:28:22.537Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="i-love-linux">
+<meta name="twitter:title" content="linux常用命令">
+<meta name="twitter:description" content="ls：显示文件或目录 mkdir：创建新目录（-p递归创建） cd：切换目录 pwd：显示当前目录绝对路径 rmdir：删除空目录 cp：复制文件或目录（-r复制目录 -p保留文件属性） mv：剪切文件，改名 rm：删除文件或目录（-r删除目录 -f强制执行） touch：创建空文件 cat：显示文件内容（-n显示行号） tac：反向显示文件内容 more：分页显示文件内容 less：分页显示文件">
   
     <link rel="alternative" href="/atom.xml" title="i-love-linux" type="application/atom+xml">
   
@@ -150,307 +155,339 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-linux常用命令" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux常用命令
+    </h1>
+  
+
+        
+        <a href="/2019/09/07/linux常用命令/" class="archive-article-date">
+  	<time datetime="2019-09-07T10:18:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ls：显示文件或目录</p>
+<p>mkdir：创建新目录（-p递归创建）</p>
+<p>cd：切换目录</p>
+<p>pwd：显示当前目录绝对路径</p>
+<p>rmdir：删除空目录</p>
+<p>cp：复制文件或目录（-r复制目录 -p保留文件属性）</p>
+<p>mv：剪切文件，改名</p>
+<p>rm：删除文件或目录（-r删除目录 -f强制执行）</p>
+<p>touch：创建空文件</p>
+<p>cat：显示文件内容（-n显示行号）</p>
+<p>tac：反向显示文件内容</p>
+<p>more：分页显示文件内容</p>
+<p>less：分页显示文件内容</p>
+<p>head：显示文件前面几行（-n 指定行数）</p>
+<p>tail：显示文件后面几行（-n 指定行数 -f动态显示文件末尾内容）</p>
+<p>ln：创建链接文件（-s创建软连接）</p>
+<a id="more"></a>
+
+<hr>
+<p>chmod：改变文件或目录权限（-R递归修改）</p>
+<p>chown：改变文件或目录的所有者</p>
+<p>chgrp：改变文件或目录的所属组</p>
+<p>umask：显示，设置文件的缺省权限（-S以rwx形式显示新建文件缺省权限）</p>
+<hr>
+<p>find：文件搜索</p>
+<p>locate：在文件资料库中查找文件</p>
+<p>which：搜索命令所在的目录及别名信息</p>
+<p>whereis：搜索命令所在的目录及帮助文档路径</p>
+<p>grep：在文件中搜索字符串匹配的行并输出（-i不区分大小写 -v排除指定字符串）</p>
+<hr>
+<p>man：获取命令或配置文件的信息</p>
+<p>help：获取Shell内置命令的帮助信息</p>
+<hr>
+<p>useradd：添加新用户<root></root></p>
+<p>passwd：设置用户密码</p>
+<p>who：查看登陆用户信息</p>
+<p>w：查看登陆用户详细信息</p>
+<p>gizp：压缩文件，格式为.gz</p>
+<p>gunzip：解压.gz的压缩文件</p>
+<p>tar：打包目录，解压缩包</p>
+<p>zip：压缩文件或目录，格式为.zip（-r压缩目录）</p>
+<p>unzip：解压.zip的压缩文件</p>
+<p>bzip2：压缩文件，格式为.bz2（-k产生压缩文件后保留原文件）</p>
+<p>bunzip2：解压.bz2的压缩文件</p>
+<hr>
+<p>write：给用户发信息，以Ctrl+D保存结束</p>
+<p>wall：发广播信息</p>
+<p>ping：测试网络的连通性（-c 指定发送次数）</p>
+<p>ifconfig：查看和设置网卡信息<root></root></p>
+<p>mail：查看发送电子邮件</p>
+<p>last：列出目前与过去登陆系统的用户信息</p>
+<p>lastlog：检查某特定用户上次登陆的时间</p>
+<p>traceroute：显示数据包到主机间的路径</p>
+<p>netstat：显示网络相关信息（-t TCP协议 -u UDP协议 -l监听 -r路由 -n显示IP地址和端口号）</p>
+<p>setup：配置网络<root></root></p>
+<p>mount：挂载命令</p>
+<hr>
+<p>shutdown：关机命令<root></root></p>
+<p>halt：关机命令</p>
+<p>poweroff：关机命令</p>
+<p>init 0：关机命令</p>
+<p>reboot：重启命令<root></root></p>
+<p>init 6：重启命令</p>
+<p>logout：退出登陆命令</p>
+<hr>
+<p>rpm：（1）RPM安装：-ivh 包全名（2）升级：-Uvh 包全名（3）卸载：-e 包名</p>
+<p>​            （4）查询是否安装：-q 包名（5）查询软件包详细信息：-qi 包名</p>
+<p>​            （6）查询包中文件安装位置：-ql 包名（7）查询系统文件属于哪个RPM包：-qf 系统文件名</p>
+<p>​            （8）查询软件包的依赖性：-qR 包名（9）RPM包校验：-V 已安装的包名</p>
+<p>yum：（1）查询所有可用软件包列表：yum list（2）安装：yum -y install 包名</p>
+<p>​             （3）升级：yum -y update 包名（4）卸载：yum -y remove 包名</p>
+<p>​             （5）列出所有可用软件组列表：yum grouplist</p>
+<p>​             （6）安装指定软件组：yum groupinstall 软件组名</p>
+<p>​             （7）卸载指定软件组：yum groupremove 软件组名</p>
+<hr>
+<p>date：显示目前时间</p>
+<p>usermod：修改用户信息</p>
+<p>chage：修改用户密码状态</p>
+<p>userdel：删除用户(-r删除用户的同时删除用户家目录)</p>
+<p>id：查看用户ID（UID GID）</p>
+<p>su：切换用户身份（su - wangxiaoxiao）</p>
+<p>exit：从普通用户退回到root，前提：之前是从超级用户切换到普通用户</p>
+<p>groupadd：添加用户组</p>
+<p>groupmod：修改用户组</p>
+<p>groupdel：删除用户组</p>
+<p>gpasswd：把用户添加入组或从组中删除（-a 用户名：加入 -d 用户名：删除）</p>
+<hr>
+<p>vi：编辑文件（不带颜色）</p>
+<p>vim：编辑文件（带颜色）</p>
+<hr>
+<p>getfacl：查看ACL权限</p>
+<p>setfacl：设定ACL权限</p>
+<p>chattr：改变文件系统属性，可以是文件也可以是文件夹</p>
+<p>lsattr：查看文件系统属性</p>
+<p>sudo：root把本来只能是超级用户执行的命令赋予普通用户执行</p>
+<p>visudo：修改/etc/sudoers文件</p>
+<hr>
+<p>df：文件系统查看命令</p>
+<p>du：统计目录或文件大小（-h使用习惯单位显示磁盘占用量 -s统计占用总量）</p>
+<p>fsck：文件系统修复命令</p>
+<p>dumpe2fs：显示磁盘状态命令</p>
+<hr>
+<p>umount:卸载命令</p>
+<p>fdisk：操作磁盘（-l查看U盘设备文件名）</p>
+<p>partprobe：重新读取分区信息</p>
+<p>mkfs：格式化分区</p>
+<hr>
+<p>echo：输出内容（-e支持反斜杠控制的字符转换）</p>
+<p>dos2unix：将windows下的文件转化为linux下的文件</p>
+<p>unix2dos：将linux下的文件转化为windows下的文件</p>
+<p>history：历史命令与补全</p>
+<p>alias：别名命令</p>
+<p>unalias：别名</p>
+<p>wc：输入重定向</p>
+<p>set：查看变量</p>
+<p>unset：删除变量</p>
+<p>export：设置环境变量</p>
+<p>env：查询环境变量</p>
+<p>read：接受键盘输入</p>
+<p>declare:声明变量类型</p>
+<p>source：解决配置文件命令更改后开机消失的问题</p>
+<p>cut：字符串截取命令</p>
+<p>printf：按格式输出内容</p>
+<p>awk：字符截取命令</p>
+<p>sed：字符截取命令</p>
+<p>sort：排序命令</p>
+<p>wc：统计命令</p>
+<p>test：条件判断</p>
+<hr>
+<p>ps aux：查看系统中所有进程（等同于ps -le）</p>
+<p>top：查看系统健康状态</p>
+<p>pstree：查看进程数</p>
+<p>kill：（1）kill -l：查看可用的进程信号  （2）kill -1 进程号：重启进程</p>
+<p>（3）kill -9 进程号：强制杀死进程</p>
+<p>killall：按照进程名终止进程（kill -9 httpd）</p>
+<p>pkill：按照进程名终止进程（pkill -9 -t tty2）</p>
+<p>w：查询本机已经登陆的用户</p>
+<p>who：查询本机已经登陆的用户</p>
+<p>whoami：查询自己是谁（等同于users）</p>
+<p>jobs：查看后台的工作（-l 显示工作的PID）</p>
+<p>fg：将后台暂停的工作恢复到前台执行</p>
+<p>bg：将后台暂停的工作恢复到后台执行</p>
+<p>vmstat：监控系统资源</p>
+<p>dmesg：开机时内核检测信息</p>
+<p>free：查看内存使用状态</p>
+<p>uptime：显示系统的启动时间和平均负载，也就是top命令的第一行。w命令也可以看到这个数据</p>
+<p>uname：查看系统和内核相关信息（-a 查看系统所有相关信息 -r 查看内核版本 -s 查看内核名称）</p>
+<p>file /bin/ls：查看当前系统的位数</p>
+<p>lsb_release -a：查看当前linux系统的发行版本</p>
+<p>lsof：列出进程打开或使用的文件信息</p>
+<p>crontab：定时任务</p>
+<hr>
+<p>logrotate：日志管理命令</p>
+<p>runlevel：查看运行级别</p>
+<p>init 运行级别：改变运行级别</p>
+<hr>
+<p>dump：备份命令</p>
+<p>restore：还原命令</p>
+<hr>
+<p>lastb：显示系统中所有用户曾经登陆失败的记录</p>
+<center>end</center>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/05/machine-learning-吴恩达-随笔/" class="archive-article-date">
-  	<time datetime="2019-09-05T12:35:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/05/machine-learning-吴恩达-随笔/">machine-learning(吴恩达)随笔</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/07/linux常用命令/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/" class="archive-article-date">
-  	<time datetime="2019-09-05T03:21:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/09/07/linux配置文件简介/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          linux配置文件简介
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/07/python绘制各种图形/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python绘制各种图形</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/">R语言中vector、matrix、array、dataframe、list的区别与联系</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">R</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/03/3-机器学习-线性模型/" class="archive-article-date">
-  	<time datetime="2019-09-03T13:09:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/03/3-机器学习-线性模型/">3-机器学习-线性模型</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/03/2-机器学习-模型评估与选择/" class="archive-article-date">
-  	<time datetime="2019-09-03T02:25:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/03/2-机器学习-模型评估与选择/">2-机器学习-模型评估与选择</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/02/1-机器学习-绪论/" class="archive-article-date">
-  	<time datetime="2019-09-02T06:42:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/02/1-机器学习-绪论/">1-机器学习-绪论</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/02/0-机器学习-序言/" class="archive-article-date">
-  	<time datetime="2019-09-02T03:48:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/02/0-机器学习-序言/">0-机器学习-序言</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/30/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-30T12:36:48.521Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/30/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/30/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-08-30T04:39:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/30/my-first-blog/">my first blog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -476,8 +513,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
