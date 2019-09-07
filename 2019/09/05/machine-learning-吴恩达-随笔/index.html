@@ -28,7 +28,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/10.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/11.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/12.png">
-<meta property="og:updated_time" content="2019-09-07T07:37:45.485Z">
+<meta property="og:updated_time" content="2019-09-07T12:49:30.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="machine-learning(吴恩达)随笔">
 <meta name="twitter:description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
@@ -318,6 +318,33 @@
 <p><img src="/2019/09/05/machine-learning-吴恩达-随笔/12.png" alt="img"></p>
 <h2 id="6-7-Multi-class-classification-One-vs-all-多分类器：一对其余"><a href="#6-7-Multi-class-classification-One-vs-all-多分类器：一对其余" class="headerlink" title="6.7 Multi-class classification : One-vs-all(多分类器：一对其余)"></a>6.7 Multi-class classification : One-vs-all(多分类器：一对其余)</h2><p><strong>算法思想：</strong>使用逻辑回归分类器(二分类)完成多分类</p>
 <p><strong>算法实现：</strong>对于n分类问题，最终会产生n个学习器($ h _ \theta ^ {(i)} (x) = P(y=i|x;\theta)$,  (i=1,2,…,n))，产生过程是依次将每一类作为正类，其余作为反类，训练出一个二分类学习器；预测时，将待预测样本分别送入这n个学习器，对比这n个输出结果，取概率最大的那个学习器的正类作为最终预测结果.</p>
+<h2 id="7-1-The-Problem-of-Overfitting-过拟合问题"><a href="#7-1-The-Problem-of-Overfitting-过拟合问题" class="headerlink" title="7.1 The Problem of Overfitting(过拟合问题)"></a>7.1 The Problem of Overfitting(过拟合问题)</h2><p><font color="red">过拟合：</font>对于一个实际问题，我们有很多特征(自变量)，这时候训练出的方程能很好的拟合训练数据，但对于新数据，不能准确预测(又叫做”泛化”能力差).</p>
+<p><strong>解决过拟合问题的方法：</strong></p>
+<ol>
+<li>减少特征的数量<ul>
+<li>人工决定保留哪些变量，舍弃不重要的变量</li>
+<li>Model selection algorithm(模型选择算法)，可以自动选择保留哪些特征</li>
+</ul>
+</li>
+<li>正则化(Regularization)<ul>
+<li>保留所有特征，但是减小参数的数量级/值</li>
+<li>当我们有大量特征时，我们训练出的学习器也能很好的工作</li>
+</ul>
+</li>
+</ol>
+<h2 id="7-2-Cost-Function-代价函数"><a href="#7-2-Cost-Function-代价函数" class="headerlink" title="7.2 Cost Function(代价函数)"></a>7.2 Cost Function(代价函数)</h2><p><strong>正则化下的代价函数为：</strong><br>$$<br>J(\theta) = \frac{1}{2m}\Bigl[ \sum _ {i=1} ^ {m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) \bigr) ^ 2 + \lambda \sum _ {j=1} ^ {n} \theta _ j ^ 2 \Bigr]<br>$$</p>
+<blockquote>
+<p>因为我们不知道该惩罚哪一项，所以对于所有的参数(除了$ \theta _ 0 $)均进行惩罚，这样，最终的参数会变小，能一定程度上较少过拟合现象</p>
+<p>$ \lambda $称为正则化参数，其作用是在两个不同的目标中的一个平衡关系；$ \lambda $过大会导致欠拟合</p>
+</blockquote>
+<h2 id="7-3-Reguilarized-Liner-Regression-线性回归正则化"><a href="#7-3-Reguilarized-Liner-Regression-线性回归正则化" class="headerlink" title="7.3 Reguilarized Liner Regression(线性回归正则化)"></a>7.3 Reguilarized Liner Regression(线性回归正则化)</h2><p><strong>梯度下降：</strong></p>
+<p>Repeat {<br>$$<br>\theta _ 0 := \theta _ 0 - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ 0 ^ {(i)} \bigr)<br>\\<br>\theta _ j := \theta _ j (1 - \alpha \frac{\lambda}{m}) - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ j ^ {(i)} \bigr) \quad (j=1,2,3,…n)<br>$$<br>}</p>
+<p><strong>正规方程(Normal equation)：</strong><br>$$<br>\theta = \Biggl( X ^ T X + \lambda \begin{bmatrix}<br>0&amp;0&amp;0&amp;…&amp;0 \\<br>0&amp;1&amp;0&amp;…&amp;0 \\<br>.&amp;0&amp;1&amp;…&amp;0 \\<br>.&amp;0&amp;0&amp;…&amp;0 \\<br>.&amp;0&amp;0&amp;…&amp;1 \\<br>\end{bmatrix}  \Biggr) ^ {-1} X ^ T y<br>$$</p>
+<blockquote>
+<p>如果$ \lambda $ &gt; 0，则上式一定存在(可以求逆)</p>
+</blockquote>
+<h2 id="Reguilarized-Logistic-Regression-逻辑回归正则化"><a href="#Reguilarized-Logistic-Regression-逻辑回归正则化" class="headerlink" title="Reguilarized Logistic Regression(逻辑回归正则化)"></a>Reguilarized Logistic Regression(逻辑回归正则化)</h2><p><strong>Cost Function：</strong><br>$$<br>J(\theta) = -\frac{1}{m}[\sum _ {i=1} ^ {m} y ^ {(i)} \log h _ \theta(x ^ {(i)}) + (1 - y ^ {(i)}) \log (1 - h _ \theta (x ^ {(i)})) - \frac{\lambda}{2} \sum _ {j=1} ^ {n} \theta _ j ^ 2]<br>$$<br><strong>梯度下降：</strong></p>
+<p>Repeat{<br>$$<br>\theta _ 0 := \theta _ 0 - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ 0 ^ {(i)} \bigr)<br>\\<br>\theta _ j := \theta _ j - \alpha \bigl[ \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ j ^ {(i)} \bigr) + \frac{\lambda}{m} \theta _ j \bigr] \quad (j=1,2,3,…n)<br>$$<br>}</p>
 
       
 
@@ -608,19 +635,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">PS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Visual Stdio</a>
+                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">R</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Visual Stdio</a>
               </li>
              
               <li class="article-tag-list-item">
