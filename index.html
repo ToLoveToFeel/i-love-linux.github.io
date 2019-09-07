@@ -152,20 +152,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-python绘制维恩图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-python绘制韦恩图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/07/python绘制维恩图/">python绘制维恩图</a>
+      <a class="article-title" href="/2019/09/07/python绘制韦恩图/">python绘制韦恩图</a>
     </h1>
   
 
         
-        <a href="/2019/09/07/python绘制维恩图/" class="archive-article-date">
-  	<time datetime="2019-09-07T02:02:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
+        <a href="/2019/09/07/python绘制韦恩图/" class="archive-article-date">
+  	<time datetime="2019-09-07T07:48:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
 </a>
         
       </header>
@@ -178,18 +178,18 @@
 <center>pip  install  matplotlib</center>
 <center>pip  install  matplotlib_venn</center>
 
-<p><img src="/2019/09/07/python绘制维恩图/1.png" alt="img"></p>
+<p><img src="/2019/09/07/python绘制韦恩图/1.png" alt="img"></p>
 <blockquote>
 <p>matplotlib_venn只能绘制两组或者三组数据的venn图，下面是代码展示以及输出结果</p>
 </blockquote>
 <p><strong>两组数据</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> matplotlib_venn <span class="keyword">import</span> venn2</span><br><span class="line"></span><br><span class="line">venn2(subsets = [set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]), set([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>])], set_labels = (<span class="string">'set1'</span>, <span class="string">'set2'</span>), set_colors = (<span class="string">'r'</span>,<span class="string">'g'</span>))</span><br><span class="line"></span><br><span class="line">plt.savefig(<span class="string">'2'</span>, dpi = <span class="number">100</span>) <span class="comment">#保存为2.png，dpi为输出图片清晰度</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2019/09/07/python绘制维恩图/2.png" alt="img"></p>
+<p><img src="/2019/09/07/python绘制韦恩图/2.png" alt="img"></p>
 <p><strong>三组数据</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> matplotlib_venn <span class="keyword">import</span> venn3</span><br><span class="line"></span><br><span class="line">venn3(subsets = [set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]), set([<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]), set([<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">9</span>])], set_labels = (<span class="string">'set1'</span>, <span class="string">'set2'</span>, <span class="string">'set3'</span>), set_colors = (<span class="string">'r'</span>,<span class="string">'g'</span>,<span class="string">'b'</span>))</span><br><span class="line"></span><br><span class="line">plt.savefig(<span class="string">'3'</span>, dpi = <span class="number">100</span>) <span class="comment">#保存为3.png，dpi为输出图片清晰度</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2019/09/07/python绘制维恩图/3.png" alt="img"></p>
+<p><img src="/2019/09/07/python绘制韦恩图/3.png" alt="img"></p>
 <center>end</center>
       
 
@@ -198,26 +198,11 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">venn</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/07/python绘制维恩图/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/07/python绘制韦恩图/">展开全文 >></a>
         </p>
       
 
@@ -1163,14 +1148,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">R</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">venn</a>
               </li>
              
               <li class="article-tag-list-item">
