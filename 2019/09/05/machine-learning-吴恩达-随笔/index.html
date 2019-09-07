@@ -26,7 +26,9 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/8.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/9.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/10.png">
-<meta property="og:updated_time" content="2019-09-06T13:38:06.334Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/11.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/12.png">
+<meta property="og:updated_time" content="2019-09-07T07:37:45.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="machine-learning(吴恩达)随笔">
 <meta name="twitter:description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
@@ -281,15 +283,41 @@
 </blockquote>
 <p>$$<br>P(y=0|x;\theta) \ = \ 1 - h _ \theta (x) = P(y=1|x;\theta)<br>$$</p>
 <h2 id="6-3-Decision-Boundary"><a href="#6-3-Decision-Boundary" class="headerlink" title="6.3 Decision Boundary"></a>6.3 Decision Boundary</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/9.png" alt="img"></p>
-<h2 id="6-4-Cost-Function-代价函数"><a href="#6-4-Cost-Function-代价函数" class="headerlink" title="6.4 Cost Function(代价函数)"></a>6.4 Cost Function(代价函数)</h2><p>$$<br>Cost\bigl(h _ \theta (x),y \bigr) = \frac{1}{2}\bigl(h _ \theta (x),y \bigr) ^ 2<br>$$</p>
+<h2 id="6-4-Cost-Function-代价函数"><a href="#6-4-Cost-Function-代价函数" class="headerlink" title="6.4 Cost Function(代价函数)"></a>6.4 Cost Function(代价函数)</h2><p>$$<br>Cost\bigl(h _ \theta (x),y \bigr) = \frac{1}{2}\bigl(h _ \theta (x) - y \bigr) ^ 2<br>$$</p>
 <p><font color="red">Logistic regression cost function(逻辑回归代价函数)：</font><br>$$<br>Cost\bigl(h _ \theta (x),y \bigr) =<br>\begin{cases}<br>-\log(h _ \theta (x)) \quad \quad \quad if \quad y = 1 \\<br>-\log(1 - h _ \theta (x)) \quad \ if \quad y = 0<br>\end{cases}<br>$$<br>其图像如图所示：</p>
 <p><img src="/2019/09/05/machine-learning-吴恩达-随笔/10.png" alt="img"></p>
 <blockquote>
 <p>如何理解上述公式？</p>
-<p>如果我们断言 y = 1(代表有肿瘤)，我们训练的模型实际预测的输出$ h _ \theta (x) $越接近于1(代表有肿瘤可能性越大，我们的断言越对)，代价函数付出的代价越小，极端情况下在$ h _ \theta (x) = 1 $的情况下，代价函数需要付出的代价为0；比如在刚开始训练参数的时候，标记为1，我们的$ h _ \theta (x)$很接近于1，则此时的参数付出的代价很小</p>
-<p>如果我们断言y = 0(代表没肿瘤)，我们训练的模型实际预测的输出$ h _ \theta (x) $越接近于1(代表有肿瘤可能性越大，我们的断言越错)，代价函数付出的代价越大，极端情况下在$ h _ \theta (x) = 1 $的情况下，代价函数需要付出的代价为无穷大；比如在刚开始训练参数的时候，标记为0，我们的$ h _ \theta (x)$很接近于1，则此时的参数付出的代价很大</p>
+<p>如果我们断言 y = 1(代表有肿瘤)，我们训练的模型实际预测的输出$ h _ \theta (x) $越接近于1(代表有肿瘤可能性越大，我们的断言越对)，代价函数付出的代价越小，极端情况下在$ h _ \theta (x) = 1 $的情况下，代价函数需要付出的代价为0；比如在刚开始训练参数的时候，标记为1，我们的$ h _ \theta (x)$很接近于1，则此时的参数付出的代价很小.</p>
+<p>如果我们断言y = 0(代表没肿瘤)，我们训练的模型实际预测的输出$ h _ \theta (x) $越接近于1(代表有肿瘤可能性越大，我们的断言越错)，代价函数付出的代价越大，极端情况下在$ h _ \theta (x) = 1 $的情况下，代价函数需要付出的代价为无穷大；比如在刚开始训练参数的时候，标记为0，我们的$ h _ \theta (x)$很接近于1，则此时的参数付出的代价很大.</p>
 </blockquote>
-<p><strong>逻辑回归代价函数</strong>还可以写成如下形式：<br>$$<br>J(\theta) = \frac{1}{m}\sum _ {i=1} ^ {m}Cost\bigl(h _ \theta (x ^ {(i)}),y  ^ {(i)} \bigr) \\<br>= -\frac{1}{m}[\sum _ {i=1} ^ {m} y ^ {(i)} \log h _ \theta(x ^ {(i)}) + (1 - y ^ {(i)}) \log (1 - h _ \theta (x ^ {(i)}))]<br>$$</p>
+<h2 id="6-5-Simplified-Cost-Function-and-Gradient-Descent"><a href="#6-5-Simplified-Cost-Function-and-Gradient-Descent" class="headerlink" title="6.5 Simplified Cost Function and Gradient Descent"></a>6.5 Simplified Cost Function and Gradient Descent</h2><p><strong>逻辑回归代价函数</strong>还可以写成如下形式：<br>$$<br>J(\theta) = \frac{1}{m}\sum _ {i=1} ^ {m}Cost\bigl(h _ \theta (x ^ {(i)}),y  ^ {(i)} \bigr) \\<br>= -\frac{1}{m}[\sum _ {i=1} ^ {m} y ^ {(i)} \log h _ \theta(x ^ {(i)}) + (1 - y ^ {(i)}) \log (1 - h _ \theta (x ^ {(i)}))]<br>$$<br><strong>最小化$ J(\theta)$，进行梯度下降：</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/11.png" alt="img"></p>
+<p>因为$ h _ \theta(x) = g(\theta ^ T x) = \frac{1}{1 + e ^ {-\theta ^ T x}} $，所以$ h _ \theta (x ^ {(i)}) \cdot (1 - h _ \theta (x ^ {(i)})) = \frac{ e ^ {-\theta ^ T x}}{(1 + e ^ {-\theta ^ T x}) ^ 2} $，$ h _ \theta’ (x ^ {(i)}) = \frac{ e ^ {-\theta ^ T x }\cdot x _ j ^ {(i)}}{(1 + e ^ {-\theta ^ T x}) ^ 2} $</p>
+<p>带入上式得：<br>$$<br>\theta _ j := \theta _ j - \alpha \frac{1}{m}\sum _ {i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) x _ j ^ {(i)} \quad j = 0, 1, 2 , …, n<br>$$</p>
+<h2 id="6-6-Advanced-Optimization-高级优化"><a href="#6-6-Advanced-Optimization-高级优化" class="headerlink" title="6.6 Advanced Optimization(高级优化)"></a>6.6 Advanced Optimization(高级优化)</h2><p><strong>Optimization algorithms(优化算法)：</strong></p>
+<ul>
+<li>Gradient descent(梯度下降)</li>
+<li>Conjugate gradient(共轭梯度法)</li>
+<li>BFGS(变尺度法)</li>
+<li>L-BFGS(限制变尺度法)</li>
+</ul>
+<blockquote>
+<p>后三个算法相对于Gradient descent的优点是：</p>
+<ol>
+<li>不需要手动选择$\alpha$</li>
+<li>速度更快</li>
+</ol>
+<p>缺点是：更复杂</p>
+</blockquote>
+<p><strong>一个Matlab优化实例：</strong></p>
+<p>代码($ J(\theta) = (\theta _ 1 -5) ^ 2 + (\theta _ 2 -5) ^ 2 $)：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[jVal, gradient]</span> = <span class="title">costFunction</span><span class="params">(theta)</span></span></span><br><span class="line">    jVal = (theta(<span class="number">1</span>) - <span class="number">5</span>)^<span class="number">2</span> + (theta(<span class="number">2</span>) - <span class="number">5</span>)^<span class="number">2</span>;</span><br><span class="line">    </span><br><span class="line">    gradient = <span class="built_in">zeros</span>(<span class="number">2</span>,<span class="number">1</span>);</span><br><span class="line">    gradient(<span class="number">1</span>) = <span class="number">2</span> * (theta(<span class="number">1</span>) - <span class="number">5</span>);</span><br><span class="line">    gradient(<span class="number">2</span>) = <span class="number">2</span> * (theta(<span class="number">2</span>) - <span class="number">5</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>命令行输入的命令，以及输出结果的含义：</p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/12.png" alt="img"></p>
+<h2 id="6-7-Multi-class-classification-One-vs-all-多分类器：一对其余"><a href="#6-7-Multi-class-classification-One-vs-all-多分类器：一对其余" class="headerlink" title="6.7 Multi-class classification : One-vs-all(多分类器：一对其余)"></a>6.7 Multi-class classification : One-vs-all(多分类器：一对其余)</h2><p><strong>算法思想：</strong>使用逻辑回归分类器(二分类)完成多分类</p>
+<p><strong>算法实现：</strong>对于n分类问题，最终会产生n个学习器($ h _ \theta ^ {(i)} (x) = P(y=i|x;\theta)$,  (i=1,2,…,n))，产生过程是依次将每一类作为正类，其余作为反类，训练出一个二分类学习器；预测时，将待预测样本分别送入这n个学习器，对比这n个输出结果，取概率最大的那个学习器的正类作为最终预测结果.</p>
 
       
 
