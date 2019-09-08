@@ -28,7 +28,11 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/10.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/11.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/12.png">
-<meta property="og:updated_time" content="2019-09-07T12:49:30.370Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/13.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/14.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/15.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/16.png">
+<meta property="og:updated_time" content="2019-09-08T03:10:49.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="machine-learning(吴恩达)随笔">
 <meta name="twitter:description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
@@ -345,6 +349,117 @@
 </blockquote>
 <h2 id="Reguilarized-Logistic-Regression-逻辑回归正则化"><a href="#Reguilarized-Logistic-Regression-逻辑回归正则化" class="headerlink" title="Reguilarized Logistic Regression(逻辑回归正则化)"></a>Reguilarized Logistic Regression(逻辑回归正则化)</h2><p><strong>Cost Function：</strong><br>$$<br>J(\theta) = -\frac{1}{m}[\sum _ {i=1} ^ {m} y ^ {(i)} \log h _ \theta(x ^ {(i)}) + (1 - y ^ {(i)}) \log (1 - h _ \theta (x ^ {(i)})) - \frac{\lambda}{2} \sum _ {j=1} ^ {n} \theta _ j ^ 2]<br>$$<br><strong>梯度下降：</strong></p>
 <p>Repeat{<br>$$<br>\theta _ 0 := \theta _ 0 - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ 0 ^ {(i)} \bigr)<br>\\<br>\theta _ j := \theta _ j - \alpha \bigl[ \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ j ^ {(i)} \bigr) + \frac{\lambda}{m} \theta _ j \bigr] \quad (j=1,2,3,…n)<br>$$<br>}</p>
+<h2 id="8-3-Model-Representation-I"><a href="#8-3-Model-Representation-I" class="headerlink" title="8.3 Model Representation I"></a>8.3 Model Representation I</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/13.png" alt="img"></p>
+<blockquote>
+<p>如果神经网络在第 j 层有$ s _ j $的单元，在第 j+1 层有$ s _ {j+1} $个单元，则从第 j 层到 j+1 层的参数矩阵$ \Theta ^ {(j)} $的维度是$ s _ {j+1} \times (s _ j + 1) $.</p>
+</blockquote>
+<h2 id="8-4-Model-Representation-II"><a href="#8-4-Model-Representation-II" class="headerlink" title="8.4 Model Representation II"></a>8.4 Model Representation II</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/14.png" alt="img"></p>
+<p><font color="red">forward propagation(前向传播)：</font>从输入层到隐藏层再到输出层依次计算激励的过程</p>
+<h2 id="8-5-Examples-and-Intuitions-I"><a href="#8-5-Examples-and-Intuitions-I" class="headerlink" title="8.5 Examples and Intuitions I"></a>8.5 Examples and Intuitions I</h2><p><strong>AND Function：</strong><br>$$<br>h _ \Theta (x) = g(-30 + 20 x _ 1 + 20 x _ 2)<br>$$</p>
+<table>
+<thead>
+<tr>
+<th>x1                   x2</th>
+<th>$ h _ \Theta (x)$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0                        0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0                        1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1                        0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1                        1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p><strong>OR Function：</strong><br>$$<br>h _ \Theta (x) = g(-10 + 20 x _ 1 + 20 x _ 2)<br>$$</p>
+<table>
+<thead>
+<tr>
+<th>x1                   x2</th>
+<th>$ h _ \Theta (x)$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0                        0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0                        1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1                        0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1                        1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h2 id="8-6-Examples-and-Intuitions-II"><a href="#8-6-Examples-and-Intuitions-II" class="headerlink" title="8.6 Examples and Intuitions II"></a>8.6 Examples and Intuitions II</h2><p><strong>NOT Function：</strong><br>$$<br>h _ \Theta (x) = g(10 - 20 x _ 1)<br>$$</p>
+<table>
+<thead>
+<tr>
+<th>x1</th>
+<th>$ h _ \Theta $</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p><strong>$(NOT \ \ x _ 1) AND (NOT \ \ x _ 2)$：</strong><br>$$<br>h _ \Theta (x) = g(10 - 20 x _ 1 - 20 x _ 2)<br>$$</p>
+<table>
+<thead>
+<tr>
+<th>x1                   x2</th>
+<th>$ h _ \Theta (x)$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0                        0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0                        1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1                        0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1                        1</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/15.png" alt="img"></p>
+<h2 id="9-1-Cost-Function"><a href="#9-1-Cost-Function" class="headerlink" title="9.1 Cost Function"></a>9.1 Cost Function</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/16.png" alt="img"></p>
+<blockquote>
+<p>K：代表分类预测输出有K种结果</p>
+<p>L：神经网络层数</p>
+<p>$ s _ l $：代表第 l 层神经单元的个数(不包含偏置单元)</p>
+<p>$ y _ k ^ {(i)} $：预测结果向量的第 k 个分量</p>
+<p>$ x ^ {(i)} $：m组训练样本中的第 i 个</p>
+</blockquote>
+<p><strong>对正则项的理解：</strong></p>
+<blockquote>
+<p>因为$ \Theta ^ {(j)} $的维度是$ s _ {j+1} \times (s _ j + 1) $，其中的 +1 代表着偏置项，正则化的过程中不用加入三层求和里，最里面的一层代表着对某一列求和，第二层代表着对所有列求和，至此，针对第 l 个参数矩阵除偏置项外的所有矩阵元素求和完毕；紧接着，最外面一层求和，对所有的偏置矩阵求和</p>
+</blockquote>
 
       
 
