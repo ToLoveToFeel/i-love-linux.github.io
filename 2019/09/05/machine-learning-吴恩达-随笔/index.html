@@ -32,7 +32,23 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/14.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/15.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/16.png">
-<meta property="og:updated_time" content="2019-09-08T03:10:49.573Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/17.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/18.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/19.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/20.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/21.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/22.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/23.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/24.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/25.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/26.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/27.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/28.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/29.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/30.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/31.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/32.png">
+<meta property="og:updated_time" content="2019-09-08T13:19:47.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="machine-learning(吴恩达)随笔">
 <meta name="twitter:description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
@@ -347,7 +363,7 @@
 <blockquote>
 <p>如果$ \lambda $ &gt; 0，则上式一定存在(可以求逆)</p>
 </blockquote>
-<h2 id="Reguilarized-Logistic-Regression-逻辑回归正则化"><a href="#Reguilarized-Logistic-Regression-逻辑回归正则化" class="headerlink" title="Reguilarized Logistic Regression(逻辑回归正则化)"></a>Reguilarized Logistic Regression(逻辑回归正则化)</h2><p><strong>Cost Function：</strong><br>$$<br>J(\theta) = -\frac{1}{m}[\sum _ {i=1} ^ {m} y ^ {(i)} \log h _ \theta(x ^ {(i)}) + (1 - y ^ {(i)}) \log (1 - h _ \theta (x ^ {(i)})) - \frac{\lambda}{2} \sum _ {j=1} ^ {n} \theta _ j ^ 2]<br>$$<br><strong>梯度下降：</strong></p>
+<h2 id="7-4-Reguilarized-Logistic-Regression-逻辑回归正则化"><a href="#7-4-Reguilarized-Logistic-Regression-逻辑回归正则化" class="headerlink" title="7.4 Reguilarized Logistic Regression(逻辑回归正则化)"></a>7.4 Reguilarized Logistic Regression(逻辑回归正则化)</h2><p><strong>Cost Function：</strong><br>$$<br>J(\theta) = -\frac{1}{m}[\sum _ {i=1} ^ {m} y ^ {(i)} \log h _ \theta(x ^ {(i)}) + (1 - y ^ {(i)}) \log (1 - h _ \theta (x ^ {(i)})) - \frac{\lambda}{2} \sum _ {j=1} ^ {n} \theta _ j ^ 2]<br>$$<br><strong>梯度下降：</strong></p>
 <p>Repeat{<br>$$<br>\theta _ 0 := \theta _ 0 - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ 0 ^ {(i)} \bigr)<br>\\<br>\theta _ j := \theta _ j - \alpha \bigl[ \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ j ^ {(i)} \bigr) + \frac{\lambda}{m} \theta _ j \bigr] \quad (j=1,2,3,…n)<br>$$<br>}</p>
 <h2 id="8-3-Model-Representation-I"><a href="#8-3-Model-Representation-I" class="headerlink" title="8.3 Model Representation I"></a>8.3 Model Representation I</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/13.png" alt="img"></p>
 <blockquote>
@@ -355,6 +371,9 @@
 </blockquote>
 <h2 id="8-4-Model-Representation-II"><a href="#8-4-Model-Representation-II" class="headerlink" title="8.4 Model Representation II"></a>8.4 Model Representation II</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/14.png" alt="img"></p>
 <p><font color="red">forward propagation(前向传播)：</font>从输入层到隐藏层再到输出层依次计算激励的过程</p>
+<blockquote>
+<p>$ \Theta _ {23} ^ {(1)}$的含义：这是一个实数，上标 1 的含义是这是从第一层到第二层的参数；下标 23 的含义是：2代表该参数是为了计算该层的第二个目标值的(即$  a _ 2 $)，3代表该参数是为了求该层第二个目标值的第 3 个参数(参数从第 0 个数起).</p>
+</blockquote>
 <h2 id="8-5-Examples-and-Intuitions-I"><a href="#8-5-Examples-and-Intuitions-I" class="headerlink" title="8.5 Examples and Intuitions I"></a>8.5 Examples and Intuitions I</h2><p><strong>AND Function：</strong><br>$$<br>h _ \Theta (x) = g(-30 + 20 x _ 1 + 20 x _ 2)<br>$$</p>
 <table>
 <thead>
@@ -460,6 +479,66 @@
 <blockquote>
 <p>因为$ \Theta ^ {(j)} $的维度是$ s _ {j+1} \times (s _ j + 1) $，其中的 +1 代表着偏置项，正则化的过程中不用加入三层求和里，最里面的一层代表着对某一列求和，第二层代表着对所有列求和，至此，针对第 l 个参数矩阵除偏置项外的所有矩阵元素求和完毕；紧接着，最外面一层求和，对所有的偏置矩阵求和</p>
 </blockquote>
+<h2 id="9-2-Backpropagation-Algorithm-反向传播"><a href="#9-2-Backpropagation-Algorithm-反向传播" class="headerlink" title="9.2 Backpropagation Algorithm(反向传播)"></a>9.2 Backpropagation Algorithm(反向传播)</h2><p><strong>复习前向传播：</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/17.png" alt="img"></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/18.png" alt="img"></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/19.png" alt="img"></p>
+<p>**”error” of node $j$ in layer $l$ :   **$ \delta _ j ^ {(l)} $</p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/20.png" alt="img"></p>
+<p><strong>忽略正则项，则：</strong><br>$$<br>\frac{\partial}{\partial \Theta _{ij} ^ {(l)}} J(\Theta) = a _ j ^ {(l)} \delta _ i ^ {(l + 1)}<br>$$<br><img src="/2019/09/05/machine-learning-吴恩达-随笔/21.png" alt="img"></p>
+<h2 id="9-6-Random-Initialization"><a href="#9-6-Random-Initialization" class="headerlink" title="9.6 Random Initialization"></a>9.6 Random Initialization</h2><p>神经网络的参数需要随机初始化</p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/22.png" alt="img"></p>
+<h2 id="9-7-Putting-It-Together"><a href="#9-7-Putting-It-Together" class="headerlink" title="9.7 Putting It Together"></a>9.7 Putting It Together</h2><p><strong>神经网络的训练过程：</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/23.png" alt="img"></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/24.png" alt="img"></p>
+<blockquote>
+<ol>
+<li>随机初始化参数</li>
+<li>对样本中的每一个数据通过前向传播计算出$ h _ \Theta (x ^ (i)) $</li>
+<li>计算$ J(\Theta) $</li>
+<li>通过反向传播算法计算$ \frac{\partial}{\partial \Theta _ {jk} ^ {(l)}} J(\Theta) $</li>
+<li>使用梯度检验比较梯度检验和第 4 步算出的结果，检验反向传播算法的正确性</li>
+<li>用梯度检验或者更高级的优化算法最小化$ J(\Theta) $以获得最好的参数</li>
+</ol>
+</blockquote>
+<h2 id="10-3-Model-Selection-and-Train-Validation-Test-Sets"><a href="#10-3-Model-Selection-and-Train-Validation-Test-Sets" class="headerlink" title="10.3 Model Selection and Train_Validation_Test Sets"></a>10.3 Model Selection and Train_Validation_Test Sets</h2><p><font color="red">模型选择：</font>例如确定某组数据最合适的多项式次数是几次，怎样选择正确的特征来构造学习算法，或者需要选择正则化参数中的$ \lambda $等.</p>
+<p><strong>只将数据集划分为训练集和测试集有什么问题？</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/25.png" alt="img"></p>
+<blockquote>
+<p>对上图解释：比如从上面10个模型中选择一个合适的模型，我们用训练集(70%)训练出10个分类器，对于每个分类器我们用测试集(30%)数据计算对应的代价函数值大小，选择代价最小的一个作为结果。上面的方法存在的问题：最终选择的分类器对测试集可能有很好的泛化效果，但对新的数据不一定有很好的效果。</p>
+</blockquote>
+<p><strong>针对上面的问题，怎么解决？</strong></p>
+<blockquote>
+<p>将原始数据集分成三份，即训练集(60%)，<strong>验证集(20%)</strong>，测试集(20%)；用训练集训练，<strong>验证集(cross validation)</strong>验证哪组参数最优，最后用测试集测试泛化性能.</p>
+</blockquote>
+<h2 id="10-4-Diagnosing-Bias-vs-Variance-判断训练的结果是偏差还是方差"><a href="#10-4-Diagnosing-Bias-vs-Variance-判断训练的结果是偏差还是方差" class="headerlink" title="10.4 Diagnosing Bias vs. Variance(判断训练的结果是偏差还是方差)"></a>10.4 Diagnosing Bias vs. Variance(判断训练的结果是偏差还是方差)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/26.png" alt="img"></p>
+<blockquote>
+<p>分析上图，可知：</p>
+<p>high bias(高偏差)：$ J _ {cv} (\theta) $(or $ J _ {test} (\theta) $)和$ J _ {train} (\theta)$都比较大</p>
+<p>high variance(高方差)：$ J _ {cv} (\theta) $(or $ J _ {test} (\theta) $)比较大，$ J _ {train} (\theta)$都比较小</p>
+</blockquote>
+<h2 id="10-5-Regularization-and-Bias-Variance-正则化和偏差方差"><a href="#10-5-Regularization-and-Bias-Variance-正则化和偏差方差" class="headerlink" title="10.5 Regularization and Bias_Variance(正则化和偏差方差)"></a>10.5 Regularization and Bias_Variance(正则化和偏差方差)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/27.png" alt="img"></p>
+<blockquote>
+<p>正则化的最初目的是消除过拟合，但过度正则化的结果会导致欠拟合</p>
+<p>分析上图，可知：$ \lambda $过大会导致偏差大，$ \lambda $过小会导致方差大</p>
+</blockquote>
+<h2 id="10-6-Learning-Curve-学习曲线"><a href="#10-6-Learning-Curve-学习曲线" class="headerlink" title="10.6 Learning Curve(学习曲线)"></a>10.6 Learning Curve(学习曲线)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/28.png" alt="img"></p>
+<blockquote>
+<p>随着样本的增加，训练集上总误差会增加，交叉验证集上误差会减小</p>
+</blockquote>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/29.png" alt="img"></p>
+<blockquote>
+<p>处于high bias(高偏差)状态，增加训练数据没有帮助</p>
+</blockquote>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/30.png" alt="img"></p>
+<blockquote>
+<p>处于high variance(高方差)，增加训练数据有用</p>
+</blockquote>
+<h2 id="10-7-Deciding-What-to-Do-Next-Revisited"><a href="#10-7-Deciding-What-to-Do-Next-Revisited" class="headerlink" title="10.7 Deciding What to Do Next Revisited"></a>10.7 Deciding What to Do Next Revisited</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/31.png" alt="img"></p>
+<blockquote>
+<p>针对不同的问题的解决办法</p>
+</blockquote>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/32.png" alt="img"></p>
 
       
 
