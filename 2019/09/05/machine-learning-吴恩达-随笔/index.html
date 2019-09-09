@@ -48,7 +48,13 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/30.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/31.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/32.png">
-<meta property="og:updated_time" content="2019-09-08T13:19:47.255Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/33.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/34.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/35.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/36.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/37.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/38.png">
+<meta property="og:updated_time" content="2019-09-09T12:41:47.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="machine-learning(吴恩达)随笔">
 <meta name="twitter:description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
@@ -539,6 +545,89 @@
 <p>针对不同的问题的解决办法</p>
 </blockquote>
 <p><img src="/2019/09/05/machine-learning-吴恩达-随笔/32.png" alt="img"></p>
+<h2 id="11-2-Error-Analysis-误差分析"><a href="#11-2-Error-Analysis-误差分析" class="headerlink" title="11.2 Error Analysis(误差分析)"></a>11.2 Error Analysis(误差分析)</h2><p><strong>Recommended approach(推荐的方法)：</strong></p>
+<ul>
+<li>快速构建一个简单的算法并且能够运行(结果好坏无所谓)，并且在交叉验证集上测试该分类器</li>
+<li>画出学习曲线以决定之后改进的方向，是需要更多的数据，需要更多的特征，等等</li>
+<li>误差分析，比如对于分类问题，查看在交叉验证集上哪些被错误分类，哪些分类正确，已确定之后的改进方向；比如垃圾邮件分类，有100封垃圾邮件被认为是正常邮件，其中12封和药品相关，4封和推销假产品有关，53封和钓鱼网站有关，31封其他类型的邮件，那么我之后的应该花费更多的时间在钓鱼邮件上。之后通过在交叉验证集上测试更改的效果，观察错误分类的邮件数目是否减少，从而确定这种改进是否有效。</li>
+</ul>
+<h2 id="11-3-Error-Metrics-For-Skewed-Classes-偏斜类的错误度量"><a href="#11-3-Error-Metrics-For-Skewed-Classes-偏斜类的错误度量" class="headerlink" title="11.3 Error Metrics For Skewed Classes(偏斜类的错误度量)"></a>11.3 Error Metrics For Skewed Classes(偏斜类的错误度量)</h2><p><font color="red">Skewed Classes(偏斜类)：</font>正例和反例的比例非常接近一个极端的现象。</p>
+<p><font color="red">混淆矩阵：</font></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/33.png" alt="img"></p>
+<p><font color="red">查准率(准确率)：</font>预测为正例中真实正例的比例<br>$$<br>P = \frac{TP}{TP + FP}<br>$$<br><font color="red">查全率(召回率)：</font>真实正例中预测正例所占的比例</p>
+<blockquote>
+<p>查准率和查全率是一对矛盾的度量，一般一高另一个就会低，通畅只有在一些简单的任务中，两者都高</p>
+</blockquote>
+<p>$$<br>R = \frac{TP}{TP + FN}<br>$$</p>
+<blockquote>
+<p>通过查准率和查全率，我们可以很好地评价我们的模型是否很好，及时训练集是偏斜类</p>
+</blockquote>
+<p><font color="red">F1：</font><br>$$<br>F1 = \frac{2 \times P \times R}{P + R} = \frac{2 \cdot TP}{样例总数 + TP - TN}<br>$$</p>
+<p>$$<br>F_\beta = \frac{(1 + \beta ^ 2) \times P \times R}{(\beta ^ 2 \times P) + R}<br>$$</p>
+<blockquote>
+<p>$$<br>\beta &gt; 1时查全率有更大影响，\beta &lt; 1是查准率影响更大<br>$$</p>
+</blockquote>
+<h2 id="11-5-Data-For-Machine-Learning-机器学习中的数据"><a href="#11-5-Data-For-Machine-Learning-机器学习中的数据" class="headerlink" title="11.5 Data For Machine Learning(机器学习中的数据)"></a>11.5 Data For Machine Learning(机器学习中的数据)</h2><p><strong>机器学习中设置更多特征(有用特征)</strong>会得到一个低偏差的分类器</p>
+<p><strong>使用大量训练数据</strong>训练出的模型不大可能过拟合，即低方差</p>
+<p>结合上述两者，可以得到低偏差和低方差的分类器</p>
+<blockquote>
+<p>如何确定特征是否充足，是否有用？</p>
+<p>当人类专家看到你提供的特征时，是否能够据此给出预测；比如预测房子的价格，如果只给出房子的大小，作为人类，是无法给出预测的，因为还需要判断房子的地点，是否使用过，使用时间长短，楼层数，装修程度等等。</p>
+</blockquote>
+<h2 id="12-1-Optimization-Objective-优化目标"><a href="#12-1-Optimization-Objective-优化目标" class="headerlink" title="12.1 Optimization Objective(优化目标)"></a>12.1 Optimization Objective(优化目标)</h2><p><strong>SVM中的Cost Function $ J(\theta) $为：</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/34.png" alt="img"></p>
+<h2 id="12-3-Mathematics-Behind-Large-Margin-Classification-大间距分类下的数学原理"><a href="#12-3-Mathematics-Behind-Large-Margin-Classification-大间距分类下的数学原理" class="headerlink" title="12.3 Mathematics Behind Large Margin Classification(大间距分类下的数学原理)"></a>12.3 Mathematics Behind Large Margin Classification(大间距分类下的数学原理)</h2><p><strong>SVM会选择大间距分类，简单解释如下：</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/35.png" alt="img"></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/36.png" alt="img"></p>
+<h2 id="12-4-Kernels-I-核函数"><a href="#12-4-Kernels-I-核函数" class="headerlink" title="12.4 Kernels I(核函数)"></a>12.4 Kernels I(核函数)</h2><p>$$<br>h_\theta(x ^ {(i)}) = \theta _ 0 x _ 0 + \theta _ 1 x _ 1  + \theta _ 2 x _ 2 + \theta _3 x _ 1 x _ 2 + \theta _ 4 x _ 1 ^ 2 + \theta _ 5 x _ 2 ^ 2 + \ …<br>$$</p>
+<p>对于其中的各种特征，我们可以成各种函数<br>$$<br>h_\theta(x ^ {(i)}) = \theta _ 0 f _ 0 + \theta _ 1 f _ 1  + \theta _ 2 f _ 2 + \theta _3 f _ 3 + \theta _ 4 f _ 4 + \theta _ 5 f _ 5 + \ …<br>$$<br>这里的各个f就是核函数，可以有不同的定义，一种定义是：给定 x ，依据标记 $ l $ 计算新特征，如高斯核函数定义如下：<br>$$<br>f _ 1 = simility(x, l ^ {(1)}) = exp(-\frac{||x - l ^ {(1)}|| ^ 2}{2 \sigma ^ 2})    \\<br>f _ 2 = simility(x, l ^ {(2)}) = exp(-\frac{||x - l ^ {(2)}|| ^ 2}{2 \sigma ^ 2})    \\<br>f _ 3 = simility(x, l ^ {(3)}) = exp(-\frac{||x - l ^ {(3)}|| ^ 2}{2 \sigma ^ 2})    \\<br>……<br>$$</p>
+<blockquote>
+<p>如果$x \approx l ^ {(1)} $，则$ f _ 1 \approx 1$.</p>
+<p>如果$ x $远离$ l ^ {(1)} $，则$ f _ 1 \approx 0 $.</p>
+</blockquote>
+<p><strong>高斯核函数中$ \sigma $对函数图像的影响：</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/37.png" alt="img"></p>
+<h2 id="12-5-Kernels-II-核函数"><a href="#12-5-Kernels-II-核函数" class="headerlink" title="12.5 Kernels II(核函数)"></a>12.5 Kernels II(核函数)</h2><p>给定数据集$(x ^ {(1)}, y ^{(1)}), (x ^ {(2)}, y ^{(2)}),…, (x ^ {(m)}, y ^{(m)})$；选择标记$ l ^ {(1)} = x ^ {(1)}, l ^ {(2)} = x ^ {(2)},…,l ^ {(m)} = x ^ {(m)} $.</p>
+<p>针对每一个数据集中的$ x $(可以来自训练集，可以来自交叉验证集，也可以来自测试集，是一个标量)：<br>$$<br>f _ 1 = similarity(x, l ^ {(1)})    \\<br>f _ 2 = similarity(x, l ^ {(2)})    \\<br>……    \\<br>f _ m = similarity(x, l ^ {(m)})    \\<br>$$<br>例如，针对数据集中的某一个数据$ (x ^ {(i)}, y ^{(i)}) $：<br>$$<br>f _ 1 ^ {(i)} = similarity(x ^ {(i)}, l ^ {(1)})    \\<br>f _ 2 ^ {(i)} = similarity(x ^ {(i)}, l ^ {(2)})    \\<br>……    \\<br>f _ i ^ {(i)} = similarity(x ^ {(i)}, l ^ {(i)})      \\<br>……    \\<br>f _ m ^ {(i)} = similarity(x ^ {(i)}, l ^ {(m)})    \\<br>$$<br>其中$ f _ i ^ {(i)} = similarity(x ^ {(i)}, l ^ {(i)}) = exp(-\frac{0}{2 \sigma ^ 2}) = 1 $.</p>
+<p>则此时的向量$ x ^ {(i)} $通过这m个高斯核函数映射为一个另一个输入向量$f$，如下：<br>$$<br>f ^ {(i)} = (f _ 0 ^ {(i)}, f _ 1 ^ {(i)}, f _ 2 ^ {(i)}, … ,f _ m ^ {(i)}) \qquad f _ 0 ^ {(i)} = 1<br>$$</p>
+<hr>
+<p><strong>SVM with Kernels：</strong></p>
+<p>假设训练好SVM模型，给定输入x，怎么做预测？</p>
+<blockquote>
+<p>给定x，计算新特征$ f \in \Bbb R ^ {m+1} $，如果$ \theta ^ T f \geq 0 $，预测y=1</p>
+</blockquote>
+<p>如何训练？<br>$$<br>\min _ \theta J(\theta) = \min _ \theta (C[\sum _ {i=1} ^ m y ^ {(i)} cost _ 1 (\theta ^ T f ^ {(i)}) + (1 - y ^ {(i)}) cost _ 0 (\theta ^ T f ^ {(i)})] \ + \ \frac{1}{2} \sum _ {j=1} ^ {m} \theta _ j ^ 2)<br>$$<br>有时候将$ \sum _ {j=1} ^ {m} \theta _ j ^ 2 $ 替换为$ \theta ^ T M \theta $ . (M和核函数有关)</p>
+<hr>
+<p><strong>SVM parameter：</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/38.png" alt="img"></p>
+<h2 id="12-6-Using-An-SVM-SVM的使用"><a href="#12-6-Using-An-SVM-SVM的使用" class="headerlink" title="12.6 Using An SVM(SVM的使用)"></a>12.6 Using An SVM(SVM的使用)</h2><p><strong>我们可以 使用SVM软件包(例如:liblinear，libsvm，…)去求解参数</strong>，但我们事先仍需要确定一些内容</p>
+<ul>
+<li>选择参数C</li>
+<li>确定核函数<ol>
+<li>线性核函数(就是普通的逻辑回归)。适合特征多，样本少的情况</li>
+<li>高斯核函数，需要选择参数$ \sigma ^ 2 $。适合特征少，样本多的情况</li>
+</ol>
+</li>
+<li>如果需要构造核函数，构造自己的核函数(注意需要<strong>特征缩放</strong>)</li>
+</ul>
+<blockquote>
+<p>选择的核函数必须满足”默塞尔定理”</p>
+<p>其他的一些核函数：Polynomial kernel(多项式核函数)，$ k(x, l) = (x ^ T l + const) ^ {degree}$；String kernel(字符串核函数)；chi-seqare kernel(卡方核函数)；histogram intersection kernel(直方相交核函数)……</p>
+</blockquote>
+<hr>
+<p><strong>SVM的多分类问题：</strong></p>
+<ul>
+<li>许多SVM包可以调用</li>
+<li>也可以使用one-vs-all 方法</li>
+</ul>
+<hr>
+<p><strong>逻辑回归</strong>和<strong>SVM</strong>的选择问题</p>
+<p>n 代表特征的数量，m 代表训练样本的数量</p>
+<ul>
+<li>如果 n 很大(相对于m)：选择<strong>逻辑回归</strong>或者<strong>线性核函数</strong></li>
+<li>如果 n 小，m 比较大(不是特别大)：使用<strong>带高斯核函数的SVM</strong></li>
+<li>如果 n 小，m 很大：创建添加更多的特征，然后使用<strong>逻辑回归</strong>或者<strong>线性核函数</strong></li>
+</ul>
 
       
 
@@ -837,10 +926,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">R</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Visual Stdio</a>
               </li>
              
@@ -858,6 +943,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">math</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">R</a>
               </li>
             
             <div class="clearfix"></div>
