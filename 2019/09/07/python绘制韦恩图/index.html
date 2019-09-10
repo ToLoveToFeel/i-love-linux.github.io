@@ -8,21 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>python绘制韦恩图 | i-love-linux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先需要安装 matplotlib 和 matplotlib_venn，打开cmd  pip  install  matplotlib pip  install  matplotlib_venn ![img](python绘制韦恩图/1.png)   matplotlib_venn只能绘制两组或者三组数据的venn图，下面是代码展示以及输出结果  两组数据 1234567from matplot">
+  <meta name="description" content="首先需要安装 matplotlib 和 matplotlib_venn，打开cmd  pip  install  matplotlib pip  install  matplotlib_venn     matplotlib_venn只能绘制两组或者三组数据的venn图，下面是代码展示以及输出结果">
 <meta name="keywords" content="python,matplotlib">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python绘制韦恩图">
 <meta property="og:url" content="http://yoursite.com/2019/09/07/python绘制韦恩图/index.html">
 <meta property="og:site_name" content="i-love-linux">
-<meta property="og:description" content="首先需要安装 matplotlib 和 matplotlib_venn，打开cmd  pip  install  matplotlib pip  install  matplotlib_venn ![img](python绘制韦恩图/1.png)   matplotlib_venn只能绘制两组或者三组数据的venn图，下面是代码展示以及输出结果  两组数据 1234567from matplot">
+<meta property="og:description" content="首先需要安装 matplotlib 和 matplotlib_venn，打开cmd  pip  install  matplotlib pip  install  matplotlib_venn     matplotlib_venn只能绘制两组或者三组数据的venn图，下面是代码展示以及输出结果">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/09/07/python绘制韦恩图/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/07/python绘制韦恩图/2.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/07/python绘制韦恩图/3.png">
-<meta property="og:updated_time" content="2019-09-07T08:43:36.037Z">
+<meta property="og:updated_time" content="2019-09-10T10:20:26.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python绘制韦恩图">
-<meta name="twitter:description" content="首先需要安装 matplotlib 和 matplotlib_venn，打开cmd  pip  install  matplotlib pip  install  matplotlib_venn ![img](python绘制韦恩图/1.png)   matplotlib_venn只能绘制两组或者三组数据的venn图，下面是代码展示以及输出结果  两组数据 1234567from matplot">
-<meta name="twitter:image" content="http://yoursite.com/2019/09/07/python绘制韦恩图/2.png">
+<meta name="twitter:description" content="首先需要安装 matplotlib 和 matplotlib_venn，打开cmd  pip  install  matplotlib pip  install  matplotlib_venn     matplotlib_venn只能绘制两组或者三组数据的venn图，下面是代码展示以及输出结果">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/07/python绘制韦恩图/1.png">
   
     <link rel="alternative" href="/atom.xml" title="i-love-linux" type="application/atom+xml">
   
@@ -183,11 +184,14 @@
 </blockquote>
 <center>pip  install  matplotlib</center>
 <center>pip  install  matplotlib_venn</center>
-![img](python绘制韦恩图/1.png)
 
+
+<p><img src="/2019/09/07/python绘制韦恩图/1.png" alt="img"></p>
 <blockquote>
 <p>matplotlib_venn只能绘制两组或者三组数据的venn图，下面是代码展示以及输出结果</p>
 </blockquote>
+<a id="more"></a>
+
 <p><strong>两组数据</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> matplotlib_venn <span class="keyword">import</span> venn2</span><br><span class="line"></span><br><span class="line">venn2(subsets = [set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]), set([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>])], set_labels = (<span class="string">'set1'</span>, <span class="string">'set2'</span>), set_colors = (<span class="string">'r'</span>,<span class="string">'g'</span>))</span><br><span class="line"></span><br><span class="line">plt.savefig(<span class="string">'2'</span>, dpi = <span class="number">100</span>) <span class="comment">#保存为2.png，dpi为输出图片清晰度</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
@@ -482,7 +486,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+                <a href="javascript:void(0)" class="js-tag color3">PS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,15 +494,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Visual Stdio</a>
+                <a href="javascript:void(0)" class="js-tag color2">R</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -518,7 +514,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">R</a>
+                <a href="javascript:void(0)" class="js-tag color3">Visual Stdio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
               </li>
             
             <div class="clearfix"></div>

@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/07/python绘制各种图形/5.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/07/python绘制各种图形/6.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/07/python绘制各种图形/7.png">
-<meta property="og:updated_time" content="2019-09-07T08:59:00.169Z">
+<meta property="og:updated_time" content="2019-09-10T10:17:11.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python绘制各种图形">
 <meta name="twitter:description" content="pyplot的子绘图区域方式一123456789101112131415161718192021import matplotlib.pyplot as pltimport numpy as npa = np.arange(0.0, 5.0, 0.02)def cos():    plt.plot(a, np.cos(2*np.pi*a))plt.subplot2grid((3,3), (0,0),">
@@ -186,10 +186,12 @@
         <h2 id="pyplot的子绘图区域"><a href="#pyplot的子绘图区域" class="headerlink" title="pyplot的子绘图区域"></a>pyplot的子绘图区域</h2><h3 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.arange(<span class="number">0.0</span>, <span class="number">5.0</span>, <span class="number">0.02</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cos</span><span class="params">()</span>:</span></span><br><span class="line">    plt.plot(a, np.cos(<span class="number">2</span>*np.pi*a))</span><br><span class="line"></span><br><span class="line">plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">0</span>,<span class="number">0</span>), colspan=<span class="number">3</span>)</span><br><span class="line">cos()</span><br><span class="line">plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">1</span>,<span class="number">0</span>), colspan=<span class="number">2</span>)</span><br><span class="line">cos()</span><br><span class="line">plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">1</span>,<span class="number">2</span>), rowspan=<span class="number">3</span>)</span><br><span class="line">cos()</span><br><span class="line">plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">2</span>,<span class="number">0</span>))</span><br><span class="line">cos()</span><br><span class="line">plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">2</span>,<span class="number">1</span>))</span><br><span class="line">cos()</span><br><span class="line"></span><br><span class="line">plt.savefig(<span class="string">'1'</span>, dpi = <span class="number">100</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/07/python绘制各种图形/1.png" alt="img"></p>
+<a id="more"></a>
+
 <h3 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> matplotlib.gridspec <span class="keyword">as</span> gridspec</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.arange(<span class="number">0.0</span>, <span class="number">5.0</span>, <span class="number">0.02</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cos</span><span class="params">()</span>:</span></span><br><span class="line">    plt.plot(a, np.cos(<span class="number">2</span>*np.pi*a), <span class="string">'r'</span>)</span><br><span class="line"></span><br><span class="line">gs = gridspec.GridSpec(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">0</span>, :])</span><br><span class="line">cos()</span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">1</span>, :<span class="number">-1</span>])</span><br><span class="line">cos()</span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">1</span>:, <span class="number">-1</span>])</span><br><span class="line">cos()</span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">2</span>, <span class="number">0</span>])</span><br><span class="line">cos()</span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">2</span>, <span class="number">1</span>])</span><br><span class="line">cos()</span><br><span class="line"></span><br><span class="line">plt.savefig(<span class="string">'2'</span>, dpi = <span class="number">100</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/07/python绘制各种图形/2.png" alt="img"></p>
-<a id="more"></a>
+<!-- more -->
 
 <h2 id="pyplot饼图的绘制"><a href="#pyplot饼图的绘制" class="headerlink" title="pyplot饼图的绘制"></a>pyplot饼图的绘制</h2><h3 id="方式一-1"><a href="#方式一-1" class="headerlink" title="方式一"></a>方式一</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">labels = <span class="string">'Frogs'</span>, <span class="string">'Hogs'</span>, <span class="string">'Dogs'</span>, <span class="string">'Logs'</span></span><br><span class="line">sizes = [<span class="number">15</span>, <span class="number">30</span>, <span class="number">45</span>, <span class="number">10</span>]</span><br><span class="line">explode = (<span class="number">0</span>, <span class="number">0.1</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">plt.pie(sizes, explode=explode, labels=labels, autopct=<span class="string">'%1.1f%%'</span>,</span><br><span class="line">        shadow=<span class="literal">False</span>, startangle=<span class="number">90</span>)</span><br><span class="line">plt.axis(<span class="string">'tight'</span>)</span><br><span class="line"></span><br><span class="line">plt.savefig(<span class="string">'3'</span>, dpi = <span class="number">100</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
@@ -493,7 +495,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+                <a href="javascript:void(0)" class="js-tag color3">PS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -501,15 +503,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Visual Stdio</a>
+                <a href="javascript:void(0)" class="js-tag color2">R</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -529,7 +523,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">R</a>
+                <a href="javascript:void(0)" class="js-tag color3">Visual Stdio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
               </li>
             
             <div class="clearfix"></div>

@@ -54,7 +54,20 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/36.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/37.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/38.png">
-<meta property="og:updated_time" content="2019-09-09T12:41:47.455Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/39.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/40.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/41.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/42.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/43.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/44.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/45.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/46.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/47.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/48.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/49.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/50.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/51.png">
+<meta property="og:updated_time" content="2019-09-10T13:06:42.563Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="machine-learning(吴恩达)随笔">
 <meta name="twitter:description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
@@ -628,6 +641,84 @@
 <li>如果 n 小，m 比较大(不是特别大)：使用<strong>带高斯核函数的SVM</strong></li>
 <li>如果 n 小，m 很大：创建添加更多的特征，然后使用<strong>逻辑回归</strong>或者<strong>线性核函数</strong></li>
 </ul>
+<h2 id="13-2-K-Means-Algorithm-K-Means算法"><a href="#13-2-K-Means-Algorithm-K-Means算法" class="headerlink" title="13.2 K-Means Algorithm(K-Means算法)"></a>13.2 K-Means Algorithm(K-Means算法)</h2><p><strong>算法过程：</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/39.png" alt="img"></p>
+<blockquote>
+<p>算法的两个步骤：</p>
+<p>1 对训练集中的每一个点划分到某个聚类中心中(Cluster assignment step)</p>
+<p>2 移动聚类中心</p>
+</blockquote>
+<h2 id="13-3-Optimization-objective-优化目标"><a href="#13-3-Optimization-objective-优化目标" class="headerlink" title="13.3 Optimization objective(优化目标)"></a>13.3 Optimization objective(优化目标)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/40.png" alt="img"></p>
+<h2 id="13-4-Random-Initialization-随机初始化"><a href="#13-4-Random-Initialization-随机初始化" class="headerlink" title="13.4 Random Initialization(随机初始化)"></a>13.4 Random Initialization(随机初始化)</h2><p><strong>局部最优：</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/41.png" alt="img"></p>
+<p><strong>如何得到一个比较好的结果，即使是局部最优？</strong></p>
+<blockquote>
+<p>随机初始化各个聚类中心，每个聚类中心都选择是样本点，运行K-Means算法，得到最优结果后记录$ J(c ^ {(1)},…,c ^ {(m)}, \mu _ 1, … , \mu _ k) $的值；对上述步骤重复50~1000次(假设 t 次)，得到 t 个结果，选择使得$ J(c ^ {(1)},…,c ^ {(m)}, \mu _ 1, … , \mu _ k) $最小的那个座位最终的聚类结果</p>
+<p>上述方法针对分成2-10个类比较有效，分的类别比较多的话 上述过程结果不一定很好</p>
+</blockquote>
+<h2 id="13-5-Choosing-the-Number-of-Cluster-选择聚类数数目"><a href="#13-5-Choosing-the-Number-of-Cluster-选择聚类数数目" class="headerlink" title="13.5 Choosing the Number of Cluster(选择聚类数数目)"></a>13.5 Choosing the Number of Cluster(选择聚类数数目)</h2><ul>
+<li>一般来说，聚类数目的选择是通过手动，人工输入或我们的经验来决定</li>
+<li>我们也可以用Elbow Method(“肘部原则”)来选择聚类数目，不过常常这种方法并不好用</li>
+</ul>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/42.png" alt="img"></p>
+<h2 id="14-1-Dimensionality-Reduction-降维"><a href="#14-1-Dimensionality-Reduction-降维" class="headerlink" title="14.1 Dimensionality Reduction(降维)"></a>14.1 Dimensionality Reduction(降维)</h2><p><strong>为什么要对数据进行降维？</strong></p>
+<ul>
+<li>数据压缩</li>
+<li>节省内存和空间</li>
+<li>加快机器学习算法运行速度</li>
+<li>数据可视化</li>
+</ul>
+<h2 id="14-3-Principal-Component-Analysis-主成分分析-PCA-Problem-Formulation"><a href="#14-3-Principal-Component-Analysis-主成分分析-PCA-Problem-Formulation" class="headerlink" title="14.3 Principal Component Analysis(主成分分析\PCA) Problem Formulation"></a>14.3 Principal Component Analysis(主成分分析\PCA) Problem Formulation</h2><p>主成分分析可以降维，比如从n维降到k维，其过程是找到k个n维向量，然后将所有的数据映射到这k个向量组成的空间中，使得投影距离的平方和最小；比如3维向量降成2维，其做法是找到2个3维向量，这两个向量可以构成一个平面，所有点映射到这个平面上，使得投影距离的平方和最小。</p>
+<h2 id="14-4-Principal-Component-Analysis-Algorithm-主成分分析算法"><a href="#14-4-Principal-Component-Analysis-Algorithm-主成分分析算法" class="headerlink" title="14.4  Principal Component Analysis Algorithm(主成分分析算法)"></a>14.4  Principal Component Analysis Algorithm(主成分分析算法)</h2><p><strong>目标是将n维空间中的点降到k维。具体做法如下：</strong></p>
+<p>1 计算协方差矩阵：<br>$$<br>\Sigma = \frac{1}{m} \sum _ {i = 1} ^ n (x ^ {(i)}) (x ^ {(i)}) ^ T<br>$$<br>如果<br>$$<br>X = \begin {bmatrix}<br>x ^ {(1)T}        \\<br>…            \\<br>x ^ {(m)T}<br>\end {bmatrix}<br>$$<br>则：<br>$$<br>\Sigma = \frac{1}{m} \cdot X ^ T \cdot X<br>$$<br>2 计算协方差矩阵的特征向量<br>$$<br>[U,S,V] = svd(\Sigma)<br>$$</p>
+<blockquote>
+<p>svd 代表奇异值分解</p>
+</blockquote>
+<p>3 $ U _ {reduce} = U (:,1:k) $</p>
+<blockquote>
+<p>第二步中求出的矩阵U是 n x n 的，该步骤取出该矩阵中前k列</p>
+</blockquote>
+<p>4 $ z = U _ {reduce} ^ T * x $</p>
+<blockquote>
+<p>z是k维向量</p>
+</blockquote>
+<p><strong>Matlab演示如下：</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/43.png" alt="img"></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/44.png" alt="img"></p>
+<h2 id="14-5-Choosing-the-Number-of-Principle-Components-选择降维的维数"><a href="#14-5-Choosing-the-Number-of-Principle-Components-选择降维的维数" class="headerlink" title="14.5 Choosing the Number of Principle Components(选择降维的维数)"></a>14.5 Choosing the Number of Principle Components(选择降维的维数)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/45.png" alt="img"></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/46.png" alt="img"></p>
+<h2 id="14-6-Reconstruction-form-Compressed-Representation-从压缩后的数据得到近似的原数据"><a href="#14-6-Reconstruction-form-Compressed-Representation-从压缩后的数据得到近似的原数据" class="headerlink" title="14.6 Reconstruction form Compressed Representation(从压缩后的数据得到近似的原数据)"></a>14.6 Reconstruction form Compressed Representation(从压缩后的数据得到近似的原数据)</h2><p>$$<br>X _ {approx} = U _ {reduce} * z<br>$$</p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/47.png" alt="img"></p>
+<h2 id="14-7-Advice-for-Applying-PCA-应用PCA的建议"><a href="#14-7-Advice-for-Applying-PCA-应用PCA的建议" class="headerlink" title="14.7 Advice for Applying PCA(应用PCA的建议)"></a>14.7 Advice for Applying PCA(应用PCA的建议)</h2><ul>
+<li>映射$ x ^ {(i)} -&gt; z ^ {(i)} $应该定义在只在训练集上执行PCA，在训练集上找到所有参数后，你可以应用这相同的映射到其他的样本中，比如交叉验证集合测试集;</li>
+<li>PCA应用场景：压缩(减小存储，加快速度)，可视化;</li>
+<li>用PCA去克服过拟合是一种十分糟糕的应用，因为PCA只对 x 进行压缩，不考虑 y 的影响，想要克服过拟合还是使用<strong>正则化</strong>;</li>
+<li>机器学习算法中不要上来就使用PCA，尽量使用原始数据，因为信息完整，除非你认为存在一个 原因导致不能工作，比如运行速度太慢，或者对存储要求过高</li>
+</ul>
+<h2 id="15-3-Algorithm"><a href="#15-3-Algorithm" class="headerlink" title="15.3 Algorithm"></a>15.3 Algorithm</h2><p><strong>异常检测算法：</strong></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/48.png" alt="img"></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/49.png" alt="img"></p>
+<h2 id="15-5-Anomaly-Detection-vs-Supervised-Learning-异常检测-vs-监督-学习"><a href="#15-5-Anomaly-Detection-vs-Supervised-Learning-异常检测-vs-监督-学习" class="headerlink" title="15.5 Anomaly Detection vs. Supervised Learning(异常检测 vs. 监督 学习)"></a>15.5 Anomaly Detection vs. Supervised Learning(异常检测 vs. 监督 学习)</h2><table>
+<thead>
+<tr>
+<th>异常检测</th>
+<th>监督学习</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>正例(异常)很少，反例很多</td>
+<td>正反例都很多</td>
+</tr>
+<tr>
+<td>会出现我们以前没有见过的异常</td>
+<td>未来预测的样本和当前的类别类似</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>异常检测和监督学习可以相互转换，例如网站欺骗检测，如果欺骗的例子很少，用异常检测，党欺骗的例子大量出现时，可以适应监督学习</p>
+</blockquote>
+<h2 id="15-6-Choosing-What-Features-to-Use-选择哪些作为特征"><a href="#15-6-Choosing-What-Features-to-Use-选择哪些作为特征" class="headerlink" title="15.6 Choosing What Features to Use(选择哪些作为特征)"></a>15.6 Choosing What Features to Use(选择哪些作为特征)</h2><p><strong>如果对于特征 x 没有服从高斯分布，变换为高斯分布：</strong><br>$$<br>xNew = \log x    \\<br>xNew = x ^ {0.05}    \\<br>……<br>$$<br><img src="/2019/09/05/machine-learning-吴恩达-随笔/50.png" alt="img"></p>
+<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/51.png" alt="img"></p>
 
       
 
@@ -910,7 +1001,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+                <a href="javascript:void(0)" class="js-tag color3">PS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -918,15 +1009,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Visual Stdio</a>
+                <a href="javascript:void(0)" class="js-tag color2">R</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -946,7 +1029,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">R</a>
+                <a href="javascript:void(0)" class="js-tag color3">Visual Stdio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
               </li>
             
             <div class="clearfix"></div>
