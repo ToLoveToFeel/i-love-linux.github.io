@@ -152,6 +152,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-平方根倒数速算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/12/平方根倒数速算法/">平方根倒数速算法</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/12/平方根倒数速算法/" class="archive-article-date">
+  	<time datetime="2019-09-12T01:03:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 平方根倒数速算法</span></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">mysqrt</span><span class="params">(<span class="keyword">float</span> x)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="keyword">float</span> half = <span class="number">0.5f</span> * x;  </span><br><span class="line">    <span class="keyword">int</span> i = *(<span class="keyword">int</span> *)&amp;x;  </span><br><span class="line">    i = <span class="number">0x5f3759df</span> - (i&gt;&gt;<span class="number">1</span>);  </span><br><span class="line">    x = *(<span class="keyword">float</span> *)&amp;i;  </span><br><span class="line">    x = x * (<span class="number">1.5f</span> - half * x * x);  </span><br><span class="line">    <span class="keyword">return</span> x;  </span><br><span class="line">&#125;  </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> x = <span class="number">100</span> ;		<span class="comment">//期望结果0.1	</span></span><br><span class="line">	<span class="keyword">float</span> result = mysqrt(x);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%f\n"</span>,result);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/09/12/平方根倒数速算法/1.png" alt="img"></p>
+<p>参考网站：</p>
+<p><a href="https://blog.csdn.net/heloowird/article/details/21862251" target="_blank" rel="noopener">https://blog.csdn.net/heloowird/article/details/21862251</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">math</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">skill</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/12/平方根倒数速算法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-编译器快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -891,85 +973,6 @@
 
 
   
-    <article id="post-R语言中vector、matrix、array、dataframe、list的区别与联系" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/">R语言中vector、matrix、array、dataframe、list的区别与联系</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/" class="archive-article-date">
-  	<time datetime="2019-09-05T03:21:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>这几者的关系如下（为相互包含关系）：</strong></p>
-<p><img src="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/1.png" alt="img"></p>
-<hr>
-<p><strong>演示代码如下：</strong></p>
-        
-          <a class="article-more-a" href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">R</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1128,6 +1131,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">math</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">skill</a>
               </li>
              
               <li class="article-tag-list-item">
