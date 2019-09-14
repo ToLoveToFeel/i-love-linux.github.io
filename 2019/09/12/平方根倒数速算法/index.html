@@ -17,7 +17,7 @@
 <meta property="og:description" content="12345678910111213141516171819202122#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;// 平方根倒数速算法float mysqrt(float x)  &amp;#123;      float half = 0.5f * x;      int i = *(int *)&amp;amp;x;      i = 0x5f3759d">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/2019/09/12/平方根倒数速算法/1.png">
-<meta property="og:updated_time" content="2019-09-12T01:09:57.791Z">
+<meta property="og:updated_time" content="2019-09-14T13:21:16.932Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="平方根倒数速算法">
 <meta name="twitter:description" content="12345678910111213141516171819202122#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;// 平方根倒数速算法float mysqrt(float x)  &amp;#123;      float half = 0.5f * x;      int i = *(int *)&amp;amp;x;      i = 0x5f3759d">
@@ -179,6 +179,8 @@
       
         <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 平方根倒数速算法</span></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">mysqrt</span><span class="params">(<span class="keyword">float</span> x)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="keyword">float</span> half = <span class="number">0.5f</span> * x;  </span><br><span class="line">    <span class="keyword">int</span> i = *(<span class="keyword">int</span> *)&amp;x;  </span><br><span class="line">    i = <span class="number">0x5f3759df</span> - (i&gt;&gt;<span class="number">1</span>);  </span><br><span class="line">    x = *(<span class="keyword">float</span> *)&amp;i;  </span><br><span class="line">    x = x * (<span class="number">1.5f</span> - half * x * x);  </span><br><span class="line">    <span class="keyword">return</span> x;  </span><br><span class="line">&#125;  </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> x = <span class="number">100</span> ;		<span class="comment">//期望结果0.1	</span></span><br><span class="line">	<span class="keyword">float</span> result = mysqrt(x);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%f\n"</span>,result);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
+
 <p><img src="/2019/09/12/平方根倒数速算法/1.png" alt="img"></p>
 <p>参考网站：</p>
 <p><a href="https://blog.csdn.net/heloowird/article/details/21862251" target="_blank" rel="noopener">https://blog.csdn.net/heloowird/article/details/21862251</a></p>
@@ -294,6 +296,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/09/14/内存区域分配/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          内存区域分配
+        
+      </div>
+    </a>
   
   
     <a href="/2019/09/10/编译器快捷键/" id="article-nav-older" class="article-nav-link-wrap">
@@ -480,6 +491,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">C</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MEMORY</a>
               </li>
              
               <li class="article-tag-list-item">
