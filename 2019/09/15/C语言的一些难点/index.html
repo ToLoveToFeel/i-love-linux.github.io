@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/8 | i-love-linux</title>
+  <title>C语言的一些难点 | i-love-linux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="i-love-linux">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+  <meta name="description" content="对char (*(*x())[5])()的理解对于此类问题，关键点是找到用户自定义的变量名，这里是 x ，从它开始入手分析，另外一点就是运算符的优先级和方向，理解如下：">
+<meta name="keywords" content="C,endian">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言的一些难点">
+<meta property="og:url" content="http://yoursite.com/2019/09/15/C语言的一些难点/index.html">
 <meta property="og:site_name" content="i-love-linux">
+<meta property="og:description" content="对char (*(*x())[5])()的理解对于此类问题，关键点是找到用户自定义的变量名，这里是 x ，从它开始入手分析，另外一点就是运算符的优先级和方向，理解如下：">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/09/15/C语言的一些难点/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/15/C语言的一些难点/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/15/C语言的一些难点/3.png">
+<meta property="og:updated_time" content="2019-09-15T02:13:35.858Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="i-love-linux">
+<meta name="twitter:title" content="C语言的一些难点">
+<meta name="twitter:description" content="对char (*(*x())[5])()的理解对于此类问题，关键点是找到用户自定义的变量名，这里是 x ，从它开始入手分析，另外一点就是运算符的优先级和方向，理解如下：">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/15/C语言的一些难点/1.png">
   
     <link rel="alternative" href="/atom.xml" title="i-love-linux" type="application/atom+xml">
   
@@ -150,76 +159,252 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-C语言的一些难点" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/30/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-30T12:36:48.521Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/30/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      C语言的一些难点
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/30/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-08-30T04:39:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
+        
+        <a href="/2019/09/15/C语言的一些难点/" class="archive-article-date">
+  	<time datetime="2019-09-15T00:40:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-15</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/30/my-first-blog/">my first blog</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="对char-x-5-的理解"><a href="#对char-x-5-的理解" class="headerlink" title="对char (*(*x())[5])()的理解"></a>对char (*(*x())[5])()的理解</h2><p>对于此类问题，关键点是找到用户自定义的变量名，这里是 x ，从它开始入手分析，另外一点就是运算符的优先级和方向，理解如下：</p>
+<p><img src="/2019/09/15/C语言的一些难点/1.png" alt="img"></p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+<blockquote>
+<p>针对不同数据的说法如下：</p>
+<p>（1）数组：元素</p>
+<p>（2）指针：指向谁</p>
+<p>（3）函数：返回值</p>
+</blockquote>
+<h2 id="typedef"><a href="#typedef" class="headerlink" title="typedef"></a>typedef</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> int32;</span><br><span class="line">int32 my_A;		<span class="comment">//等价于  int my_A;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span>* STRING;</span><br><span class="line">STRING p;		<span class="comment">//等价于  char* p;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ARRAY[<span class="number">10</span>];</span><br><span class="line">ARRAY a;		<span class="comment">//等价于  int a[10];</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">char</span> <span class="params">(*myFunction)</span><span class="params">(<span class="keyword">int</span>)</span></span>; 	<span class="comment">//myFunction是一个指针，指向一个函数</span></span><br><span class="line">myFunction myFun; </span><br><span class="line"><span class="function"><span class="keyword">char</span> <span class="title">glFun</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123; <span class="keyword">return</span>;&#125; </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    myFun = glFun; </span><br><span class="line">    (*myFun)(<span class="number">2</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="如何判断计算机大小端"><a href="#如何判断计算机大小端" class="headerlink" title="如何判断计算机大小端"></a>如何判断计算机大小端</h2><p><font color="red">大端：</font>高地址存放数据的低位，例如对于数据0x12345678</p>
+<table>
+<thead>
+<tr>
+<th>内存地址</th>
+<th>存放内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x4000</td>
+<td>0x12</td>
+</tr>
+<tr>
+<td>0x4001</td>
+<td>0x34</td>
+</tr>
+<tr>
+<td>0x4002</td>
+<td>0x56</td>
+</tr>
+<tr>
+<td>0x4003</td>
+<td>0x78</td>
+</tr>
+</tbody></table>
+<p><font color="red">小端：</font>高地址存放数据的高位，例如对于数据0x12345678</p>
+<table>
+<thead>
+<tr>
+<th>内存地址</th>
+<th>存放内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x4000</td>
+<td>0x78</td>
+</tr>
+<tr>
+<td>0x4001</td>
+<td>0x56</td>
+</tr>
+<tr>
+<td>0x4002</td>
+<td>0x34</td>
+</tr>
+<tr>
+<td>0x4003</td>
+<td>0x12</td>
+</tr>
+</tbody></table>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">union</span> w</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">short</span> <span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">char</span> b;</span><br><span class="line">&#125; myUnion;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">checkEndian</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	myUnion.a = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> (<span class="number">1</span> == myUnion.b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(checkEndian())</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Little-endian\n"</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Big-endian\n"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/09/15/C语言的一些难点/2.png" alt="img"></p>
+<p><strong>另一种判断方式：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">checkEndian</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">short</span> a = <span class="number">0x0061</span>;</span><br><span class="line">	<span class="keyword">return</span> (<span class="string">'a'</span> == (<span class="keyword">char</span>)a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(checkEndian())</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Little-endian\n"</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Big-endian\n"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/09/15/C语言的一些难点/3.png" alt="img"></p>
+<h2 id="为什么c或c-打开文件后使用后必须关闭？"><a href="#为什么c或c-打开文件后使用后必须关闭？" class="headerlink" title="为什么c或c++打开文件后使用后必须关闭？"></a>为什么c或c++打开文件后使用后必须关闭？</h2><p>(1)容量限制</p>
+<p>(2)读写文件是在缓冲（内存）中进行的，不关闭可能未写入磁盘</p>
+<h2 id="c语言中由三种类型不能定义。"><a href="#c语言中由三种类型不能定义。" class="headerlink" title="c语言中由三种类型不能定义。"></a>c语言中由三种类型不能定义。</h2><p>（1）数组元素不能是函数，例如这样定义：int a[] ();</p>
+<p>（2）函数不能返回数组，例如这样定义：int f()[];</p>
+<p>（3）函数不能返回函数，例如这样定义：int f()();</p>
+<h2 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h2><p>当将指针传递给函数时，形参指针所指单元内容的改变将直接影响到实参指针所指向的单元的内容；而形参指针的改变并不影响与其对应的实参指针。</p>
+<h2 id="p和（-p）-5-的区别"><a href="#p和（-p）-5-的区别" class="headerlink" title="**p和（*p）[5]的区别"></a>**p和（*p）[5]的区别</h2><p>（1）int  **p;        int  *a[5];       p=a;</p>
+<p>（2）int （*P）[5];       int  a [M] [5];   p=a;</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">C</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">endian</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/15/C语言的一些难点/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/09/14/内存区域分配/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">内存区域分配</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -244,8 +429,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
