@@ -22,11 +22,13 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/4.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/5.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/6.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/11.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/12.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/7.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/8.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/9.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/10.png">
-<meta property="og:updated_time" content="2019-09-18T02:27:57.942Z">
+<meta property="og:updated_time" content="2019-09-18T08:05:53.849Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="simca-p使用">
 <meta name="twitter:description" content="实例1  FOODS数据：">
@@ -205,8 +207,23 @@
 <p>最后想说的一点是，Loading Scatter Plot图中越远离坐标原点的点对分类的影响越大。</p>
 <p><strong>DmodX</strong></p>
 <p>该图反应了每个样本对PCA模型的适应程度，超过红线说明适应的不好</p>
+<p><strong>X/Y Overview [M1]</strong></p>
+<p>R2代表解释能力(数学上再现训练集的能力)，Q2代表预测能力，均是希望越大越好 ，该图反映了每个自变量对总体解释能力和预测能力的影响，两者最好都在0.5以上；选择保留的主成分数不同，该图的值也不同。</p>
+<hr>
+<h3 id="选择几个主成分合适？"><a href="#选择几个主成分合适？" class="headerlink" title="选择几个主成分合适？"></a>选择几个主成分合适？</h3><p><img src="/2019/09/18/simca-p使用/11.png" alt="img"></p>
+<blockquote>
+<p>上图显示的是综合解释能力和预测能力，而X/Y Overview [M1]这个图显示的是每个变量对解释能力和预测能力的贡献</p>
+</blockquote>
+<p><img src="/2019/09/18/simca-p使用/12.jpg" alt="img"></p>
+<hr>
 <h3 id="Loading-Column-Plot"><a href="#Loading-Column-Plot" class="headerlink" title="Loading Column Plot"></a>Loading Column Plot</h3><p><img src="/2019/09/18/simca-p使用/7.png" alt="img"></p>
-<p>该图反应了哪些变量对于第一主成分的影响较大</p>
+<p>该图反应了哪些变量对于第一主成分的影响较大，或者说第一主成分很好的解释了哪些变量</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><ul>
+<li>对于参数$ R ^ 2 X 和 Q ^ 2 X $，有几个值得注意的事实，$ R ^ 2 X $不高的话$ Q ^ 2 X $ 也不可能很高；一般认为$ Q ^ 2 X $  &gt; 0.5，可以认为模型好，若$ Q ^ 2 X $ &gt; 0.9，则可以认为该模型十分优秀，但这也与实际应用十分相关；另外$ R ^ 2 X 和 Q ^ 2 X $差异必须足够小，一般差距在0.2~0.3之间。</li>
+<li>通过Score Scatter Plot图可以判断强异常值，通过DmodX可以发现中等异常值；在残差中识别异常值(此处指中等异常值)是很重要的，因为他们表示了在特征中缺乏同质性；对于强异常值，在后续的分析中应该剔除，但在以后的研究中应该关注这些强异常值由来的原因以及一些其他细节。</li>
+<li>为了提高PCA的精度和可靠性，我们应该拥有更多的特征；为了让PCA提供更多的信息，我们应该拥有更多样本。</li>
+</ul>
 <h2 id="实例2-IRIS"><a href="#实例2-IRIS" class="headerlink" title="实例2  IRIS"></a>实例2  IRIS</h2><p><img src="/2019/09/18/simca-p使用/8.png" alt="img"></p>
 <h3 id="VIP"><a href="#VIP" class="headerlink" title="VIP"></a>VIP</h3><p><img src="/2019/09/18/simca-p使用/9.png" alt="img"></p>
 <h3 id="Permutation"><a href="#Permutation" class="headerlink" title="Permutation"></a>Permutation</h3><p><img src="/2019/09/18/simca-p使用/10.png" alt="img"></p>
@@ -500,11 +517,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">R</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">R</a>
               </li>
              
               <li class="article-tag-list-item">
