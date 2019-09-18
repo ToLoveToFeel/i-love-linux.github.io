@@ -6,26 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>2-机器学习-模型评估与选择 | i-love-linux</title>
+  <title>simca-p使用 | i-love-linux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="机器学习(周志华)第二章  模型评估与选择2.1 经验误差与过拟合错误率：分类错误的样本数/样本总数 精度：1 - 错误率 误差：学习器的实际预测输出与样本的真实输出之间的误差 训练误差(经验误差)：学习器在训练集上的误差 泛化误差：学习器在新样本上的误差  我们希望泛化误差越小越好  过拟合：学习器把训练样本学得”太好了”；很有可能把训练样本自身的特点当做了所有潜在样本都会具有的一般性质(实际上">
-<meta name="keywords" content="machine learning">
+  <meta name="description" content="实例1  FOODS数据：">
+<meta name="keywords" content="simca-p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2-机器学习-模型评估与选择">
-<meta property="og:url" content="http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/index.html">
+<meta property="og:title" content="simca-p使用">
+<meta property="og:url" content="http://yoursite.com/2019/09/18/simca-p使用/index.html">
 <meta property="og:site_name" content="i-love-linux">
-<meta property="og:description" content="机器学习(周志华)第二章  模型评估与选择2.1 经验误差与过拟合错误率：分类错误的样本数/样本总数 精度：1 - 错误率 误差：学习器的实际预测输出与样本的真实输出之间的误差 训练误差(经验误差)：学习器在训练集上的误差 泛化误差：学习器在新样本上的误差  我们希望泛化误差越小越好  过拟合：学习器把训练样本学得”太好了”；很有可能把训练样本自身的特点当做了所有潜在样本都会具有的一般性质(实际上">
+<meta property="og:description" content="实例1  FOODS数据：">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/1.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/2.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/3.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/4.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/5.jpg">
-<meta property="og:updated_time" content="2019-09-05T12:45:13.917Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/6.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/7.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/8.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/9.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/simca-p使用/10.png">
+<meta property="og:updated_time" content="2019-09-18T02:27:57.942Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2-机器学习-模型评估与选择">
-<meta name="twitter:description" content="机器学习(周志华)第二章  模型评估与选择2.1 经验误差与过拟合错误率：分类错误的样本数/样本总数 精度：1 - 错误率 误差：学习器的实际预测输出与样本的真实输出之间的误差 训练误差(经验误差)：学习器在训练集上的误差 泛化误差：学习器在新样本上的误差  我们希望泛化误差越小越好  过拟合：学习器把训练样本学得”太好了”；很有可能把训练样本自身的特点当做了所有潜在样本都会具有的一般性质(实际上">
-<meta name="twitter:image" content="http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/1.jpg">
+<meta name="twitter:title" content="simca-p使用">
+<meta name="twitter:description" content="实例1  FOODS数据：">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/18/simca-p使用/1.png">
   
     <link rel="alternative" href="/atom.xml" title="i-love-linux" type="application/atom+xml">
   
@@ -161,136 +166,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2-机器学习-模型评估与选择" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-simca-p使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      2-机器学习-模型评估与选择
+      simca-p使用
     </h1>
   
 
         
-        <a href="/2019/09/03/2-机器学习-模型评估与选择/" class="archive-article-date">
-  	<time datetime="2019-09-03T02:25:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+        <a href="/2019/09/18/simca-p使用/" class="archive-article-date">
+  	<time datetime="2019-09-18T00:24:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="机器学习-周志华"><a href="#机器学习-周志华" class="headerlink" title="机器学习(周志华)"></a>机器学习(周志华)</h1><h2 id="第二章-模型评估与选择"><a href="#第二章-模型评估与选择" class="headerlink" title="第二章  模型评估与选择"></a>第二章  模型评估与选择</h2><h3 id="2-1-经验误差与过拟合"><a href="#2-1-经验误差与过拟合" class="headerlink" title="2.1 经验误差与过拟合"></a>2.1 经验误差与过拟合</h3><p><font color="red">错误率：</font>分类错误的样本数/样本总数</p>
-<p><font color="red">精度：</font>1 - <font color="red">错误率</font></p>
-<p><font color="red">误差：</font>学习器的实际预测输出与样本的真实输出之间的误差</p>
-<p><font color="red">训练误差(经验误差)：</font>学习器在训练集上的误差</p>
-<p><font color="red">泛化误差：</font>学习器在新样本上的误差</p>
-<blockquote>
-<p>我们希望泛化误差越小越好</p>
-</blockquote>
-<p><font color="red">过拟合：</font>学习器把训练样本学得”太好了”；很有可能把训练样本自身的特点当做了所有潜在样本都会具有的一般性质(实际上潜在样本并没有这些性质)</p>
-<p><font color="red">欠拟合：</font>学习器对训练样本学习欠佳；就连一般的性质(潜在样本就具有的性质)都没学好</p>
-<blockquote>
-<p>过拟合是无法彻底避免的，我们所能做的就是减小其风险</p>
-</blockquote>
-<p><font color="red">模型选择：</font>针对某个具体任务，选择哪种<strong>学习算法</strong>，使用哪一种<strong>参数配置</strong></p>
-<h3 id="2-2-评估方法"><a href="#2-2-评估方法" class="headerlink" title="2.2 评估方法"></a>2.2 评估方法</h3><p><font color="red">测试集：</font>为了评价学习器的泛化误差而产生的集合，一般从数据集中产生</p>
-<blockquote>
-<p>数据集可以被划分为：训练集S，测试集T，两者尽可能互斥</p>
-<p>之后还会提到验证集，可以按下图这样理解：</p>
-</blockquote>
-<pre class="mermaid">graph TD
-数据集 --> 训练数据
-数据集 --> 测试集
-训练数据 --> 训练集
-训练数据 --> 验证集</pre>
-
-<blockquote>
-<p>训练集用于训练模型参数，测试集用于估计模型对样本的泛化误差，验证集用于“训练”模型的超参数。</p>
-<p>很多文章和书籍并不涉及验证集，只是将数据集分为<strong>训练集</strong>和<strong>测试集</strong></p>
-</blockquote>
+        <h2 id="实例1-FOODS"><a href="#实例1-FOODS" class="headerlink" title="实例1  FOODS"></a>实例1  FOODS</h2><h3 id="数据："><a href="#数据：" class="headerlink" title="数据："></a>数据：</h3><p><img src="/2019/09/18/simca-p使用/1.png" alt="img"></p>
 <a id="more"></a>
 
-<p><font color="blue">留出法：</font>将数据集划分为两个互斥的集合，一个作为训练集S，另一个作为测试集T</p>
-<blockquote>
-<p>训练/测试集的划分要尽可能保持数据分布的一致性，通常采用”分层采样”</p>
-<p>单次使用留出法得到的估计结果往往不够稳定可靠，一般采用多次随机划分求平均</p>
-<p>面临的窘境：测试集太小，评估结果可能不可靠；测试集太大，真实模型与训练出的模型可能差别较大</p>
-</blockquote>
-<p><font color="blue">交叉验证法(k折交叉验证)：</font>将数据集D划分为k个大小相似的互斥子集，每个子集尽可能保持数据分布的一致性，然后每次用k - 1个子集的并集作为训练集，剩余1个作为测试集，进行k次训练和测试，最终返回k个测试结果的均值。</p>
-<blockquote>
-<p>k最常用的取值为10</p>
-<p>p次k折交叉验证：数据集随机划分为k个子集，训练和验证k次；之后再次随机划分为k个子集，训练和验证k次……如此进行p次。</p>
-<p>留一法：当数据集D中含有m个样本，并且k = m，此时的交叉验证称为留一法。优点是实际模型与训练出的模型很相似；缺点，计算开销大，而且又是也并不比其他方法表现更优</p>
-</blockquote>
-<p><font color="blue">自助法：</font>给定包含m个样本的数据集D，我们每次对它采样产生数据集D’，每次随机从D中抽取一个样本放入D’中，如此进行m次，然后用D’作为训练集，D - D’作为测试集进行训练和测试</p>
-<blockquote>
-<p>样本在m此采样中始终不被采到的概率为<br>$$<br>(1 - \frac{1}{m})^m<br>$$<br>取极限，有<br>$$<br>\lim_{m \to \infty}(1 - \frac{1}{m})^m = \frac{1}{e} \approx 0.368<br>$$<br>意味着大约有36.8%的数据未出现在D’中</p>
-<p>自助法改变了初始数据的分布，会引入估计误差</p>
-</blockquote>
-<p><strong>调参与最终模型：</strong>在模型选择完成后，学习算法与参数配置已选定，此时应该用数据集D重新训练模型，最终提交给用户</p>
-<h3 id="2-3-性能度量"><a href="#2-3-性能度量" class="headerlink" title="2.3 性能度量"></a>2.3 性能度量</h3><blockquote>
-<p>性能度量反映了任务需求，什么样的模型是好的，不仅取决于算法和数据，还取决于任务需求</p>
-</blockquote>
-<ul>
-<li>回归任务最常用的性能度量是”均方误差”:</li>
-</ul>
-<p>$$<br>E(f;\ D) = \frac{1}{m} \sum_{i = 1}^{m}(f(x) - y_i)^2 \ .<br>$$</p>
-<ul>
-<li>更一般的，对于数据分布D和概率密度函数p(.)，均方误差可描述为：</li>
-</ul>
-<p>$$<br>E(f; \ D) = \int_{\boldsymbol x \sim D}(f(\boldsymbol x) - y)^2p(\boldsymbol x)d \boldsymbol x<br>$$</p>
-<p><font color="red">错误率，精度(见2.1)</font></p>
-<p><font color="red">混淆矩阵：</font></p>
-<p><img src="/2019/09/03/2-机器学习-模型评估与选择/1.jpg" alt="img"></p>
-<p><font color="red">查准率(准确率)：</font>预测为正例中真实正例的比例<br>$$<br>P = \frac{TP}{TP + FP}<br>$$<br><font color="red">查全率(召回率)：</font>真实正例中预测正例所占的比例</p>
-<blockquote>
-<p>查准率和查全率是一对矛盾的度量，一般一高另一个就会低，通畅只有在一些简单的任务中，两者都高</p>
-</blockquote>
-<p>$$<br>R = \frac{TP}{TP + FN}<br>$$</p>
-<p><font color="red">P-R曲线：</font>以查准率(P)为纵轴，查全率(R)为横轴的曲线</p>
-<p><img src="/2019/09/03/2-机器学习-模型评估与选择/2.jpg" alt="img"></p>
-<blockquote>
-<p>一个学习器的P-R曲线被另一个学习器的曲线”包住”，则断言后者性能优于前者</p>
-</blockquote>
-<p><font color="red">平衡点(BEP)：</font>查准率 = 查全率 时坐标(横/纵坐标)的取值</p>
-<p><font color="red">F1：</font><br>$$<br>F1 = \frac{2 \times P \times R}{P + R} = \frac{2 \cdot TP}{样例总数 + TP - TN}<br>$$</p>
-<p>$$<br>F_\beta = \frac{(1 + \beta ^ 2) \times P \times R}{(\beta ^ 2 \times P) + R}<br>$$</p>
-<blockquote>
-<p>$$<br>\beta &gt; 1时查全率有更大影响，\beta &lt; 1是查准率影响更大<br>$$</p>
-</blockquote>
-<p><font color="red">宏查准率(micro-P)：</font>对于多次训练/测试得到的多个混淆矩阵，分别求出各矩阵的P和R，之后将所有的P求平均，得到的就是<font color="red">宏查准率(micro-P)</font></p>
-<p><font color="red">宏查全率(micro-R)：</font>对于多次训练/测试得到的多个混淆矩阵，分别求出各矩阵的P和R，之后将所有的R求平均，得到的就是<font color="red">宏查全率(micro-R)</font></p>
-<p><font color="red">宏F1：</font>上述F1公式中P和R换为micro-P，micro-R得到的结果</p>
-<p><font color="red">微查准率(micro-P)：</font>对于多次训练/测试得到的多个混淆矩阵，将混淆矩阵中的对应元素求平均得到一个矩阵，之后基于该矩阵求得的P，得到的就是<font color="red">微查准率(micro-P)</font></p>
-<p><font color="red">微查全率(micro-R)：</font>对于多次训练/测试得到的多个混淆矩阵，将混淆矩阵中的对应元素求平均得到一个矩阵，之后基于该矩阵求得的R，得到的就是<font color="red">微查全率(micro-R)</font></p>
-<p><font color="red">微F1：</font>上述F1公式中P和R换为micro-P，micro-R得到的结果</p>
-<p><font color="red">真正例率：</font>就是查全率R<br>$$<br>TPR = \frac{TP}{TP + FN}<br>$$<br><font color="red">假正例率：</font>真实反例中预测正例所占的比例<br>$$<br>FPR = \frac{FP}{TN + FP}<br>$$<br><font color="red">ROC(受试者工作特征)：</font>以真正例率(TPR)为纵轴，假正例率(FPR)为横轴的曲线</p>
-<p><img src="/2019/09/03/2-机器学习-模型评估与选择/3.jpg" alt="img"></p>
-<blockquote>
-<p>一个学习器的ROC曲线被另一个学习器的曲线”包住”，则断言后者性能优于前者</p>
-</blockquote>
-<p><font color="red">AUC：</font>上图ROC曲线阴影部分的面积</p>
-<p><font color="red">排序损失：</font><br>$$<br>l_{rank} = \frac{1}{m^+m^-}\sum_{\boldsymbol x^+ \in D^+}\sum_{\boldsymbol x^- \in D^-}\Bigl(\amalg \bigl(f(\boldsymbol x^+) &lt; f(\boldsymbol x^-)\bigr) + \frac{1}{2}\amalg(f\bigl(\boldsymbol x^+) = f(\boldsymbol x^-)\bigr)\Bigr)<br>$$</p>
-<blockquote>
-<p>$$<br>AUC = 1 - l_{rank}<br>$$</p>
-</blockquote>
-<p><font color="red">代价敏感错误率：</font>…</p>
-<p><font color="red">代价曲线：</font></p>
-<p><img src="/2019/09/03/2-机器学习-模型评估与选择/4.jpg" alt="img"></p>
-<h3 id="2-4-比较检验"><a href="#2-4-比较检验" class="headerlink" title="2.4 比较检验"></a>2.4 比较检验</h3><p><strong>假设检验：</strong>针对单个学习器泛化性能的假设进行检验</p>
-<p><strong>交叉验证t检验：</strong>针对两个学习器的性能进行比较</p>
-<p><strong>McNemar检验：</strong>针对两个学习器的性能进行比较</p>
-<p><strong>Friedman检验 与 Nemenyi后续检验：</strong>在多个数据集上对多个算法进行比较</p>
-<h3 id="2-5-偏差与方差"><a href="#2-5-偏差与方差" class="headerlink" title="2.5 偏差与方差"></a>2.5 偏差与方差</h3><p>$$<br>E(f; \ D) = bias^2(\boldsymbol x) + var(\boldsymbol x) + \varepsilon^2<br>$$</p>
-<blockquote>
-<p>泛化误差可分解为偏差，方差与噪声之和</p>
-<p>偏差刻画了学习算法本身的拟合能力；方差刻画了数据扰动造成的影响；噪声刻画了学习问题本身的难度。</p>
-<p>一般来说，偏差和方差是有冲突的，这称为<strong>偏差-方差窘境</strong>，如下图：</p>
-</blockquote>
-<p><img src="/2019/09/03/2-机器学习-模型评估与选择/5.jpg" alt="img"></p>
-<center>end</center>
+<h3 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h3><p><img src="/2019/09/18/simca-p使用/2.png" alt="img"></p>
+<h3 id="结果分析："><a href="#结果分析：" class="headerlink" title="结果分析："></a>结果分析：</h3><p><strong>Score Scatter Plot</strong></p>
+<p>对于该图，横坐标是第一主成分，能够解释原变量30.4%的信息，纵坐标是第二主成分，能够解释原变量21%的信息。</p>
+<p>图中距离比较近的国家，饮食习惯的相似性越高，比如Sweden和Denmark，均位于第一象限的右上方，此图应该对照着Loading Scatter Plot一起查看，对应象限一起看，因为Sweden和Denmark位于Score Scatter Plot的第一象限右上方，所以应该查看Loading Scatter Plot的第一象限右上方，我们发现Fro_Fish和Fro_Veg位于此处，这说明Sweden和Denmark这两个国家对于Fro_Fish和Fro_Veg这两种食物消耗比较高，我们查看原始数据发现正是如此，如下图</p>
+<p><img src="/2019/09/18/simca-p使用/3.png" alt="img"></p>
+<p><strong>Loading Scatter Plot</strong></p>
+<p>上面也说过，我们应该将该图和Score Scatter Plot一起查看，另外单独解释一下该图的含义。</p>
+<p>此图显示了哪些变量对分类的影响大，并且展示了变量之间关系。距离比较近的变量之间是正相关的关系，即一个随着另一个的增加而增加，减少而减少，比如图中的Fro_Fish和Crisp_Bread就是这种关系，画出散点图，如下：</p>
+<p><img src="/2019/09/18/simca-p使用/4.png" alt="img"></p>
+<p>两变量位于原点两侧，并且连线差不多经过原点(即基本位于坐标轴对角线上)的变量之间是反相关的关系，即一个随着另一个的增加而减少，较少而增加，比如图中Garlic和Sweether就是负相关，画出散点图，如下：</p>
+<p><img src="/2019/09/18/simca-p使用/5.png" alt="img"></p>
+<p>两个变量连接原点，两条线的角度越接近90度，相关性越接近于0，如果为90度，则说明两个变量不相关，比如In_Potato和Apples，如下图：</p>
+<p><img src="/2019/09/18/simca-p使用/6.png" alt="img"></p>
+<p>最后想说的一点是，Loading Scatter Plot图中越远离坐标原点的点对分类的影响越大。</p>
+<p><strong>DmodX</strong></p>
+<p>该图反应了每个样本对PCA模型的适应程度，超过红线说明适应的不好</p>
+<h3 id="Loading-Column-Plot"><a href="#Loading-Column-Plot" class="headerlink" title="Loading Column Plot"></a>Loading Column Plot</h3><p><img src="/2019/09/18/simca-p使用/7.png" alt="img"></p>
+<p>该图反应了哪些变量对于第一主成分的影响较大</p>
+<h2 id="实例2-IRIS"><a href="#实例2-IRIS" class="headerlink" title="实例2  IRIS"></a>实例2  IRIS</h2><p><img src="/2019/09/18/simca-p使用/8.png" alt="img"></p>
+<h3 id="VIP"><a href="#VIP" class="headerlink" title="VIP"></a>VIP</h3><p><img src="/2019/09/18/simca-p使用/9.png" alt="img"></p>
+<h3 id="Permutation"><a href="#Permutation" class="headerlink" title="Permutation"></a>Permutation</h3><p><img src="/2019/09/18/simca-p使用/10.png" alt="img"></p>
+<p>因为R2 &lt;= 0.3(即截距小于0.3，可以看到截距为-0.0343)，Q2 &lt;= 0.05(即截距小于0.05，可以看到截距为-0.0987)，右侧越高效果越好，因为右侧的R2和Q2分别代表模型的解释能力和预测能力。</p>
 
       
 
@@ -330,7 +250,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">simca-p</a>
         		</li>
       		
 		</ul>
@@ -386,7 +306,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/03/2-机器学习-模型评估与选择/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/18/simca-p使用/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -400,18 +320,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/03/3-机器学习-线性模型/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          3-机器学习-线性模型
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/02/1-机器学习-绪论/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">1-机器学习-绪论</div>
+    <a href="/2019/09/15/C语言的一些难点/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C语言的一些难点</div>
       <i class="icon-circle-right"></i>
     </a>
   
