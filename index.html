@@ -152,6 +152,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-R语言假设检验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/20/R语言假设检验/">R语言假设检验</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/20/R语言假设检验/" class="archive-article-date">
+  	<time datetime="2019-09-20T08:56:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="T检验"><a href="#T检验" class="headerlink" title="T检验"></a>T检验</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 单样本的T检验，判断其总体均值是否为某常数</span></span><br><span class="line">x &lt;- rnorm(<span class="number">30</span>, <span class="number">70</span>, <span class="number">5</span>)  <span class="comment">#生成30个数据，服从均值为70，方差为5的正态分布</span></span><br><span class="line">hist(x)</span><br><span class="line">score &lt;- <span class="number">80</span>   <span class="comment">#原假设：均值为80</span></span><br><span class="line">t &lt;- (mean(x) - score) / (sd(x) / sqrt(<span class="number">30</span>))</span><br><span class="line">pt(t, df = <span class="number">29</span>) <span class="comment">#df为自由度，30个数据，自由度为30-1=29</span></span><br><span class="line">t.test(x, mu = <span class="number">80</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/09/20/R语言假设检验/1.png" alt="img"></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 是不是世界上所有的大学学位的人的工资都大于100</span></span><br><span class="line"><span class="keyword">library</span>(ISLR)</span><br><span class="line">data(Wage)</span><br><span class="line">x &lt;- subset(Wage, education == <span class="string">'4. College Grad'</span>, select = <span class="string">'wage'</span>)</span><br><span class="line">hist(x$wage)</span><br><span class="line">t.test(x, mu = <span class="number">100</span>, alternative = <span class="string">'greater'</span>)  <span class="comment">#原假设 小于100，备择假设 薪水大于100</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/09/20/R语言假设检验/2.png" alt="img"></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 两样本的t检验，Wage数据中大学学历的收入和高中一样吗？</span></span><br><span class="line"><span class="keyword">library</span>(ISLR)</span><br><span class="line">data(Wage)</span><br><span class="line">x &lt;- subset(Wage, education == <span class="string">'4. College Grad'</span>, select = <span class="string">'wage'</span>)</span><br><span class="line">y &lt;- subset(Wage, education == <span class="string">'2. HS Grad'</span>, select = <span class="string">'wage'</span>)</span><br><span class="line">x &lt;- unlist(x)</span><br><span class="line">y &lt;- unlist(y)</span><br><span class="line">t.test(x, y)</span><br><span class="line"><span class="comment"># F检验观察两总体方差是否相等</span></span><br><span class="line">var.test(x, y)</span><br><span class="line"><span class="comment"># 非参数检验</span></span><br><span class="line">wilcox.test(x, y)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/09/20/R语言假设检验/3.png" alt="img"></p>
+<center>end</center>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">R</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">statistics</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/20/R语言假设检验/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-R语言概率分布" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -882,85 +970,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/09/07/linux配置文件简介/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-linux常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/07/linux常用命令/">linux常用命令</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/07/linux常用命令/" class="archive-article-date">
-  	<time datetime="2019-09-07T10:18:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>ls：显示文件或目录</p>
-<p>mkdir：创建新目录（-p递归创建）</p>
-<p>cd：切换目录</p>
-<p>pwd：显示当前目录绝对路径</p>
-        
-          <a class="article-more-a" href="/2019/09/07/linux常用命令/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/07/linux常用命令/">展开全文 >></a>
         </p>
       
 
