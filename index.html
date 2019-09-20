@@ -152,6 +152,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-R语言线性回归" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/20/R语言线性回归/">R语言线性回归</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/20/R语言线性回归/" class="archive-article-date">
+  	<time datetime="2019-09-20T11:36:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="连续变量回归"><a href="#连续变量回归" class="headerlink" title="连续变量回归"></a>连续变量回归</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"># 人为制造一批数据</span><br><span class="line">set.seed(1)</span><br><span class="line">x &lt;- seq(1, 5, length.out = 100)</span><br><span class="line">noise &lt;- rnorm(n = 100, mean = 0, sd = 1)</span><br><span class="line">beta0 &lt;- 1</span><br><span class="line">beta1 &lt;- 2</span><br><span class="line">y &lt;- beta0 + beta1 * x + noise</span><br><span class="line"># 画出散点图</span><br><span class="line">plot(y ~ x)</span><br><span class="line"># 最小二乘法回归</span><br><span class="line">model &lt;- lm(y ~ x)</span><br><span class="line">plot(y ~ x)</span><br><span class="line">abline(model)</span><br><span class="line"># 输出结果</span><br><span class="line">summary(model)</span><br><span class="line">#model.matrix(model)</span><br><span class="line"></span><br><span class="line"># R2、残差标准差的计算过程</span><br><span class="line">ybar &lt;- mean(y)  # 真实y的均值</span><br><span class="line">yPred &lt;- model$fitted.values  # 每个y的预测值</span><br><span class="line">Rsquared &lt;- sum((yPred - ybar) ^ 2) / sum((y - ybar) ^ 2)  # 计算R2</span><br><span class="line">sqrt(sum(model$residuals ^ 2) / 98)  # 残差标准差</span><br><span class="line"></span><br><span class="line"># 利用模型对新的样本进行预测</span><br><span class="line">yCof &lt;- predict(model, interval = &apos;confidence&apos;)</span><br><span class="line">yPrede &lt;- predict(model, interval = &apos;prediction&apos;)</span><br><span class="line">plot(y ~ x, col = &apos;gray&apos;, pch = 16)</span><br><span class="line">yCof &lt;- as.data.frame(yCof)</span><br><span class="line">yPrede &lt;- as.data.frame(yPrede)</span><br><span class="line">lines(yCof$lwr ~ x, col = &apos;black&apos;, lty = 3)</span><br><span class="line">lines(yCof$upr ~ x, col = &apos;black&apos;, lty = 3)</span><br><span class="line">lines(yPrede$lwr ~ x, col = &apos;black&apos;, lty = 2)</span><br><span class="line">lines(yPrede$upr ~ x, col = &apos;black&apos;, lty = 2)</span><br><span class="line">lines(yPrede$fit ~ x, col = &apos;black&apos;, lty = 1)</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/09/20/R语言线性回归/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">R</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">statistics</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/20/R语言线性回归/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-R语言假设检验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -923,82 +1003,6 @@
 
 
   
-    <article id="post-linux配置文件简介" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/07/linux配置文件简介/">linux配置文件简介</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/07/linux配置文件简介/" class="archive-article-date">
-  	<time datetime="2019-09-07T10:30:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>/etc/issue                                本地终端欢迎信息<br>/etc/services</p>
-        
-          <a class="article-more-a" href="/2019/09/07/linux配置文件简介/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/07/linux配置文件简介/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1132,19 +1136,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">C</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">endian</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">PS</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">C</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">endian</a>
               </li>
              
               <li class="article-tag-list-item">
