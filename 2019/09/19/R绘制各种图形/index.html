@@ -49,7 +49,12 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/19/R绘制各种图形/31.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/19/R绘制各种图形/32.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/19/R绘制各种图形/33.png">
-<meta property="og:updated_time" content="2019-09-19T09:05:46.783Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/19/R绘制各种图形/34.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/19/R绘制各种图形/35.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/19/R绘制各种图形/36.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/19/R绘制各种图形/37.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/19/R绘制各种图形/38.png">
+<meta property="og:updated_time" content="2019-09-20T02:50:06.865Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="R绘制各种图形">
 <meta name="twitter:description" content="plot基本绘图函数散点图1plot(cars$dist ~ cars$speed)">
@@ -227,28 +232,28 @@
 <h2 id="lattice"><a href="#lattice" class="headerlink" title="lattice"></a>lattice</h2><h3 id="条形图"><a href="#条形图" class="headerlink" title="条形图"></a>条形图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(lattice)</span><br><span class="line">num &lt;- sample(<span class="number">1</span>:<span class="number">3</span>, size = <span class="number">50</span>, replace = <span class="literal">T</span>)</span><br><span class="line">barchart(table(num))</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/19/R绘制各种图形/5.png" alt="img"></p>
-<h3 id="Q-Q图"><a href="#Q-Q图" class="headerlink" title="Q-Q图"></a>Q-Q图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qqmath(rnorm(<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="Q-Q图"><a href="#Q-Q图" class="headerlink" title="Q-Q图"></a>Q-Q图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(lattice)</span><br><span class="line">qqmath(rnorm(<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/19/R绘制各种图形/6.png" alt="img"></p>
-<h3 id="分组画图"><a href="#分组画图" class="headerlink" title="分组画图"></a>分组画图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stripplot(~ Sepal.Length | Species, data = iris, layout = c(<span class="number">1</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="分组画图"><a href="#分组画图" class="headerlink" title="分组画图"></a>分组画图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(lattice)</span><br><span class="line">stripplot(~ Sepal.Length | Species, data = iris, layout = c(<span class="number">1</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/19/R绘制各种图形/7.png" alt="img"></p>
-<h3 id="密度图"><a href="#密度图" class="headerlink" title="密度图"></a>密度图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">densityplot(~ Sepal.Length, groups = Species, data = iris, plot.points = <span class="literal">FALSE</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="密度图"><a href="#密度图" class="headerlink" title="密度图"></a>密度图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(lattice)</span><br><span class="line">densityplot(~ Sepal.Length, groups = Species, data = iris, plot.points = <span class="literal">FALSE</span>)</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/19/R绘制各种图形/8.png" alt="img"></p>
-<h3 id="分组箱线图"><a href="#分组箱线图" class="headerlink" title="分组箱线图"></a>分组箱线图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bwplot(Species ~ Sepal.Length, data = iris)</span><br></pre></td></tr></table></figure>
+<h3 id="分组箱线图"><a href="#分组箱线图" class="headerlink" title="分组箱线图"></a>分组箱线图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(lattice)</span><br><span class="line">bwplot(Species ~ Sepal.Length, data = iris)</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/19/R绘制各种图形/9.png" alt="img"></p>
-<h3 id="散点图-1"><a href="#散点图-1" class="headerlink" title="散点图"></a>散点图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xyplot(Sepal.Width ~ Sepal.Length, groups = Species, data = iris)</span><br></pre></td></tr></table></figure>
+<h3 id="散点图-1"><a href="#散点图-1" class="headerlink" title="散点图"></a>散点图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(lattice)</span><br><span class="line">xyplot(Sepal.Width ~ Sepal.Length, groups = Species, data = iris)</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/19/R绘制各种图形/10.png" alt="img"></p>
-<h3 id="矩阵散点图"><a href="#矩阵散点图" class="headerlink" title="矩阵散点图"></a>矩阵散点图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">splom(iris[<span class="number">1</span>:<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
+<h3 id="矩阵散点图"><a href="#矩阵散点图" class="headerlink" title="矩阵散点图"></a>矩阵散点图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(lattice)</span><br><span class="line">splom(iris[<span class="number">1</span>:<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/19/R绘制各种图形/11.png" alt="img"></p>
-<h3 id="分组直方图"><a href="#分组直方图" class="headerlink" title="分组直方图"></a>分组直方图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">histogram(~ Sepal.Length | Species, data = iris, layout = c(<span class="number">1</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="分组直方图"><a href="#分组直方图" class="headerlink" title="分组直方图"></a>分组直方图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(lattice)</span><br><span class="line">histogram(~ Sepal.Length | Species, data = iris, layout = c(<span class="number">1</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/19/R绘制各种图形/12.png" alt="img"></p>
-<h3 id="三维图"><a href="#三维图" class="headerlink" title="三维图"></a>三维图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">func3d &lt;- <span class="keyword">function</span>(x, y) &#123;</span><br><span class="line">  sin(x^<span class="number">2</span>/<span class="number">2</span> - y^<span class="number">2</span>/<span class="number">2</span>) * cos(<span class="number">2</span>*x - exp(y))</span><br><span class="line">&#125;</span><br><span class="line">vec1 &lt;- vec2 &lt;- seq(<span class="number">0</span>, <span class="number">1</span>, length = <span class="number">30</span>)</span><br><span class="line">para &lt;- expand.grid(x = vec1, y = vec2)</span><br><span class="line">result6 &lt;- mdply(.data = para, .fun = func3d)</span><br><span class="line">wireframe(V1 ~ x*y, data = result6, scales = list(arrows = <span class="literal">FALSE</span>),</span><br><span class="line">          drape = <span class="literal">TRUE</span>, colorkey = <span class="literal">F</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="三维图"><a href="#三维图" class="headerlink" title="三维图"></a>三维图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(lattice)</span><br><span class="line"><span class="keyword">library</span>(plyr)</span><br><span class="line">func3d &lt;- <span class="keyword">function</span>(x, y) &#123;</span><br><span class="line">  sin(x^<span class="number">2</span>/<span class="number">2</span> - y^<span class="number">2</span>/<span class="number">2</span>) * cos(<span class="number">2</span>*x - exp(y))</span><br><span class="line">&#125;</span><br><span class="line">vec1 &lt;- vec2 &lt;- seq(<span class="number">0</span>, <span class="number">1</span>, length = <span class="number">30</span>)</span><br><span class="line">para &lt;- expand.grid(x = vec1, y = vec2)</span><br><span class="line">result6 &lt;- mdply(.data = para, .fun = func3d)</span><br><span class="line">wireframe(V1 ~ x*y, data = result6, scales = list(arrows = <span class="literal">FALSE</span>),</span><br><span class="line">          drape = <span class="literal">TRUE</span>, colorkey = <span class="literal">F</span>)</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/19/R绘制各种图形/13.png" alt="img"></p>
 <h2 id="ggplot2"><a href="#ggplot2" class="headerlink" title="ggplot2"></a>ggplot2</h2><h3 id="散点图-2"><a href="#散点图-2" class="headerlink" title="散点图"></a>散点图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">p &lt;- ggplot(data = mpg, mapping = aes(x = cty, y = hwy, colour = factor(year))) +</span><br><span class="line">  geom_point()</span><br><span class="line">print(p)</span><br></pre></td></tr></table></figure>
@@ -314,7 +319,25 @@
 <h3 id="散点图加回归线加点的大小加分组"><a href="#散点图加回归线加点的大小加分组" class="headerlink" title="散点图加回归线加点的大小加分组"></a>散点图加回归线加点的大小加分组</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">mpg$year &lt;- factor(mpg$year)</span><br><span class="line">p &lt;- ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +</span><br><span class="line">  geom_point(aes(colour = class, size = displ), alpha = <span class="number">0.5</span>, position = <span class="string">'jitter'</span>) +</span><br><span class="line">  geom_smooth(method = <span class="string">"lm"</span>) +</span><br><span class="line">  scale_size_continuous(range = c(<span class="number">4</span>, <span class="number">10</span>)) +</span><br><span class="line">  facet_wrap(~year, ncol = <span class="number">1</span>)</span><br><span class="line">print(p)</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/09/19/R绘制各种图形/33.png" alt="img"></p>
-<h3 id="矩阵散点图，相关矩阵图……"><a href="#矩阵散点图，相关矩阵图……" class="headerlink" title="矩阵散点图，相关矩阵图……"></a>矩阵散点图，相关矩阵图……</h3>
+<h3 id="矩阵散点图，相关矩阵图……"><a href="#矩阵散点图，相关矩阵图……" class="headerlink" title="矩阵散点图，相关矩阵图……"></a>矩阵散点图，相关矩阵图……</h3><hr>
+<h2 id="时间和空间作图"><a href="#时间和空间作图" class="headerlink" title="时间和空间作图"></a>时间和空间作图</h2><h3 id="条形图-2"><a href="#条形图-2" class="headerlink" title="条形图"></a>条形图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">fillcolor &lt;- ifelse(economics[<span class="number">440</span>:<span class="number">470</span>, <span class="string">'psavert'</span>]&gt;<span class="number">0</span>, <span class="string">'steelblue'</span>, <span class="string">'red4'</span>)</span><br><span class="line">p &lt;- ggplot(economics[<span class="number">440</span>:<span class="number">470</span>, ], aes(x = date, y = psavert)) +</span><br><span class="line">  geom_bar(stat = <span class="string">'identity'</span>, fill = fillcolor)</span><br><span class="line">print(p)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/09/19/R绘制各种图形/34.png" alt="img"></p>
+<h3 id="线图-1"><a href="#线图-1" class="headerlink" title="线图"></a>线图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">p &lt;- ggplot(economics[<span class="number">300</span>:<span class="number">470</span>, ], aes(x = date, ymax = psavert, ymin = <span class="number">0</span>)) +</span><br><span class="line">  geom_linerange(color = <span class="string">'gray20'</span>, size = <span class="number">0.5</span>) +</span><br><span class="line">  geom_point(aes(y = psavert), color = <span class="string">'red4'</span>) +</span><br><span class="line">  theme_bw()</span><br><span class="line">print(p)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/09/19/R绘制各种图形/35.png" alt="img"></p>
+<h3 id="面积图"><a href="#面积图" class="headerlink" title="面积图"></a>面积图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">fill.color &lt;-ifelse(economics$date &gt; <span class="string">'1980-01-01'</span> &amp; economics$date &lt; <span class="string">'1990-01-01'</span>, <span class="string">'steelblue'</span>, <span class="string">'red4'</span>)</span><br><span class="line">p &lt;- ggplot(economics, aes(x = date, ymax = psavert, ymin = <span class="number">0</span>)) +</span><br><span class="line">  geom_linerange(color = fill.color, size = <span class="number">0.9</span>) +</span><br><span class="line">  geom_text(aes(x = as.Date(<span class="string">"1985-01-01"</span>, <span class="string">'%Y-%m-%d'</span>), y = <span class="number">13</span>), label = <span class="string">"1980'"</span>) +</span><br><span class="line">  theme_bw()</span><br><span class="line">print(p)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/09/19/R绘制各种图形/36.png" alt="img"></p>
+<h3 id="日历热图"><a href="#日历热图" class="headerlink" title="日历热图"></a>日历热图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(openair)</span><br><span class="line"><span class="keyword">library</span>(dplyr)</span><br><span class="line">Sys.setlocale(<span class="string">"LC_TIME"</span>, <span class="string">"english"</span>)</span><br><span class="line">breaks &lt;- c(<span class="number">0</span>,<span class="number">20</span>,<span class="number">40</span>,<span class="number">60</span>,<span class="number">80</span>,<span class="number">100</span>)</span><br><span class="line">labels &lt;- c(<span class="string">"优"</span>,<span class="string">"良"</span>,<span class="string">"轻度"</span>,<span class="string">"中度"</span>,<span class="string">"重度"</span>)</span><br><span class="line">colors &lt;- c(<span class="string">"#009966"</span>,<span class="string">"#ffde33"</span>,<span class="string">"#ff9933"</span>,<span class="string">"#cc0033"</span>,<span class="string">"#660099"</span>)</span><br><span class="line">mydata &lt;-read.csv(<span class="string">"C:/Code/R/graphics/dataset/pm2.5.csv"</span>, header = <span class="literal">TRUE</span>)</span><br><span class="line">mydata$date&lt;-as.POSIXct(mydata$date)</span><br><span class="line">mydata$num&lt;-as.integer(mydata$pm25)</span><br><span class="line"><span class="comment">#calendarPlot(mydata,pollutant = 'num',year = 2014,breaks =breaks,labels = labels,cols = colors,remove.empty = FALSE)</span></span><br><span class="line">calendarPlot(mydata,pollutant = <span class="string">'num'</span> ,breaks =breaks,labels = labels,cols = colors,remove.empty = <span class="literal">FALSE</span>)</span><br><span class="line">print(p)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/09/19/R绘制各种图形/37.png" alt="img"></p>
+<h3 id="世界地图"><a href="#世界地图" class="headerlink" title="世界地图"></a>世界地图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">world &lt;- map_data(<span class="string">"world"</span>)</span><br><span class="line">worldmap &lt;- ggplot(world, aes(x = long, y = lat, group = group)) +</span><br><span class="line">  geom_path(color = <span class="string">'gray10'</span>, size = <span class="number">0.3</span>) +</span><br><span class="line">  geom_point(x = <span class="number">114</span>, y = <span class="number">30</span>, size = <span class="number">10</span>, shape = <span class="string">'*'</span>) +</span><br><span class="line">  scale_y_continuous(breaks = (-<span class="number">2</span>: <span class="number">2</span>) * <span class="number">30</span>) + </span><br><span class="line">  scale_x_continuous(breaks = (-<span class="number">4</span>: <span class="number">4</span>) * <span class="number">45</span>) + </span><br><span class="line">  coord_map(<span class="string">"ortho"</span>, orientation = c(<span class="number">30</span>, <span class="number">120</span>, <span class="number">0</span>)) +</span><br><span class="line">  theme(panel.grid.major = element_line(colour = <span class="string">"gray50"</span>),</span><br><span class="line">        panel.background = element_rect(fill = <span class="string">'white'</span>),</span><br><span class="line">        axis.text = element_blank(),</span><br><span class="line">        axis.ticks = element_blank(),</span><br><span class="line">        axis.title = element_blank())</span><br><span class="line">print(worldmap)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/09/19/R绘制各种图形/38.png" alt="img"></p>
+<center>end</center>
+
+
       
 
       
@@ -426,6 +449,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/09/20/R语言概率分布/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          R语言概率分布
+        
+      </div>
+    </a>
   
   
     <a href="/2019/09/18/simca-p使用/" id="article-nav-older" class="article-nav-link-wrap">
@@ -591,14 +623,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">R</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">graphics</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">C</a>
               </li>
              
@@ -615,11 +639,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">R</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
+                <a href="javascript:void(0)" class="js-tag color1">statistics</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -628,6 +656,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">graphics</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
               </li>
              
               <li class="article-tag-list-item">
