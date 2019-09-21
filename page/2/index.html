@@ -152,6 +152,262 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-平方根倒数速算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/12/平方根倒数速算法/">平方根倒数速算法</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/12/平方根倒数速算法/" class="archive-article-date">
+  	<time datetime="2019-09-12T01:03:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 平方根倒数速算法</span></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">mysqrt</span><span class="params">(<span class="keyword">float</span> x)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="keyword">float</span> half = <span class="number">0.5f</span> * x;  </span><br><span class="line">    <span class="keyword">int</span> i = *(<span class="keyword">int</span> *)&amp;x;  </span><br><span class="line">    i = <span class="number">0x5f3759df</span> - (i&gt;&gt;<span class="number">1</span>);  </span><br><span class="line">    x = *(<span class="keyword">float</span> *)&amp;i;  </span><br><span class="line">    x = x * (<span class="number">1.5f</span> - half * x * x);  </span><br><span class="line">    <span class="keyword">return</span> x;  </span><br><span class="line">&#125;  </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> x = <span class="number">100</span> ;		<span class="comment">//期望结果0.1	</span></span><br><span class="line">	<span class="keyword">float</span> result = mysqrt(x);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%f\n"</span>,result);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/09/12/平方根倒数速算法/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">math</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">skill</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/12/平方根倒数速算法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-编译器快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/10/编译器快捷键/">编译器快捷键</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/10/编译器快捷键/" class="archive-article-date">
+  	<time datetime="2019-09-10T10:05:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Visual-Stdio快捷键"><a href="#Visual-Stdio快捷键" class="headerlink" title="Visual Stdio快捷键"></a>Visual Stdio快捷键</h2><ul>
+<li>Ctrl+K Ctrl+C        注释</li>
+<li>Ctrl+K Ctrl+U        解注</li>
+<li>Ctrl+D              复制当前行</li>
+<li>Ctrl+L              删除当前行</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/09/10/编译器快捷键/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">快捷键</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Visual Stdio</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Eclipse</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">PyCharm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/10/编译器快捷键/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-PS快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/07/PS快捷键/">PS快捷键</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/07/PS快捷键/" class="archive-article-date">
+  	<time datetime="2019-09-07T10:37:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>Ctrl+空格+鼠标左击（按住不放）：放大图片</li>
+<li>Alt+空格+鼠标左击（按住不放）：缩小图片</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/09/07/PS快捷键/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">PS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">快捷键</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/07/PS快捷键/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-linux配置文件简介" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -719,271 +975,6 @@
 
 
   
-    <article id="post-R语言中vector、matrix、array、dataframe、list的区别与联系" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/">R语言中vector、matrix、array、dataframe、list的区别与联系</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/" class="archive-article-date">
-  	<time datetime="2019-09-05T03:21:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>这几者的关系如下（为相互包含关系）：</strong></p>
-<p><img src="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/1.png" alt="img"></p>
-<hr>
-<p><strong>演示代码如下：</strong></p>
-        
-          <a class="article-more-a" href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">R</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-3-机器学习-线性模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/03/3-机器学习-线性模型/">3-机器学习-线性模型</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/03/3-机器学习-线性模型/" class="archive-article-date">
-  	<time datetime="2019-09-03T13:09:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="机器学习-周志华"><a href="#机器学习-周志华" class="headerlink" title="机器学习(周志华)"></a>机器学习(周志华)</h1><h2 id="第三章-线性模型"><a href="#第三章-线性模型" class="headerlink" title="第三章 线性模型"></a>第三章 线性模型</h2><h3 id="3-1-基本形式"><a href="#3-1-基本形式" class="headerlink" title="3.1 基本形式"></a>3.1 基本形式</h3><p>$$<br>f(\boldsymbol x) = \omega_1x_1 + \omega_2x_2 + … + \omega_dx_d + b<br>$$</p>
-<p>$$<br>f(\boldsymbol x) = \boldsymbol \omega^T \boldsymbol x + b<br>$$</p>
-<blockquote>
-<p>线性模型具有很好的可解释性</p>
-</blockquote>
-<h3 id="3-2-线性回归"><a href="#3-2-线性回归" class="headerlink" title="3.2 线性回归"></a>3.2 线性回归</h3><p><strong>首先考虑一种最简单的情形：输入属性只有一个</strong><br>$$<br>f(x_i) = \omega x_i + b<br>$$<br>我们的目的是求均方误差最小时的 w 和 b ，即：<br>$$<br>(\omega ^ *, \ b ^ *) = \arg\min_{(\omega, \ b)}\sum_{i=1}^{m}\bigl (f(x_i) - y_i \bigr) = \arg\min_{(\omega, \ b)}\sum_{i=1}^{m}\bigl (f(x_i) - \omega x_i - b \bigr)<br>$$<br>求导计算后可以得到：<br>$$<br>\omega = \frac{\displaystyle \sum_{i=1}^{m}y_i(x_i - \overline x)}{\displaystyle \sum_{i=1}^{m}x_i^2 - \frac{1}{m}(\displaystyle \sum_{i=1}^{m}x_i^2)}<br>$$</p>
-<p>$$<br>b = \frac{1}{m}\sum_{i=1}^{m}(y_i - \omega x_i)<br>$$</p>
-        
-          <a class="article-more-a" href="/2019/09/03/3-机器学习-线性模型/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/03/3-机器学习-线性模型/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2-机器学习-模型评估与选择" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/03/2-机器学习-模型评估与选择/">2-机器学习-模型评估与选择</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/03/2-机器学习-模型评估与选择/" class="archive-article-date">
-  	<time datetime="2019-09-03T02:25:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="机器学习-周志华"><a href="#机器学习-周志华" class="headerlink" title="机器学习(周志华)"></a>机器学习(周志华)</h1><h2 id="第二章-模型评估与选择"><a href="#第二章-模型评估与选择" class="headerlink" title="第二章  模型评估与选择"></a>第二章  模型评估与选择</h2><h3 id="2-1-经验误差与过拟合"><a href="#2-1-经验误差与过拟合" class="headerlink" title="2.1 经验误差与过拟合"></a>2.1 经验误差与过拟合</h3><p><font color="red">错误率：</font>分类错误的样本数/样本总数</p>
-<p><font color="red">精度：</font>1 - <font color="red">错误率</font></p>
-<p><font color="red">误差：</font>学习器的实际预测输出与样本的真实输出之间的误差</p>
-<p><font color="red">训练误差(经验误差)：</font>学习器在训练集上的误差</p>
-<p><font color="red">泛化误差：</font>学习器在新样本上的误差</p>
-<blockquote>
-<p>我们希望泛化误差越小越好</p>
-</blockquote>
-<p><font color="red">过拟合：</font>学习器把训练样本学得”太好了”；很有可能把训练样本自身的特点当做了所有潜在样本都会具有的一般性质(实际上潜在样本并没有这些性质)</p>
-<p><font color="red">欠拟合：</font>学习器对训练样本学习欠佳；就连一般的性质(潜在样本就具有的性质)都没学好</p>
-<blockquote>
-<p>过拟合是无法彻底避免的，我们所能做的就是减小其风险</p>
-</blockquote>
-<p><font color="red">模型选择：</font>针对某个具体任务，选择哪种<strong>学习算法</strong>，使用哪一种<strong>参数配置</strong></p>
-<h3 id="2-2-评估方法"><a href="#2-2-评估方法" class="headerlink" title="2.2 评估方法"></a>2.2 评估方法</h3><p><font color="red">测试集：</font>为了评价学习器的泛化误差而产生的集合，一般从数据集中产生</p>
-<blockquote>
-<p>数据集可以被划分为：训练集S，测试集T，两者尽可能互斥</p>
-<p>之后还会提到验证集，可以按下图这样理解：</p>
-</blockquote>
-<pre class="mermaid">graph TD
-数据集 --> 训练数据
-数据集 --> 测试集
-训练数据 --> 训练集
-训练数据 --> 验证集</pre>
-
-<blockquote>
-<p>训练集用于训练模型参数，测试集用于估计模型对样本的泛化误差，验证集用于“训练”模型的超参数。</p>
-<p>很多文章和书籍并不涉及验证集，只是将数据集分为<strong>训练集</strong>和<strong>测试集</strong></p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2019/09/03/2-机器学习-模型评估与选择/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/03/2-机器学习-模型评估与选择/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1117,6 +1108,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">R</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">C</a>
               </li>
              
@@ -1133,7 +1128,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">R</a>
+                <a href="javascript:void(0)" class="js-tag color4">R语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1157,11 +1152,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MEMORY</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
               </li>
              
               <li class="article-tag-list-item">
