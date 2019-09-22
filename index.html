@@ -152,6 +152,90 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-R神经网络" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/22/R神经网络/">R神经网络</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/22/R神经网络/" class="archive-article-date">
+  	<time datetime="2019-09-22T07:10:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>BP (Back Propagation)神经网络是1986年提出，是一种按误差逆传播算法训练的多层前馈网络，是目前应用最广泛的神经网络模型之一。</li>
+<li>R语言中的nnet包可以实现BP神经网络分类算法，其中的重要参数有：size：隐层神经元个数，数字越大模型越复杂。decay：学习速率，类似于正则化方法中的惩罚项系数，是为了避免过度拟合问题，这个值一般在0到0.1之间。linout：隐层到输出层的函数形式，若是回归问题则设置为TRUE,表示线性输出，若是分类问题则设S为FALSE,表示非线性输出。</li>
+<li>caret包中的avNNet函数对nnet包有所改进，它使用同一个BP神经网络模型，而使用不同的初始随机种子，最后预测时进行综合预测。这样可以一定程度上避免模型训练时陷入局部最优解。</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/09/22/R神经网络/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">machine learning</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">R语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/22/R神经网络/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-R决策树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -180,7 +264,7 @@
 <li>而且稳健性强</li>
 <li>对噪声数据和缺失数据不敏感</li>
 </ul>
-<p>决策树模型的基本思路是：先从n个自变置中挑选一个，寻找最佳分割点，将数据划分为两组。针对<br>分组后数据将上述步骤重复下去，直到满足某种条件。</p>
+<p>决策树模型的基本思路是：先从n个自变置中挑选一个，寻找最佳分割点，将数据划分为两组。针对分组后数据将上述步骤重复下去，直到满足某种条件。</p>
         
           <a class="article-more-a" href="/2019/09/21/R决策树/#more">more >></a>
         
@@ -896,114 +980,6 @@
 
 
   
-    <article id="post-内存区域分配" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/14/内存区域分配/">内存区域分配</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/14/内存区域分配/" class="archive-article-date">
-  	<time datetime="2019-09-14T13:20:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>程序运行过程中内存被分为五大区域，如下：</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>名称</strong></th>
-<th><strong>内容</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>TEST(代码段)</td>
-<td>可执行代码、字符串常量</td>
-</tr>
-<tr>
-<td>DATA(数据区)</td>
-<td>已初始化全局变量、已初始化全局静态变量、局部静态变量、常量数据</td>
-</tr>
-<tr>
-<td>BSS</td>
-<td>未初始化全局变量，未初始化全局静态变量</td>
-</tr>
-<tr>
-<td>HEAP(堆区)</td>
-<td>局部变量、函数参数</td>
-</tr>
-<tr>
-<td>STACK(栈区)</td>
-<td>动态内存分配</td>
-</tr>
-</tbody></table>
-        
-          <a class="article-more-a" href="/2019/09/14/内存区域分配/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">MEMORY</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/14/内存区域分配/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1137,10 +1113,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">R</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">C</a>
               </li>
              
@@ -1181,15 +1153,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MEMORY</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1210,6 +1182,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">R</a>
               </li>
             
             <div class="clearfix"></div>
