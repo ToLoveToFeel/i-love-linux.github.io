@@ -6,94 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>machine-learning(吴恩达)随笔 | i-love-linux</title>
+  <title>paddlepaddle使用入门 | i-love-linux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
+  <meta name="description" content="简介paddlepaddle是一款类似于tensorflow的深度学习框架，通过该框架可以很简单的搭建深度学习网络。下面以预测Boston房价预测为例，介绍paddlepaddle框架的使用。">
 <meta name="keywords" content="machine learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="machine-learning(吴恩达)随笔">
-<meta property="og:url" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/index.html">
+<meta property="og:title" content="paddlepaddle使用入门">
+<meta property="og:url" content="http://yoursite.com/2019/09/25/paddlepaddle使用入门/index.html">
 <meta property="og:site_name" content="i-love-linux">
-<meta property="og:description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
+<meta property="og:description" content="简介paddlepaddle是一款类似于tensorflow的深度学习框架，通过该框架可以很简单的搭建深度学习网络。下面以预测Boston房价预测为例，介绍paddlepaddle框架的使用。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/1.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/2.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/3.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/4.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/5.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/6.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/7.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/8.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/9.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/10.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/11.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/12.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/13.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/14.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/15.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/16.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/17.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/18.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/19.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/20.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/21.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/22.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/23.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/24.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/25.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/26.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/27.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/28.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/29.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/30.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/31.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/32.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/33.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/34.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/35.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/36.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/37.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/38.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/39.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/40.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/41.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/42.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/43.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/44.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/45.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/46.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/47.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/48.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/49.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/50.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/51.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/52.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/53.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/54.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/55.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/56.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/57.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/58.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/59.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/60.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/61.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/62.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/63.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/64.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/65.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/66.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/67.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/68.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/69.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/70.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/71.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/72.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/73.png">
-<meta property="og:updated_time" content="2019-09-25T13:36:14.452Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/25/paddlepaddle使用入门/MyBlog/source/_posts/paddlepaddle使用入门/1.png">
+<meta property="og:updated_time" content="2019-09-25T10:38:12.560Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="machine-learning(吴恩达)随笔">
-<meta name="twitter:description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
-<meta name="twitter:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/1.png">
+<meta name="twitter:title" content="paddlepaddle使用入门">
+<meta name="twitter:description" content="简介paddlepaddle是一款类似于tensorflow的深度学习框架，通过该框架可以很简单的搭建深度学习网络。下面以预测Boston房价预测为例，介绍paddlepaddle框架的使用。">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/25/paddlepaddle使用入门/MyBlog/source/_posts/paddlepaddle使用入门/1.png">
   
     <link rel="alternative" href="/atom.xml" title="i-love-linux" type="application/atom+xml">
   
@@ -229,612 +157,163 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-machine-learning-吴恩达-随笔" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-paddlepaddle使用入门" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      machine-learning(吴恩达)随笔
+      paddlepaddle使用入门
     </h1>
   
 
         
-        <a href="/2019/09/05/machine-learning-吴恩达-随笔/" class="archive-article-date">
-  	<time datetime="2019-09-05T12:35:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
+        <a href="/2019/09/25/paddlepaddle使用入门/" class="archive-article-date">
+  	<time datetime="2019-09-25T09:13:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="2-2-Cost-Function"><a href="#2-2-Cost-Function" class="headerlink" title="2.2 Cost Function"></a>2.2 Cost Function</h2><p><font color="red">代价函数(平方误差函数，平方误差代价函数)：</font><br>$$<br>J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2<br>$$<br>其中：<br>$$<br>h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x<br>$$<br>linear regression的目的是求出使上式最小时的$ \theta _0 $和$ \theta _ 1$</p>
-<blockquote>
-<p>需要指出的是，代价函数不止这一种，但对大多数问题，特别是回归问题，上面的代价函数都是一个合理的选择</p>
-</blockquote>
-<h2 id="2-5-Gradient-Descent"><a href="#2-5-Gradient-Descent" class="headerlink" title="2.5 Gradient Descent"></a>2.5 Gradient Descent</h2><p><font color="red">梯度下降公式：</font><br>$$<br>\theta _ j = \theta _ j - \alpha \frac{\partial}{\partial \theta _ j}(\theta _ 0, \ \theta _1)<br>$$</p>
-<blockquote>
-<p>$ \alpha $(&gt;0)为learning rate(学习率)，值越大学习越快</p>
-</blockquote>
-<h2 id="3-6-Inverse-and-Transpose"><a href="#3-6-Inverse-and-Transpose" class="headerlink" title="3.6 Inverse and Transpose"></a>3.6 Inverse and Transpose</h2><p><font color="red">奇异矩阵(退化矩阵)：</font>不存在逆矩阵的矩阵</p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>paddlepaddle是一款类似于tensorflow的深度学习框架，通过该框架可以很简单的搭建深度学习网络。下面以预测Boston房价预测为例，介绍paddlepaddle框架的使用。</p>
 <a id="more"></a>
 
-<h2 id="4-1-Multiple-Features"><a href="#4-1-Multiple-Features" class="headerlink" title="4.1 Multiple Features"></a>4.1 Multiple Features</h2><p>$$<br>h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x _ 1 + \theta _ 2 x _ 2 + \ … \ +  \theta _ n x _ n = \theta ^ T x<br>$$</p>
-<p>其中：<br>$$<br>\theta = (\theta _ 0 ; \theta _ 1; \theta _ 2; \ …\ \theta _ n)  \quad 为列向量<br>$$</p>
-<p>$$<br>x = (x _ 0; x _ 1; x _ 2; \ … \ ; x _ n) \quad 为列向量，x_0 = 1<br>$$</p>
-<h2 id="4-2-Gradient-Descent-for-Multiple-Variables"><a href="#4-2-Gradient-Descent-for-Multiple-Variables" class="headerlink" title="4.2 Gradient Descent for Multiple Variables"></a>4.2 Gradient Descent for Multiple Variables</h2><p>$$<br>\theta _ j := \theta _ j - \alpha \frac{\partial}{\partial \theta _ j} J(\theta) \quad j = 0, 1, 2 , …, n<br>$$</p>
-<p>$$<br>\theta _ j := \theta _ j - \alpha \frac{\partial}{\partial \theta _ j} \frac{1}{2m}\sum _ {i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2 \quad j = 0, 1, 2 , …, n<br>$$</p>
-<p>求偏导，有：<br>$$<br>\theta _ j := \theta _ j - \alpha \frac{1}{m}\sum _ {i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) x _ j ^ {(i)} \quad j = 0, 1, 2 , …, n<br>$$</p>
-<h2 id="4-3-Gradient-Descent-in-Practice-I-Feature-Scaling"><a href="#4-3-Gradient-Descent-in-Practice-I-Feature-Scaling" class="headerlink" title="4.3 Gradient Descent in Practice I - Feature Scaling"></a>4.3 Gradient Descent in Practice I - Feature Scaling</h2><p><font color="red">特征缩放(Feature Scaling)：</font>将特征通过乘以一个系数，使得特征的范围大约在(-1, 1) 的范围左右</p>
-<blockquote>
-<p>在(-3, 3) 或者$(-\frac{1}{3}, \frac{1}{3})$的范围内我们还能接受，超出这个范围我们不能接受</p>
-</blockquote>
-<p><font color="red">归一化(Mean normalization)：</font><br>$$<br>x _ j \quad &lt;- \quad \frac{x _ j - \mu _j}{S _ j} \quad \mu _ j为均值， S _ j为标准差(或者理解为范围)<br>$$</p>
-<h2 id="4-4-Gradient-Descent-in-Practice-II-Learning-Rate"><a href="#4-4-Gradient-Descent-in-Practice-II-Learning-Rate" class="headerlink" title="4.4 Gradient Descent in Practice II - Learning Rate"></a>4.4 Gradient Descent in Practice II - Learning Rate</h2><p><strong>how to choose learning rate $\alpha$?</strong></p>
-<blockquote>
-<p>理想状态</p>
-</blockquote>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/1.png" alt="img"></p>
-<blockquote>
-<p>$\alpha$偏大</p>
-</blockquote>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/2.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/3.png" alt="img"></p>
-<blockquote>
-<p>数学上可以证明，只要$\alpha$足够小，cost function每次迭代都会减小；但是$\alpha$太小会导致收敛很慢</p>
-<p>针对不同的问题，需获得比较好的参数要迭代的次数差异可能很大，比如有些问题需要迭代30次，而一些问题可能需要30000次</p>
-<p>如何选择学习率$\alpha$?常见的做法是从0.001开始取值，每次增大大约三倍，比如如下序列：…， 0.001， 0.003， 0.01， 0.03， 0.1， 0.3， 1， …观察不同$\alpha$下代价函数和迭代次数关系曲线，选择一个收敛且学习率的值较大的$\alpha$作为最终的学习率 </p>
-</blockquote>
-<h2 id="4-6-Normal-Equation-标准方程法"><a href="#4-6-Normal-Equation-标准方程法" class="headerlink" title="4.6 Normal Equation(标准方程法)"></a>4.6 Normal Equation(标准方程法)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/4.png" alt="img"><br>$$<br>\theta = (X ^ T X) ^ {-1} X ^ T y<br>$$<br><strong>如何确定用<font color="red">梯度下降法</font>还是<font color="red">标准方程法</font>？</strong></p>
-<table>
-<thead>
-<tr>
-<th>梯度下降法</th>
-<th>标准方程法</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>需要选择$ \alpha $</td>
-<td>不需要选择$ \alpha $</td>
-</tr>
-<tr>
-<td>需要大量迭代</td>
-<td>不需要迭代</td>
-</tr>
-<tr>
-<td>n很大时仍能正常运行</td>
-<td>需要计算$(X ^ T X) ^{-1}$</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>当n特别大的时候$(X ^ T X) ^{-1}$的计算量很大$(O(n ^ 3))$，一般以10000作为临界点，当n小于10000是推荐使用<strong>标准方程法</strong>，但注意：不是所有的算法都可以使用<strong>标准方程法</strong></p>
-</blockquote>
-<h2 id="5-4-Plotting-Data"><a href="#5-4-Plotting-Data" class="headerlink" title="5.4 Plotting Data"></a>5.4 Plotting Data</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/5.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/6.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/7.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/8.png" alt="img"></p>
-<h2 id="5-5-Control-Statement"><a href="#5-5-Control-Statement" class="headerlink" title="5.5 Control Statement"></a>5.5 Control Statement</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% if</span></span><br><span class="line">a = <span class="number">25</span>;</span><br><span class="line"><span class="keyword">if</span> a&gt;<span class="number">30</span></span><br><span class="line">    <span class="built_in">disp</span>(<span class="string">'a比30大'</span>); <span class="comment">%输出字符串</span></span><br><span class="line"><span class="keyword">elseif</span> a&gt;<span class="number">20</span></span><br><span class="line">    <span class="built_in">disp</span>(<span class="string">'a比20大比30小'</span>);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="built_in">disp</span>(<span class="string">'a比20小'</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% switch</span></span><br><span class="line">a = <span class="number">25</span>;</span><br><span class="line"><span class="keyword">switch</span> <span class="built_in">rem</span>(a,<span class="number">2</span>)</span><br><span class="line">    <span class="keyword">case</span> <span class="number">0</span></span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">'a能被2整除'</span>) </span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span></span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">'a不能被2整除'</span>)</span><br><span class="line">    <span class="keyword">otherwise</span></span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">'异常'</span>)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% for</span></span><br><span class="line">x(<span class="number">1</span>,<span class="number">1</span>)=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> n=<span class="number">2</span>:<span class="number">6</span></span><br><span class="line">    x(<span class="number">1</span>,n) = <span class="number">2</span>*x(<span class="number">1</span>,n<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="built_in">disp</span>(x);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% while break</span></span><br><span class="line">v = <span class="built_in">zeros</span>(<span class="number">10</span>,<span class="number">1</span>);</span><br><span class="line"><span class="built_in">i</span> = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> <span class="built_in">true</span></span><br><span class="line">    v(<span class="built_in">i</span>) = <span class="number">999</span>;</span><br><span class="line">    <span class="built_in">i</span> = <span class="built_in">i</span> + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> <span class="number">6</span> == <span class="built_in">i</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="built_in">disp</span>(v)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>定义函数是文件名和函数名一致，例如文件名为squareThisNumber.m，则应该像如下定义函数：</p>
-</blockquote>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">squareThisNumber</span><span class="params">(x)</span></span></span><br><span class="line">    y = x^<span class="number">2</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>另外一些函数的例子：</p>
-</blockquote>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[y1, y2]</span> = <span class="title">squareAndCubeThisNumber</span><span class="params">(x)</span></span></span><br><span class="line">    y1 = x ^ <span class="number">2</span>;</span><br><span class="line">    y2 = x ^ <span class="number">3</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">J</span> = <span class="title">constFunctionJ</span><span class="params">(X, y, theta)</span></span></span><br><span class="line"><span class="comment">% X is the "design matrix" containing our training example.</span></span><br><span class="line"><span class="comment">% y is the class labels</span></span><br><span class="line"></span><br><span class="line">m = <span class="built_in">size</span>(X, <span class="number">1</span>);             <span class="comment">% number of training examples</span></span><br><span class="line">predictions = X * theta;    <span class="comment">% predictions of hypothesis on all m examples</span></span><br><span class="line">sqrErrors = (predictions - y) .^ <span class="number">2</span>;  <span class="comment">%squared errors</span></span><br><span class="line"></span><br><span class="line">J = <span class="number">1</span> / (<span class="number">2</span> * m) * sum(sqrErrors);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="6-2-Hypothesis-Representation-假设表示"><a href="#6-2-Hypothesis-Representation-假设表示" class="headerlink" title="6.2 Hypothesis Representation(假设表示)"></a>6.2 Hypothesis Representation(假设表示)</h2><p><font color="red">Logistic Regression Model：</font><br>$$<br>g(z) = \frac{1}{1 + e ^ {-z}}<br>$$</p>
-<blockquote>
-<p>该函数又称为Sigmoid function或者Logistic function</p>
-</blockquote>
-<p><font color="red">hypothesis function(假设函数)：</font><br>$$<br>h _ \theta(x) = g(\theta ^ T x) = g(\theta _ 0 + \theta _ 1 x _ 1 + … + \theta _ n x _ n)<br>$$<br>$ h _ \theta (x ) $的值如下表示：<br>$$<br>h _ \theta (x) = P(y=1|x;\theta)<br>$$</p>
-<blockquote>
-<p>上式的含义为：在我们训练出的参数$ \theta $下，给定特定输入x，预测结果为1的概率是$ h _ \theta (x) $</p>
-</blockquote>
-<p>$$<br>P(y=0|x;\theta) \ = \ 1 - h _ \theta (x) = P(y=1|x;\theta)<br>$$</p>
-<h2 id="6-3-Decision-Boundary"><a href="#6-3-Decision-Boundary" class="headerlink" title="6.3 Decision Boundary"></a>6.3 Decision Boundary</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/9.png" alt="img"></p>
-<h2 id="6-4-Cost-Function-损失函数"><a href="#6-4-Cost-Function-损失函数" class="headerlink" title="6.4 Cost Function(损失函数)"></a>6.4 Cost Function(损失函数)</h2><p><font color="red">lineae regression(线性回归损失函数):</font><br>$$<br>Cost\bigl(h _ \theta (x),y \bigr) = \frac{1}{2}\bigl(h _ \theta (x) - y \bigr) ^ 2<br>$$</p>
-<p><font color="red">Logistic regression cost function(逻辑回归损失函数)：</font><br>$$<br>Cost\bigl(h _ \theta (x),y \bigr) =<br>\begin{cases}<br>-\log(h _ \theta (x)) \quad \quad \quad if \quad y = 1 \\<br>-\log(1 - h _ \theta (x)) \quad \ if \quad y = 0<br>\end{cases}<br>$$<br>逻辑回归损失函数其图像如图所示：</p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/10.png" alt="img"></p>
-<blockquote>
-<p>如何理解上述公式？</p>
-<p>如果我们断言 y = 1(代表有肿瘤)，我们训练的模型实际预测的输出$ h _ \theta (x) $越接近于1(代表有肿瘤可能性越大，我们的断言越对)，代价函数付出的代价越小，极端情况下在$ h _ \theta (x) = 1 $的情况下，代价函数需要付出的代价为0；比如在刚开始训练参数的时候，标记为1，我们的$ h _ \theta (x)$很接近于1，则此时的参数付出的代价很小.</p>
-<p>如果我们断言y = 0(代表没肿瘤)，我们训练的模型实际预测的输出$ h _ \theta (x) $越接近于1(代表有肿瘤可能性越大，我们的断言越错)，代价函数付出的代价越大，极端情况下在$ h _ \theta (x) = 1 $的情况下，代价函数需要付出的代价为无穷大；比如在刚开始训练参数的时候，标记为0，我们的$ h _ \theta (x)$很接近于1，则此时的参数付出的代价很大.</p>
-</blockquote>
-<h2 id="6-5-Simplified-Cost-Function-and-Gradient-Descent"><a href="#6-5-Simplified-Cost-Function-and-Gradient-Descent" class="headerlink" title="6.5 Simplified Cost Function and Gradient Descent"></a>6.5 Simplified Cost Function and Gradient Descent</h2><p><strong>逻辑回归代价函数</strong>还可以写成如下形式：<br>$$<br>J(\theta) = \frac{1}{m}\sum _ {i=1} ^ {m}Cost\bigl(h _ \theta (x ^ {(i)}),y  ^ {(i)} \bigr) \\<br>= -\frac{1}{m}[\sum _ {i=1} ^ {m} y ^ {(i)} \log h _ \theta(x ^ {(i)}) + (1 - y ^ {(i)}) \log (1 - h _ \theta (x ^ {(i)}))]<br>$$<br><strong>最小化$ J(\theta)$，进行梯度下降：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/11.png" alt="img"></p>
-<p>因为$ h _ \theta(x) = g(\theta ^ T x) = \frac{1}{1 + e ^ {-\theta ^ T x}} $，所以$ h _ \theta (x ^ {(i)}) \cdot (1 - h _ \theta (x ^ {(i)})) = \frac{ e ^ {-\theta ^ T x}}{(1 + e ^ {-\theta ^ T x}) ^ 2} $，$ h _ \theta’ (x ^ {(i)}) = \frac{ e ^ {-\theta ^ T x }\cdot x _ j ^ {(i)}}{(1 + e ^ {-\theta ^ T x}) ^ 2} $</p>
-<p>带入上式得：<br>$$<br>\theta _ j := \theta _ j - \alpha \frac{1}{m}\sum _ {i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) x _ j ^ {(i)} \quad j = 0, 1, 2 , …, n<br>$$</p>
-<h2 id="6-6-Advanced-Optimization-高级优化"><a href="#6-6-Advanced-Optimization-高级优化" class="headerlink" title="6.6 Advanced Optimization(高级优化)"></a>6.6 Advanced Optimization(高级优化)</h2><p><strong>Optimization algorithms(优化算法)：</strong></p>
+<h2 id="1-引用库"><a href="#1-引用库" class="headerlink" title="1 - 引用库"></a>1 - 引用库</h2><p>首先载入需要用到的库，它们分别是：</p>
 <ul>
-<li>Gradient descent(梯度下降)</li>
-<li>Conjugate gradient(共轭梯度法)</li>
-<li>BFGS(变尺度法)</li>
-<li>L-BFGS(限制变尺度法)</li>
-</ul>
-<blockquote>
-<p>后三个算法相对于Gradient descent的优点是：</p>
-<ol>
-<li>不需要手动选择$\alpha$</li>
-<li>速度更快</li>
-</ol>
-<p>缺点是：更复杂</p>
+<li><blockquote>
+<p>paddle.fluid：引入PaddlePaddle深度学习框架的fluid版本库；  </p>
 </blockquote>
-<p><strong>一个Matlab优化实例：</strong></p>
-<p>代码($ J(\theta) = (\theta _ 1 -5) ^ 2 + (\theta _ 2 -5) ^ 2 $)：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[jVal, gradient]</span> = <span class="title">costFunction</span><span class="params">(theta)</span></span></span><br><span class="line">    jVal = (theta(<span class="number">1</span>) - <span class="number">5</span>)^<span class="number">2</span> + (theta(<span class="number">2</span>) - <span class="number">5</span>)^<span class="number">2</span>;</span><br><span class="line">    </span><br><span class="line">    gradient = <span class="built_in">zeros</span>(<span class="number">2</span>,<span class="number">1</span>);</span><br><span class="line">    gradient(<span class="number">1</span>) = <span class="number">2</span> * (theta(<span class="number">1</span>) - <span class="number">5</span>);</span><br><span class="line">    gradient(<span class="number">2</span>) = <span class="number">2</span> * (theta(<span class="number">2</span>) - <span class="number">5</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<p>命令行输入的命令，以及输出结果的含义：</p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/12.png" alt="img"></p>
-<h2 id="6-7-Multi-class-classification-One-vs-all-多分类器：一对其余"><a href="#6-7-Multi-class-classification-One-vs-all-多分类器：一对其余" class="headerlink" title="6.7 Multi-class classification : One-vs-all(多分类器：一对其余)"></a>6.7 Multi-class classification : One-vs-all(多分类器：一对其余)</h2><p><strong>算法思想：</strong>使用逻辑回归分类器(二分类)完成多分类</p>
-<p><strong>算法实现：</strong>对于n分类问题，最终会产生n个学习器($ h _ \theta ^ {(i)} (x) = P(y=i|x;\theta)$,  (i=1,2,…,n))，产生过程是依次将每一类作为正类，其余作为反类，训练出一个二分类学习器；预测时，将待预测样本分别送入这n个学习器，对比这n个输出结果，取概率最大的那个学习器的正类作为最终预测结果.</p>
-<h2 id="7-1-The-Problem-of-Overfitting-过拟合问题"><a href="#7-1-The-Problem-of-Overfitting-过拟合问题" class="headerlink" title="7.1 The Problem of Overfitting(过拟合问题)"></a>7.1 The Problem of Overfitting(过拟合问题)</h2><p><font color="red">过拟合：</font>对于一个实际问题，我们有很多特征(自变量)，这时候训练出的方程能很好的拟合训练数据，但对于新数据，不能准确预测(又叫做”泛化”能力差).</p>
-<p><strong>解决过拟合问题的方法：</strong></p>
-<ol>
-<li>减少特征的数量<ul>
-<li>人工决定保留哪些变量，舍弃不重要的变量</li>
-<li>Model selection algorithm(模型选择算法)，可以自动选择保留哪些特征</li>
-</ul>
 </li>
-<li>正则化(Regularization)<ul>
-<li>保留所有特征，但是减小参数的数量级/值</li>
-<li>当我们有大量特征时，我们训练出的学习器也能很好的工作</li>
-</ul>
+<li><blockquote>
+<p>numpy：NumPy是Python语言的一个扩展程序库。支持高端大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。NumPy的核心功能是”ndarray”(即n-dimensional array，多维数组)数据结构。</p>
+</blockquote>
 </li>
-</ol>
-<h2 id="7-2-Cost-Function-代价函数"><a href="#7-2-Cost-Function-代价函数" class="headerlink" title="7.2 Cost Function(代价函数)"></a>7.2 Cost Function(代价函数)</h2><p><strong>正则化下的代价函数为：</strong><br>$$<br>J(\theta) = \frac{1}{2m}\Bigl[ \sum _ {i=1} ^ {m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) \bigr) ^ 2 + \lambda \sum _ {j=1} ^ {n} \theta _ j ^ 2 \Bigr]<br>$$</p>
-<blockquote>
-<p>因为我们不知道该惩罚哪一项，所以对于所有的参数(除了$ \theta _ 0 $)均进行惩罚，这样，最终的参数会变小，能一定程度上较少过拟合现象</p>
-<p>$ \lambda $称为正则化参数，其作用是在两个不同的目标中的一个平衡关系；$ \lambda $过大会导致欠拟合</p>
+<li><blockquote>
+<p>os: python的模块，可使用该模块对操作系统、目录、文件等进行操作</p>
 </blockquote>
-<h2 id="7-3-Reguilarized-Liner-Regression-线性回归正则化"><a href="#7-3-Reguilarized-Liner-Regression-线性回归正则化" class="headerlink" title="7.3 Reguilarized Liner Regression(线性回归正则化)"></a>7.3 Reguilarized Liner Regression(线性回归正则化)</h2><p><strong>梯度下降：</strong></p>
-<p>Repeat {<br>$$<br>\theta _ 0 := \theta _ 0 - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ 0 ^ {(i)} \bigr)<br>\\<br>\theta _ j := \theta _ j (1 - \alpha \frac{\lambda}{m}) - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ j ^ {(i)} \bigr) \quad (j=1,2,3,…n)<br>$$<br>}</p>
-<p><strong>正规方程(Normal equation)：</strong><br>$$<br>\theta = \Biggl( X ^ T X + \lambda \begin{bmatrix}<br>0&amp;0&amp;0&amp;…&amp;0 \\<br>0&amp;1&amp;0&amp;…&amp;0 \\<br>.&amp;0&amp;1&amp;…&amp;0 \\<br>.&amp;0&amp;0&amp;…&amp;0 \\<br>.&amp;0&amp;0&amp;…&amp;1 \\<br>\end{bmatrix}  \Biggr) ^ {-1} X ^ T y<br>$$</p>
-<blockquote>
-<p>如果$ \lambda $ &gt; 0，则上式一定存在(可以求逆)</p>
-</blockquote>
-<h2 id="7-4-Reguilarized-Logistic-Regression-逻辑回归正则化"><a href="#7-4-Reguilarized-Logistic-Regression-逻辑回归正则化" class="headerlink" title="7.4 Reguilarized Logistic Regression(逻辑回归正则化)"></a>7.4 Reguilarized Logistic Regression(逻辑回归正则化)</h2><p><strong>Cost Function：</strong><br>$$<br>J(\theta) = -\frac{1}{m}[\sum _ {i=1} ^ {m} y ^ {(i)} \log h _ \theta(x ^ {(i)}) + (1 - y ^ {(i)}) \log (1 - h _ \theta (x ^ {(i)})) - \frac{\lambda}{2} \sum _ {j=1} ^ {n} \theta _ j ^ 2]<br>$$<br><strong>梯度下降：</strong></p>
-<p>Repeat{<br>$$<br>\theta _ 0 := \theta _ 0 - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ 0 ^ {(i)} \bigr)<br>\\<br>\theta _ j := \theta _ j - \alpha \bigl[ \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ j ^ {(i)} \bigr) + \frac{\lambda}{m} \theta _ j \bigr] \quad (j=1,2,3,…n)<br>$$<br>}</p>
-<h2 id="8-3-Model-Representation-I"><a href="#8-3-Model-Representation-I" class="headerlink" title="8.3 Model Representation I"></a>8.3 Model Representation I</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/13.png" alt="img"></p>
-<blockquote>
-<p>如果神经网络在第 j 层有$ s _ j $的单元，在第 j+1 层有$ s _ {j+1} $个单元，则从第 j 层到 j+1 层的参数矩阵$ \Theta ^ {(j)} $的维度是$ s _ {j+1} \times (s _ j + 1) $.</p>
-</blockquote>
-<h2 id="8-4-Model-Representation-II"><a href="#8-4-Model-Representation-II" class="headerlink" title="8.4 Model Representation II"></a>8.4 Model Representation II</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/14.png" alt="img"></p>
-<p><font color="red">forward propagation(前向传播)：</font>从输入层到隐藏层再到输出层依次计算激励的过程</p>
-<blockquote>
-<p>$ \Theta _ {23} ^ {(1)}$的含义：这是一个实数，上标 1 的含义是这是从第一层到第二层的参数；下标 23 的含义是：2代表该参数是为了计算该层的第二个目标值的(即$  a _ 2 $)，3代表该参数是为了求该层第二个目标值的第 3 个参数(参数从第 0 个数起).</p>
-</blockquote>
-<h2 id="8-5-Examples-and-Intuitions-I"><a href="#8-5-Examples-and-Intuitions-I" class="headerlink" title="8.5 Examples and Intuitions I"></a>8.5 Examples and Intuitions I</h2><p><strong>AND Function：</strong><br>$$<br>h _ \Theta (x) = g(-30 + 20 x _ 1 + 20 x _ 2)<br>$$</p>
-<table>
-<thead>
-<tr>
-<th>x1                   x2</th>
-<th>$ h _ \Theta (x)$</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0                        0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0                        1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1                        0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1                        1</td>
-<td>1</td>
-</tr>
-</tbody></table>
-<p><strong>OR Function：</strong><br>$$<br>h _ \Theta (x) = g(-10 + 20 x _ 1 + 20 x _ 2)<br>$$</p>
-<table>
-<thead>
-<tr>
-<th>x1                   x2</th>
-<th>$ h _ \Theta (x)$</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0                        0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0                        1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1                        0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1                        1</td>
-<td>1</td>
-</tr>
-</tbody></table>
-<h2 id="8-6-Examples-and-Intuitions-II"><a href="#8-6-Examples-and-Intuitions-II" class="headerlink" title="8.6 Examples and Intuitions II"></a>8.6 Examples and Intuitions II</h2><p><strong>NOT Function：</strong><br>$$<br>h _ \Theta (x) = g(10 - 20 x _ 1)<br>$$</p>
-<table>
-<thead>
-<tr>
-<th>x1</th>
-<th>$ h _ \Theta $</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p><strong>$(NOT \ \ x _ 1) AND (NOT \ \ x _ 2)$：</strong><br>$$<br>h _ \Theta (x) = g(10 - 20 x _ 1 - 20 x _ 2)<br>$$</p>
-<table>
-<thead>
-<tr>
-<th>x1                   x2</th>
-<th>$ h _ \Theta (x)$</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0                        0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0                        1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1                        0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1                        1</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/15.png" alt="img"></p>
-<h2 id="9-1-Cost-Function"><a href="#9-1-Cost-Function" class="headerlink" title="9.1 Cost Function"></a>9.1 Cost Function</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/16.png" alt="img"></p>
-<blockquote>
-<p>K：代表分类预测输出有K种结果</p>
-<p>L：神经网络层数</p>
-<p>$ s _ l $：代表第 l 层神经单元的个数(不包含偏置单元)</p>
-<p>$ y _ k ^ {(i)} $：预测结果向量的第 k 个分量</p>
-<p>$ x ^ {(i)} $：m组训练样本中的第 i 个</p>
-</blockquote>
-<p><strong>对正则项的理解：</strong></p>
-<blockquote>
-<p>因为$ \Theta ^ {(j)} $的维度是$ s _ {j+1} \times (s _ j + 1) $，其中的 +1 代表着偏置项，正则化的过程中不用加入三层求和里，最里面的一层代表着对某一列求和，第二层代表着对所有列求和，至此，针对第 l 个参数矩阵除偏置项外的所有矩阵元素求和完毕；紧接着，最外面一层求和，对所有的偏置矩阵求和</p>
-</blockquote>
-<h2 id="9-2-Backpropagation-Algorithm-反向传播"><a href="#9-2-Backpropagation-Algorithm-反向传播" class="headerlink" title="9.2 Backpropagation Algorithm(反向传播)"></a>9.2 Backpropagation Algorithm(反向传播)</h2><p><strong>复习前向传播：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/17.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/18.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/19.png" alt="img"></p>
-<p>**”error” of node $j$ in layer $ l$ :   **$ \delta _ j ^ {(l)}  $</p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/20.png" alt="img"></p>
-<p><strong>忽略正则项，则：</strong><br>$$<br>\frac{\partial}{\partial \Theta _{ij} ^ {(l)}} J(\Theta) = a _ j ^ {(l)} \delta _ i ^ {(l + 1)}<br>$$<br><img src="/2019/09/05/machine-learning-吴恩达-随笔/21.png" alt="img"></p>
-<h2 id="9-6-Random-Initialization"><a href="#9-6-Random-Initialization" class="headerlink" title="9.6 Random Initialization"></a>9.6 Random Initialization</h2><p>神经网络的参数需要随机初始化</p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/22.png" alt="img"></p>
-<h2 id="9-7-Putting-It-Together"><a href="#9-7-Putting-It-Together" class="headerlink" title="9.7 Putting It Together"></a>9.7 Putting It Together</h2><p><strong>神经网络的训练过程：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/23.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/24.png" alt="img"></p>
-<blockquote>
-<ol>
-<li>随机初始化参数</li>
-<li>对样本中的每一个数据通过前向传播计算出$ h _ \Theta (x ^ (i)) $</li>
-<li>计算$ J(\Theta) $</li>
-<li>通过反向传播算法计算$ \frac{\partial}{\partial \Theta _ {jk} ^ {(l)}} J(\Theta) $</li>
-<li>使用梯度检验比较梯度检验和第 4 步算出的结果，检验反向传播算法的正确性</li>
-<li>用梯度检验或者更高级的优化算法最小化$ J(\Theta) $以获得最好的参数</li>
-</ol>
-</blockquote>
-<h2 id="10-3-Model-Selection-and-Train-Validation-Test-Sets"><a href="#10-3-Model-Selection-and-Train-Validation-Test-Sets" class="headerlink" title="10.3 Model Selection and Train_Validation_Test Sets"></a>10.3 Model Selection and Train_Validation_Test Sets</h2><p><font color="red">模型选择：</font>例如确定某组数据最合适的多项式次数是几次，怎样选择正确的特征来构造学习算法，或者需要选择正则化参数中的$ \lambda $等.</p>
-<p><strong>只将数据集划分为训练集和测试集有什么问题？</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/25.png" alt="img"></p>
-<blockquote>
-<p>对上图解释：比如从上面10个模型中选择一个合适的模型，我们用训练集(70%)训练出10个分类器，对于每个分类器我们用测试集(30%)数据计算对应的代价函数值大小，选择代价最小的一个作为结果。上面的方法存在的问题：最终选择的分类器对测试集可能有很好的泛化效果，但对新的数据不一定有很好的效果。</p>
-</blockquote>
-<p><strong>针对上面的问题，怎么解决？</strong></p>
-<blockquote>
-<p>将原始数据集分成三份，即训练集(60%)，<strong>验证集(20%)</strong>，测试集(20%)；用训练集训练，<strong>验证集(cross validation)</strong>验证哪组参数最优，最后用测试集测试泛化性能.</p>
-</blockquote>
-<h2 id="10-4-Diagnosing-Bias-vs-Variance-判断训练的结果是偏差还是方差"><a href="#10-4-Diagnosing-Bias-vs-Variance-判断训练的结果是偏差还是方差" class="headerlink" title="10.4 Diagnosing Bias vs. Variance(判断训练的结果是偏差还是方差)"></a>10.4 Diagnosing Bias vs. Variance(判断训练的结果是偏差还是方差)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/26.png" alt="img"></p>
-<blockquote>
-<p>分析上图，可知：</p>
-<p>high bias(高偏差)：$ J _ {cv} (\theta) $(or $ J _ {test} (\theta) $)和$ J _ {train} (\theta)$都比较大</p>
-<p>high variance(高方差)：$ J _ {cv} (\theta) $(or $ J _ {test} (\theta) $)比较大，$ J _ {train} (\theta)$都比较小</p>
-</blockquote>
-<h2 id="10-5-Regularization-and-Bias-Variance-正则化和偏差方差"><a href="#10-5-Regularization-and-Bias-Variance-正则化和偏差方差" class="headerlink" title="10.5 Regularization and Bias_Variance(正则化和偏差方差)"></a>10.5 Regularization and Bias_Variance(正则化和偏差方差)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/27.png" alt="img"></p>
-<blockquote>
-<p>正则化的最初目的是消除过拟合，但过度正则化的结果会导致欠拟合</p>
-<p>分析上图，可知：$ \lambda $过大会导致偏差大，$ \lambda $过小会导致方差大</p>
-</blockquote>
-<h2 id="10-6-Learning-Curve-学习曲线"><a href="#10-6-Learning-Curve-学习曲线" class="headerlink" title="10.6 Learning Curve(学习曲线)"></a>10.6 Learning Curve(学习曲线)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/28.png" alt="img"></p>
-<blockquote>
-<p>随着样本的增加，训练集上总误差会增加，交叉验证集上误差会减小</p>
-</blockquote>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/29.png" alt="img"></p>
-<blockquote>
-<p>处于high bias(高偏差)状态，增加训练数据没有帮助</p>
-</blockquote>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/30.png" alt="img"></p>
-<blockquote>
-<p>处于high variance(高方差)，增加训练数据有用</p>
-</blockquote>
-<h2 id="10-7-Deciding-What-to-Do-Next-Revisited"><a href="#10-7-Deciding-What-to-Do-Next-Revisited" class="headerlink" title="10.7 Deciding What to Do Next Revisited"></a>10.7 Deciding What to Do Next Revisited</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/31.png" alt="img"></p>
-<blockquote>
-<p>针对不同的问题的解决办法</p>
-</blockquote>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/32.png" alt="img"></p>
-<h2 id="11-2-Error-Analysis-误差分析"><a href="#11-2-Error-Analysis-误差分析" class="headerlink" title="11.2 Error Analysis(误差分析)"></a>11.2 Error Analysis(误差分析)</h2><p><strong>Recommended approach(推荐的方法)：</strong></p>
-<ul>
-<li>快速构建一个简单的算法并且能够运行(结果好坏无所谓)，并且在交叉验证集上测试该分类器</li>
-<li>画出学习曲线以决定之后改进的方向，是需要更多的数据，需要更多的特征，等等</li>
-<li>误差分析，比如对于分类问题，查看在交叉验证集上哪些被错误分类，哪些分类正确，已确定之后的改进方向；比如垃圾邮件分类，有100封垃圾邮件被认为是正常邮件，其中12封和药品相关，4封和推销假产品有关，53封和钓鱼网站有关，31封其他类型的邮件，那么我之后的应该花费更多的时间在钓鱼邮件上。之后通过在交叉验证集上测试更改的效果，观察错误分类的邮件数目是否减少，从而确定这种改进是否有效。</li>
-</ul>
-<h2 id="11-3-Error-Metrics-For-Skewed-Classes-偏斜类的错误度量"><a href="#11-3-Error-Metrics-For-Skewed-Classes-偏斜类的错误度量" class="headerlink" title="11.3 Error Metrics For Skewed Classes(偏斜类的错误度量)"></a>11.3 Error Metrics For Skewed Classes(偏斜类的错误度量)</h2><p><font color="red">Skewed Classes(偏斜类)：</font>正例和反例的比例非常接近一个极端的现象。</p>
-<p><font color="red">混淆矩阵：</font></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/33.png" alt="img"></p>
-<p><font color="red">查准率(准确率)：</font>预测为正例中真实正例的比例<br>$$<br>P = \frac{TP}{TP + FP}<br>$$<br><font color="red">查全率(召回率)：</font>真实正例中预测正例所占的比例</p>
-<blockquote>
-<p>查准率和查全率是一对矛盾的度量，一般一高另一个就会低，通畅只有在一些简单的任务中，两者都高</p>
-</blockquote>
-<p>$$<br>R = \frac{TP}{TP + FN}<br>$$</p>
-<blockquote>
-<p>通过查准率和查全率，我们可以很好地评价我们的模型是否很好，及时训练集是偏斜类</p>
-</blockquote>
-<p><font color="red">F1：</font><br>$$<br>F1 = \frac{2 \times P \times R}{P + R} = \frac{2 \cdot TP}{样例总数 + TP - TN}<br>$$</p>
-<p>$$<br>F_\beta = \frac{(1 + \beta ^ 2) \times P \times R}{(\beta ^ 2 \times P) + R}<br>$$</p>
-<blockquote>
-<p>$$<br>\beta &gt; 1时查全率有更大影响，\beta &lt; 1是查准率影响更大<br>$$</p>
-</blockquote>
-<h2 id="11-5-Data-For-Machine-Learning-机器学习中的数据"><a href="#11-5-Data-For-Machine-Learning-机器学习中的数据" class="headerlink" title="11.5 Data For Machine Learning(机器学习中的数据)"></a>11.5 Data For Machine Learning(机器学习中的数据)</h2><p><strong>机器学习中设置更多特征(有用特征)</strong>会得到一个低偏差的分类器</p>
-<p><strong>使用大量训练数据</strong>训练出的模型不大可能过拟合，即低方差</p>
-<p>结合上述两者，可以得到低偏差和低方差的分类器</p>
-<blockquote>
-<p>如何确定特征是否充足，是否有用？</p>
-<p>当人类专家看到你提供的特征时，是否能够据此给出预测；比如预测房子的价格，如果只给出房子的大小，作为人类，是无法给出预测的，因为还需要判断房子的地点，是否使用过，使用时间长短，楼层数，装修程度等等。</p>
-</blockquote>
-<h2 id="12-1-Optimization-Objective-优化目标"><a href="#12-1-Optimization-Objective-优化目标" class="headerlink" title="12.1 Optimization Objective(优化目标)"></a>12.1 Optimization Objective(优化目标)</h2><p><strong>SVM中的Cost Function $ J(\theta) $为：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/34.png" alt="img"></p>
-<h2 id="12-3-Mathematics-Behind-Large-Margin-Classification-大间距分类下的数学原理"><a href="#12-3-Mathematics-Behind-Large-Margin-Classification-大间距分类下的数学原理" class="headerlink" title="12.3 Mathematics Behind Large Margin Classification(大间距分类下的数学原理)"></a>12.3 Mathematics Behind Large Margin Classification(大间距分类下的数学原理)</h2><p><strong>SVM会选择大间距分类，简单解释如下：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/35.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/36.png" alt="img"></p>
-<h2 id="12-4-Kernels-I-核函数"><a href="#12-4-Kernels-I-核函数" class="headerlink" title="12.4 Kernels I(核函数)"></a>12.4 Kernels I(核函数)</h2><p>$$<br>h_\theta(x ^ {(i)}) = \theta _ 0 x _ 0 + \theta _ 1 x _ 1  + \theta _ 2 x _ 2 + \theta _3 x _ 1 x _ 2 + \theta _ 4 x _ 1 ^ 2 + \theta _ 5 x _ 2 ^ 2 + \ …<br>$$</p>
-<p>对于其中的各种特征，我们可以成各种函数<br>$$<br>h_\theta(x ^ {(i)}) = \theta _ 0 f _ 0 + \theta _ 1 f _ 1  + \theta _ 2 f _ 2 + \theta _3 f _ 3 + \theta _ 4 f _ 4 + \theta _ 5 f _ 5 + \ …<br>$$<br>这里的各个f就是核函数，可以有不同的定义，一种定义是：给定 x ，依据标记 $ l $ 计算新特征，如高斯核函数定义如下：<br>$$<br>f _ 1 = simility(x, l ^ {(1)}) = exp(-\frac{||x - l ^ {(1)}|| ^ 2}{2 \sigma ^ 2})    \\<br>f _ 2 = simility(x, l ^ {(2)}) = exp(-\frac{||x - l ^ {(2)}|| ^ 2}{2 \sigma ^ 2})    \\<br>f _ 3 = simility(x, l ^ {(3)}) = exp(-\frac{||x - l ^ {(3)}|| ^ 2}{2 \sigma ^ 2})    \\<br>……<br>$$</p>
-<blockquote>
-<p>如果$x \approx l ^ {(1)} $，则$ f _ 1 \approx 1$.</p>
-<p>如果$ x $远离$ l ^ {(1)} $，则$ f _ 1 \approx 0 $.</p>
-</blockquote>
-<p><strong>高斯核函数中$ \sigma $对函数图像的影响：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/37.png" alt="img"></p>
-<h2 id="12-5-Kernels-II-核函数"><a href="#12-5-Kernels-II-核函数" class="headerlink" title="12.5 Kernels II(核函数)"></a>12.5 Kernels II(核函数)</h2><p>给定数据集$(x ^ {(1)}, y ^{(1)}), (x ^ {(2)}, y ^{(2)}),…, (x ^ {(m)}, y ^{(m)})$；选择标记$ l ^ {(1)} = x ^ {(1)}, l ^ {(2)} = x ^ {(2)},…,l ^ {(m)} = x ^ {(m)} $.</p>
-<p>针对每一个数据集中的$ x $(可以来自训练集，可以来自交叉验证集，也可以来自测试集，是一个标量)：<br>$$<br>f _ 1 = similarity(x, l ^ {(1)})    \\<br>f _ 2 = similarity(x, l ^ {(2)})    \\<br>……    \\<br>f _ m = similarity(x, l ^ {(m)})    \\<br>$$<br>例如，针对数据集中的某一个数据$ (x ^ {(i)}, y ^{(i)}) $：<br>$$<br>f _ 1 ^ {(i)} = similarity(x ^ {(i)}, l ^ {(1)})    \\<br>f _ 2 ^ {(i)} = similarity(x ^ {(i)}, l ^ {(2)})    \\<br>……    \\<br>f _ i ^ {(i)} = similarity(x ^ {(i)}, l ^ {(i)})      \\<br>……    \\<br>f _ m ^ {(i)} = similarity(x ^ {(i)}, l ^ {(m)})    \\<br>$$<br>其中$ f _ i ^ {(i)} = similarity(x ^ {(i)}, l ^ {(i)}) = exp(-\frac{0}{2 \sigma ^ 2}) = 1 $.</p>
-<p>则此时的向量$ x ^ {(i)} $通过这m个高斯核函数映射为一个另一个输入向量$f$，如下：<br>$$<br>f ^ {(i)} = (f _ 0 ^ {(i)}, f _ 1 ^ {(i)}, f _ 2 ^ {(i)}, … ,f _ m ^ {(i)}) \qquad f _ 0 ^ {(i)} = 1<br>$$</p>
-<hr>
-<p><strong>SVM with Kernels：</strong></p>
-<p>假设训练好SVM模型，给定输入x，怎么做预测？</p>
-<blockquote>
-<p>给定x，计算新特征$ f \in \Bbb R ^ {m+1} $，如果$ \theta ^ T f \geq 0 $，预测y=1</p>
-</blockquote>
-<p>如何训练？<br>$$<br>\min _ \theta J(\theta) = \min _ \theta (C[\sum _ {i=1} ^ m y ^ {(i)} cost _ 1 (\theta ^ T f ^ {(i)}) + (1 - y ^ {(i)}) cost _ 0 (\theta ^ T f ^ {(i)})] \ + \ \frac{1}{2} \sum _ {j=1} ^ {m} \theta _ j ^ 2)<br>$$<br>有时候将$ \sum _ {j=1} ^ {m} \theta _ j ^ 2 $ 替换为$ \theta ^ T M \theta $ . (M和核函数有关)</p>
-<hr>
-<p><strong>SVM parameter：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/38.png" alt="img"></p>
-<h2 id="12-6-Using-An-SVM-SVM的使用"><a href="#12-6-Using-An-SVM-SVM的使用" class="headerlink" title="12.6 Using An SVM(SVM的使用)"></a>12.6 Using An SVM(SVM的使用)</h2><p><strong>我们可以 使用SVM软件包(例如:liblinear，libsvm，…)去求解参数</strong>，但我们事先仍需要确定一些内容</p>
-<ul>
-<li>选择参数C</li>
-<li>确定核函数<ol>
-<li>线性核函数(就是普通的逻辑回归)。适合特征多，样本少的情况</li>
-<li>高斯核函数，需要选择参数$ \sigma ^ 2 $。适合特征少，样本多的情况</li>
-</ol>
 </li>
-<li>如果需要构造核函数，构造自己的核函数(注意需要<strong>特征缩放</strong>)</li>
-</ul>
-<blockquote>
-<p>选择的核函数必须满足”默塞尔定理”</p>
-<p>其他的一些核函数：Polynomial kernel(多项式核函数)，$ k(x, l) = (x ^ T l + const) ^ {degree}$；String kernel(字符串核函数)；chi-seqare kernel(卡方核函数)；histogram intersection kernel(直方相交核函数)……</p>
+<li><blockquote>
+<p>matplotlib.pyplot：用于生成图，在验证模型准确率和展示成本变化趋势时会使用到</p>
 </blockquote>
-<hr>
-<p><strong>SVM的多分类问题：</strong></p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> paddle</span><br><span class="line"><span class="keyword">import</span> paddle.fluid <span class="keyword">as</span> fluid</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-数据集介绍"><a href="#2-数据集介绍" class="headerlink" title="2 - 数据集介绍"></a>2 - 数据集介绍</h2><ul>
+<li><blockquote>
+<p>本次所用数据集已经集成在paddle.dataset中了，并且已经为我们拆分成了训练集和测试集；我们可以通过调用paddle.dataset.uci_housing.train()和paddle.dataset.uci_housing.test()两个接口来获取训练集和测试集，非常的方便。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>数据集共506行,每行14列。前13列用来描述房屋的各种信息，最后一列为该类房屋价格中位数。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="3-数据提供器"><a href="#3-数据提供器" class="headerlink" title="3 - 数据提供器"></a>3 - 数据提供器</h2><ul>
+<li><blockquote>
+<p>接下来我们通过paddle.batch这个接口，来定义数据提供器：train_reader和test_reader。分别向我们的网络提供训练数据和测试数据。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>提供器每次读入一个大小为BATCH_SIZE的数据批次。如果用户希望加一些随机性，它可以同时定义一个批次大小和一个缓存大小。这样的话，每次数据提供器会从缓存中随机读取批次大小那么多的数据。我们都可以通过batch_size进行设置，这个大小一般是2的N次方。</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>关于参数的解释如下：</strong></p>
 <ul>
-<li>许多SVM包可以调用</li>
-<li>也可以使用one-vs-all 方法</li>
+<li>paddle.reader.shuffle(train(), buf_size=500)表示trainer从train()这个reader中读取了buf_size=500大小的数据并打乱顺序</li>
+<li>paddle.batch(reader(), batch_size=BATCH_SIZE)表示从打乱的数据中再取出BATCH_SIZE=20大小的数据进行一次迭代训练</li>
 </ul>
-<hr>
-<p><strong>逻辑回归</strong>和<strong>SVM</strong>的选择问题</p>
-<p>n 代表特征的数量，m 代表训练样本的数量</p>
+<p>如果buf_size设置的数值大于数据集本身，就直接把整个数据集打乱顺序；如果buf_size设置的数值小于数据集本身，就按照buf_size的大小打乱顺序。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">BUF_SIZE=<span class="number">500</span></span><br><span class="line">BATCH_SIZE=<span class="number">20</span></span><br><span class="line"><span class="comment">#用于训练的数据提供器，每次从缓存中随机读取批次大小的数据</span></span><br><span class="line">train_reader = paddle.batch(</span><br><span class="line">    paddle.reader.shuffle(paddle.dataset.uci_housing.train(), buf_size=BUF_SIZE), batch_size=BATCH_SIZE)   </span><br><span class="line"><span class="comment">#用于测试的数据提供器，每次从缓存中随机读取批次大小的数据</span></span><br><span class="line">test_reader = paddle.batch(</span><br><span class="line">paddle.reader.shuffle(paddle.dataset.uci_housing.test(),buf_size=BUF_SIZE),batch_size=BATCH_SIZE)</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-配置网络结构和设置参数"><a href="#4-配置网络结构和设置参数" class="headerlink" title="4 - 配置网络结构和设置参数"></a>4 - 配置网络结构和设置参数</h2><p><strong>配置网络结构:</strong></p>
+<p>线性回归的模型其实就是一个采用线性激活函数（linear activation）的全连接层（fully-connected layer，fc_layer），因此在Peddlepeddle中利用全连接层模型构造线性回归，这样一个全连接层就可以看做是一个简单的神经网络，只包含输入层和输出层即可。本次的模型由于只有一个影响参数，因此输入只含一个$X_0$。</p>
+<img src="/2019/09/25/paddlepaddle使用入门/MyBlog\source\_posts\paddlepaddle使用入门/1.png" style="width:380px;height:180px;">
+
+<p>接下来就让我们利用PaddlePaddle提供的接口，搭建我们自己的网络吧！</p>
+<p><strong>输入层:</strong>  </p>
+<p>我们可以用 x = fluid.layers.data(name=’x’, shape=[13], dtype=’float32’)来表示数据的一个输入层，其中name属性的名称为”x”，数据的shape为13维向量，这是因为本次所用的房价数据集的每条数据有13个属性，所以shape=13。</p>
+<p><strong>输出层:</strong>  </p>
+<p>用y_predict = fluid.layers.fc(input=x, size=1, act=None)来表示输出层：其中paddle.layer.fc表示全连接层，input=x表示该层输入数据为x，size=1表示该层有一个神经元，在Fluid版本中使用的激活函数不再是调用一个函数了，而是传入一个字符串就可以，比如：act=’relu’就表示使用relu激活函数。act=None表示激活函数为线性激活函数。</p>
+<p><strong>标签层:</strong></p>
+<p>用y = fluid.layers.data(name=’y’, shape=[1], dtype=’float32’)来表示标签数据，名称为y，有时我们名称不用y而用label。数据类型为一维向量。</p>
+<p><font color="red">函数介绍：</font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">paddle.fluid.layers.data(name, shape, append_batch_size=<span class="literal">True</span>, dtype=<span class="string">'float32'</span>, lod_level=<span class="number">0</span>, type=VarType.LOD_TENSOR, stop_gradient=<span class="literal">True</span>)</span><br><span class="line"><span class="comment"># 数据层(Data Layer)</span></span><br><span class="line"><span class="comment"># 该功能接受输入数据，判断是否需要以minibatch方式返回数据，然后使用辅助函数创建全局变量。该全局变量可由计算图中的所有operator访问。</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">paddle.fluid.layers.fc(input, size, num_flatten_dims=<span class="number">1</span>, param_attr=<span class="literal">None</span>, bias_attr=<span class="literal">None</span>, act=<span class="literal">None</span>, is_test=<span class="literal">False</span>, name=<span class="literal">None</span>)</span><br><span class="line"><span class="comment"># 该函数在神经网络中建立一个全连接层。 它可以将一个或多个tensor（ input 可以是一个list或者Variable，详见参数说明）作为自己的输入，并为每个输入的tensor创立一个变量，称为“权”（weights），等价于一个从每个输入单元到每个输出单元的全连接权矩阵。FC层用每个tensor和它对应的权相乘得到形状为[M, size]输出tensor，M是批大小。如果有多个输入tensor，那么形状为[M, size]的多个输出张量的结果将会被加起来。如果 bias_attr 非空，则会新创建一个偏向变量（bias variable），并把它加入到输出结果的运算中。最后，如果 act 非空，它也会加入最终输出的计算中。</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义张量变量x，表示13维的特征值</span></span><br><span class="line">x = fluid.layers.data(name=<span class="string">'x'</span>, shape=[<span class="number">13</span>], dtype=<span class="string">'float32'</span>)</span><br><span class="line"><span class="comment">#定义张量y,表示目标值</span></span><br><span class="line">y = fluid.layers.data(name=<span class="string">'y'</span>, shape=[<span class="number">1</span>], dtype=<span class="string">'float32'</span>)</span><br><span class="line"><span class="comment">#定义一个简单的线性网络,连接输入和输出的全连接层</span></span><br><span class="line"><span class="comment">#input:输入tensor;</span></span><br><span class="line"><span class="comment">#size:该层输出单元的数目</span></span><br><span class="line"><span class="comment">#act:激活函数</span></span><br><span class="line">y_predict=fluid.layers.fc(input=x,size=<span class="number">1</span>,act=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-定义损失函数"><a href="#5-定义损失函数" class="headerlink" title="5 - 定义损失函数"></a>5 - 定义损失函数</h2><p>PaddlePaddle提供了很多的损失函数的接口，比如交叉熵损失函数(cross_entropy)。因为本项目是一个线性回归任务，所以我们使用的是均方差损失函数。可以调用fluid.layers.square_error_cost(input= ,laybel= )实现方差计算。因为fluid.layers.square_error_cost(input= ,laybel= )求的是一个Batch的损失值，所以我们还要通过调用fluid.layers.mean(loss)对方差求平均。</p>
+<p>将输入定义为 <strong>房价预测值</strong>，label定义为 <strong>标签数据</strong>。进而计算损失值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cost = fluid.layers.square_error_cost(input=y_predict, label=y) <span class="comment">#求一个batch的损失值</span></span><br><span class="line">avg_cost = fluid.layers.mean(cost)                              <span class="comment">#对损失值求平均值</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-优化方法"><a href="#6-优化方法" class="headerlink" title="6 - 优化方法"></a>6 - 优化方法</h2><p>损失函数定义确定后，需要定义参数优化方法。为了改善模型的训练速度以及效果，学术界先后提出了很多优化算法，包括： Momentum、RMSProp、Adam 等，已经被封装在fluid内部，读者可直接调用。本次可以用 fluid.optimizer.SGD(learning_rate= ) 使用随机梯度下降的方法优化，其中learning_rate表示学习率，大家可以自己尝试修改。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">optimizer = fluid.optimizer.SGDOptimizer(learning_rate=<span class="number">0.001</span>)</span><br><span class="line">opts = optimizer.minimize(avg_cost)</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>如果 n 很大(相对于m)：选择<strong>逻辑回归</strong>或者<strong>线性核函数</strong></li>
-<li>如果 n 小，m 比较大(不是特别大)：使用<strong>带高斯核函数的SVM</strong></li>
-<li>如果 n 小，m 很大：创建添加更多的特征，然后使用<strong>逻辑回归</strong>或者<strong>线性核函数</strong></li>
-</ul>
-<h2 id="13-2-K-Means-Algorithm-K-Means算法"><a href="#13-2-K-Means-Algorithm-K-Means算法" class="headerlink" title="13.2 K-Means Algorithm(K-Means算法)"></a>13.2 K-Means Algorithm(K-Means算法)</h2><p><strong>算法过程：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/39.png" alt="img"></p>
-<blockquote>
-<p>算法的两个步骤：</p>
-<p>1 对训练集中的每一个点划分到某个聚类中心中(Cluster assignment step)</p>
-<p>2 移动聚类中心</p>
+<li><blockquote>
+<p>fluid有两个program，一个是default_main_program，一个是default_startup_program;</p>
 </blockquote>
-<h2 id="13-3-Optimization-objective-优化目标"><a href="#13-3-Optimization-objective-优化目标" class="headerlink" title="13.3 Optimization objective(优化目标)"></a>13.3 Optimization objective(优化目标)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/40.png" alt="img"></p>
-<h2 id="13-4-Random-Initialization-随机初始化"><a href="#13-4-Random-Initialization-随机初始化" class="headerlink" title="13.4 Random Initialization(随机初始化)"></a>13.4 Random Initialization(随机初始化)</h2><p><strong>局部最优：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/41.png" alt="img"></p>
-<p><strong>如何得到一个比较好的结果，即使是局部最优？</strong></p>
-<blockquote>
-<p>随机初始化各个聚类中心，每个聚类中心都选择是样本点，运行K-Means算法，得到最优结果后记录$ J(c ^ {(1)},…,c ^ {(m)}, \mu _ 1, … , \mu _ k) $的值；对上述步骤重复50~1000次(假设 t 次)，得到 t 个结果，选择使得$ J(c ^ {(1)},…,c ^ {(m)}, \mu _ 1, … , \mu _ k) $最小的那个座位最终的聚类结果</p>
-<p>上述方法针对分成2-10个类比较有效，分的类别比较多的话 上述过程结果不一定很好</p>
+</li>
+<li><blockquote>
+<p>fluid.default_main_program()用于获取默认或全局main program(主程序)。该主程序用于训练和测试模型。fluid.layers 中的所有layer函数可以向 default_main_program 中添加算子和变量。</p>
 </blockquote>
-<h2 id="13-5-Choosing-the-Number-of-Cluster-选择聚类数数目"><a href="#13-5-Choosing-the-Number-of-Cluster-选择聚类数数目" class="headerlink" title="13.5 Choosing the Number of Cluster(选择聚类数数目)"></a>13.5 Choosing the Number of Cluster(选择聚类数数目)</h2><ul>
-<li>一般来说，聚类数目的选择是通过手动，人工输入或我们的经验来决定</li>
-<li>我们也可以用Elbow Method(“肘部原则”)来选择聚类数目，不过常常这种方法并不好用</li>
+</li>
+<li><blockquote>
+<p>参数初始化操作会被写入fluid.default_startup_program();</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>使用fluid.default_main_program().clone(for_test=True)语句，我们可以克隆一个default_main_program，以备将来测试时使用。</p>
+</blockquote>
+</li>
 </ul>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/42.png" alt="img"></p>
-<h2 id="14-1-Dimensionality-Reduction-降维"><a href="#14-1-Dimensionality-Reduction-降维" class="headerlink" title="14.1 Dimensionality Reduction(降维)"></a>14.1 Dimensionality Reduction(降维)</h2><p><strong>为什么要对数据进行降维？</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test_program = fluid.default_main_program().clone(for_test=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-设置训练场所-创建执行器-参数初始化"><a href="#7-设置训练场所-创建执行器-参数初始化" class="headerlink" title="7 - 设置训练场所+创建执行器+参数初始化"></a>7 - 设置训练场所+创建执行器+参数初始化</h2><p><strong>设置训练场所：</strong> 首先进行设置训练使用的设备。也就是选择是在CPU上进行训练，还是在GPU上进行训练。在复杂量较低的时候使用 CPU 就可以完成任务，但是对于大规模计算就需要使用 GPU 训练。目前 GPU 训练都是基于 CUDA 工具之上的。</p>
+<p>代码实现也很简单，我们使用两行代码就可以实现，如下面所示：  </p>
 <ul>
-<li>数据压缩</li>
-<li>节省内存和空间</li>
-<li>加快机器学习算法运行速度</li>
-<li>数据可视化</li>
+<li>use_cuda=False 表示不使用 GPU 进行训练</li>
 </ul>
-<h2 id="14-3-Principal-Component-Analysis-主成分分析-PCA-Problem-Formulation"><a href="#14-3-Principal-Component-Analysis-主成分分析-PCA-Problem-Formulation" class="headerlink" title="14.3 Principal Component Analysis(主成分分析\PCA) Problem Formulation"></a>14.3 Principal Component Analysis(主成分分析\PCA) Problem Formulation</h2><p>主成分分析可以降维，比如从n维降到k维，其过程是找到k个n维向量，然后将所有的数据映射到这k个向量组成的空间中，使得投影距离的平方和最小；比如3维向量降成2维，其做法是找到2个3维向量，这两个向量可以构成一个平面，所有点映射到这个平面上，使得投影距离的平方和最小。</p>
-<h2 id="14-4-Principal-Component-Analysis-Algorithm-主成分分析算法"><a href="#14-4-Principal-Component-Analysis-Algorithm-主成分分析算法" class="headerlink" title="14.4  Principal Component Analysis Algorithm(主成分分析算法)"></a>14.4  Principal Component Analysis Algorithm(主成分分析算法)</h2><p><strong>目标是将n维空间中的点降到k维。具体做法如下：</strong></p>
-<p>1 计算协方差矩阵：<br>$$<br>\Sigma = \frac{1}{m} \sum _ {i = 1} ^ n (x ^ {(i)}) (x ^ {(i)}) ^ T<br>$$<br>如果<br>$$<br>X = \begin {bmatrix}<br>x ^ {(1)T}        \\<br>…            \\<br>x ^ {(m)T}<br>\end {bmatrix}<br>$$<br>则：<br>$$<br>\Sigma = \frac{1}{m} \cdot X ^ T \cdot X<br>$$<br>2 计算协方差矩阵的特征向量<br>$$<br>[U,S,V] = svd(\Sigma)<br>$$</p>
-<blockquote>
-<p>svd 代表奇异值分解</p>
+<p><strong>创建执行器：</strong>为了能够运行开发者定义的网络拓扑结构和优化器，需要定义执行器。由执行器来真正的执行参数的初始化和网络的训练过程。fulid使用了一个C++类Executor用于运行一个程序，Executor类似一个解释器，Fluid将会使用这样一个解析器来训练和测试模型。</p>
+<p>之后我们run一下，初始化执行器；<br>用户配置完模型后，参数初始化操作会被写入到 fluid.default_startup_program() 中。<br>使用 fluid.Executor() 运行 这一程序，即可在全局中随机初始化参数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用CPU训练</span></span><br><span class="line">use_cuda = <span class="literal">False</span></span><br><span class="line">place = fluid.CUDAPlace(<span class="number">0</span>) <span class="keyword">if</span> use_cuda <span class="keyword">else</span> fluid.CPUPlace() </span><br><span class="line"></span><br><span class="line">exe = fluid.Executor(place)              <span class="comment">#创建一个Executor实例exe</span></span><br><span class="line">exe.run(fluid.default_startup_program()) <span class="comment">#Executor的run()方法执行startup_program(),进行参数初始化</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来定义映射  </p>
+<p>输入网络的数据要与网络本身应该接受的数据相匹配。在paddle的 fluid 中使用 feed_list 的概念来保证输入的数据与网络接受的数据的顺序是一致的。本示例中使用 feed_list = [x,y] 来告知网络，输入的数据是分为两部分，第一部分是 x 值，第二部分是 label 值。</p>
+<p>映射完之后，创建 DataFeeder 对象，在训练的时候，用户可调用其 feeder.feed(iterable) 方法将用户传入的iterable 数据转换为 LoDTensor。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义feeder </span></span><br><span class="line">feeder = fluid.DataFeeder(place=place, feed_list=[x, y])<span class="comment">#feed_list:向模型输入的变量名</span></span><br></pre></td></tr></table></figure>
+
+<p>为了便于观察训练过程，我们可以定义一个绘制函数，用来把“训练过程的损失值变化趋势”实时的展示出来：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">iter=<span class="number">0</span>;</span><br><span class="line">iters=[]</span><br><span class="line">train_costs=[]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_train_cost</span><span class="params">(iters,train_costs)</span>:</span></span><br><span class="line">    title=<span class="string">"training cost"</span></span><br><span class="line">    plt.title(title, fontsize=<span class="number">24</span>)</span><br><span class="line">    plt.xlabel(<span class="string">"iter"</span>, fontsize=<span class="number">14</span>)</span><br><span class="line">    plt.ylabel(<span class="string">"cost"</span>, fontsize=<span class="number">14</span>)</span><br><span class="line">    plt.plot(iters, train_costs,color=<span class="string">'blue'</span>,label=<span class="string">'training cost'</span>) </span><br><span class="line">    plt.grid()</span><br><span class="line">    plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-开始训练"><a href="#8-开始训练" class="headerlink" title="8 - 开始训练"></a>8 - 开始训练</h2><ul>
+<li><blockquote>
+<p>接下来我们就是用双层循环，来进行训练；</p>
 </blockquote>
-<p>3 $ U _ {reduce} = U (:,1:k) $</p>
-<blockquote>
-<p>第二步中求出的矩阵U是 n x n 的，该步骤取出该矩阵中前k列</p>
+</li>
+<li><blockquote>
+<p>在训练之前还要定义一个模型保存路径，用来保存我们训练好的模型；</p>
 </blockquote>
-<p>4 $ z = U _ {reduce} ^ T * x $</p>
-<blockquote>
-<p>z是k维向量</p>
+</li>
+<li><blockquote>
+<p>我们还要定义一个变量，来规定训练的总epoch；</p>
 </blockquote>
-<p><strong>Matlab演示如下：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/43.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/44.png" alt="img"></p>
-<h2 id="14-5-Choosing-the-Number-of-Principle-Components-选择降维的维数"><a href="#14-5-Choosing-the-Number-of-Principle-Components-选择降维的维数" class="headerlink" title="14.5 Choosing the Number of Principle Components(选择降维的维数)"></a>14.5 Choosing the Number of Principle Components(选择降维的维数)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/45.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/46.png" alt="img"></p>
-<h2 id="14-6-Reconstruction-form-Compressed-Representation-从压缩后的数据得到近似的原数据"><a href="#14-6-Reconstruction-form-Compressed-Representation-从压缩后的数据得到近似的原数据" class="headerlink" title="14.6 Reconstruction form Compressed Representation(从压缩后的数据得到近似的原数据)"></a>14.6 Reconstruction form Compressed Representation(从压缩后的数据得到近似的原数据)</h2><p>$$<br>X _ {approx} = U _ {reduce} * z<br>$$</p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/47.png" alt="img"></p>
-<h2 id="14-7-Advice-for-Applying-PCA-应用PCA的建议"><a href="#14-7-Advice-for-Applying-PCA-应用PCA的建议" class="headerlink" title="14.7 Advice for Applying PCA(应用PCA的建议)"></a>14.7 Advice for Applying PCA(应用PCA的建议)</h2><ul>
-<li>映射$ x ^ {(i)} -&gt; z ^ {(i)} $应该定义在只在训练集上执行PCA，在训练集上找到所有参数后，你可以应用这相同的映射到其他的样本中，比如交叉验证集合测试集;</li>
-<li>PCA应用场景：压缩(减小存储，加快速度)，可视化;</li>
-<li>用PCA去克服过拟合是一种十分糟糕的应用，因为PCA只对 x 进行压缩，不考虑 y 的影响，想要克服过拟合还是使用<strong>正则化</strong>;</li>
-<li>机器学习算法中不要上来就使用PCA，尽量使用原始数据，因为信息完整，除非你认为存在一个 原因导致不能工作，比如运行速度太慢，或者对存储要求过高</li>
+</li>
 </ul>
-<h2 id="15-3-Algorithm"><a href="#15-3-Algorithm" class="headerlink" title="15.3 Algorithm"></a>15.3 Algorithm</h2><p><strong>异常检测算法：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/48.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/49.png" alt="img"></p>
-<h2 id="15-5-Anomaly-Detection-vs-Supervised-Learning-异常检测-vs-监督-学习"><a href="#15-5-Anomaly-Detection-vs-Supervised-Learning-异常检测-vs-监督-学习" class="headerlink" title="15.5 Anomaly Detection vs. Supervised Learning(异常检测 vs. 监督 学习)"></a>15.5 Anomaly Detection vs. Supervised Learning(异常检测 vs. 监督 学习)</h2><table>
-<thead>
-<tr>
-<th>异常检测</th>
-<th>监督学习</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>正例(异常)很少，反例很多</td>
-<td>正反例都很多</td>
-</tr>
-<tr>
-<td>会出现我们以前没有见过的异常</td>
-<td>未来预测的样本和当前的类别类似</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>异常检测和监督学习可以相互转换，例如网站欺骗检测，如果欺骗的例子很少，用异常检测，党欺骗的例子大量出现时，可以适应监督学习</p>
-</blockquote>
-<h2 id="15-6-Choosing-What-Features-to-Use-选择哪些作为特征"><a href="#15-6-Choosing-What-Features-to-Use-选择哪些作为特征" class="headerlink" title="15.6 Choosing What Features to Use(选择哪些作为特征)"></a>15.6 Choosing What Features to Use(选择哪些作为特征)</h2><p><strong>如果对于特征 x 没有服从高斯分布，变换为高斯分布：</strong><br>$$<br>xNew = \log x    \\<br>xNew = x ^ {0.05}    \\<br>……<br>$$<br><img src="/2019/09/05/machine-learning-吴恩达-随笔/50.png" alt="img"></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/51.png" alt="img"></p>
-<h2 id="15-8-Anormaly-Detection-using-the-Multivariate-Gaussian-Distribution"><a href="#15-8-Anormaly-Detection-using-the-Multivariate-Gaussian-Distribution" class="headerlink" title="15.8 Anormaly Detection using the Multivariate Gaussian Distribution"></a>15.8 Anormaly Detection using the Multivariate Gaussian Distribution</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/52.png" alt="img"></p>
-<p><strong>两者对比：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/53.png" alt="img"></p>
-<table>
-<thead>
-<tr>
-<th>Original model</th>
-<th>Multivariate Gaussian</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>当特征有异常组合时，认为选择出来</td>
-<td>自动捕捉特征的相关性</td>
-</tr>
-<tr>
-<td>容易计算</td>
-<td>计算代价高</td>
-</tr>
-<tr>
-<td>样本很少时，也可以计算</td>
-<td>要保证样本数 &gt; 特征数，否则不可逆</td>
-</tr>
-</tbody></table>
-<h2 id="16-1-problem-formulation-问题描述"><a href="#16-1-problem-formulation-问题描述" class="headerlink" title="16.1 problem formulation(问题描述)"></a>16.1 problem formulation(问题描述)</h2><p>$n _ u$：用户的数量</p>
-<p>$ n _ m $：电影的数量</p>
-<p>$ r(i, j) $：如果用户 j 给电影 i 评分了，该值取 1，否则取 0</p>
-<p>$ y ^ {(i, j)} $：用户 j 给电影 i 的评分大小( 当且仅当$ r(i, j) $ = 1时，才有取值 )</p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/54.png" alt="img"></p>
-<p>上面这个例子中，有4个用户，5部电影，所以$n _ u$ = 4，$ n _ m $ = 5 。</p>
-<h2 id="16-2-Content-Based-Recommendations-基于内容的推荐系统"><a href="#16-2-Content-Based-Recommendations-基于内容的推荐系统" class="headerlink" title="16.2 Content Based Recommendations(基于内容的推荐系统)"></a>16.2 Content Based Recommendations(基于内容的推荐系统)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/55.png" alt="img"></p>
-<blockquote>
-<p>其中的$ x ^ {(i)} $代表每个电影的特征向量，比如有两个 特征，一个$ x _ 1 $，代表爱情剧情的多少，另一个是$ x _ 2 $，代表动作剧情的含量，则$ x ^ {(i)} = [x _ 0; x _ 1; x _ 2] \quad 其中 x _ 0 = 1 $.</p>
-</blockquote>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/56.png" alt="img"></p>
-<h2 id="16-3-Collaborative-Filtering-协同过滤"><a href="#16-3-Collaborative-Filtering-协同过滤" class="headerlink" title="16.3 Collaborative Filtering(协同过滤)"></a>16.3 Collaborative Filtering(协同过滤)</h2><p><strong>对于16.2中的$ x ^ {(i)} $，我们事先不知道，怎么办？此时就需要使用协同过滤</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/57.png" alt="img"></p>
-<p><strong>上一节16.2中我们通过 x 可以求出 $ \theta $，本节中，我们可以通过 $ \theta $ 训练出 x ，这类似于先有鸡还是先有蛋的问题，应该怎么解决？</strong></p>
-<blockquote>
-<p>我们可以随机初始化一组$ \theta $，然后算出 x ，然后通过 x 计算 $ \theta $，如此往复，如下图：</p>
-</blockquote>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/58.png" alt="img"></p>
-<h2 id="16-4-Collaborative-Filtering-Algorithm-协同过滤算法"><a href="#16-4-Collaborative-Filtering-Algorithm-协同过滤算法" class="headerlink" title="16.4 Collaborative Filtering Algorithm(协同过滤算法)"></a>16.4 Collaborative Filtering Algorithm(协同过滤算法)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/59.png" alt="img"></p>
-<blockquote>
-<p>在此算法中，向量 x 和 参数 $ \theta $为 n 维向量，不存在 $ x _ 0 和 \theta _ 0 $，原因如下：我们现在要学习所有的特征，没必要将这个等于1的特征固定死，因为如果真的需要一个特征永远为1，该算法可以靠自己去获得1这个值；同时这样做算法就有了灵活性去自行学习</p>
-</blockquote>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/60.png" alt="img"></p>
-<h2 id="16-5-Vectorization-Low-Rank-Matrix-Factorization-向量化-低秩矩阵因式分解"><a href="#16-5-Vectorization-Low-Rank-Matrix-Factorization-向量化-低秩矩阵因式分解" class="headerlink" title="16.5 Vectorization_Low Rank Matrix Factorization(向量化_低秩矩阵因式分解)"></a>16.5 Vectorization_Low Rank Matrix Factorization(向量化_低秩矩阵因式分解)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/61.png" alt="img"></p>
-<blockquote>
-<p>矩阵元素$ (\theta ^ {(j)}) ^ T (x ^ {(i)}) $代表的含义是用户 j 对用户 i 的评分预测.</p>
-</blockquote>
-<h2 id="16-6-Implementational-detail：Mean-Normalization-实现细节：均值归一化"><a href="#16-6-Implementational-detail：Mean-Normalization-实现细节：均值归一化" class="headerlink" title="16.6 Implementational detail：Mean Normalization(实现细节：均值归一化)"></a>16.6 Implementational detail：Mean Normalization(实现细节：均值归一化)</h2><p><strong>前面的方法存在的问题：当某个用户对任何电影都没有评价时，算法给出其对所有电影的预测结果均为0，无法进行推荐，如下图：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/62.png" alt="img"></p>
-<p><strong>解决方式：均值归一化，如下图：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/63.png" alt="img"></p>
-<h2 id="17-2-Stochastic-Gradient-Descent-随机梯度下降"><a href="#17-2-Stochastic-Gradient-Descent-随机梯度下降" class="headerlink" title="17.2 Stochastic Gradient Descent(随机梯度下降)"></a>17.2 Stochastic Gradient Descent(随机梯度下降)</h2><p>本章讲解存在大量数据如何处理</p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/64.png" alt="img"></p>
-<h2 id="17-3-Mini-Batch-Gradient-Descent-微型批量梯度下降"><a href="#17-3-Mini-Batch-Gradient-Descent-微型批量梯度下降" class="headerlink" title="17.3 Mini-Batch Gradient Descent(微型批量梯度下降)"></a>17.3 Mini-Batch Gradient Descent(微型批量梯度下降)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/65.png" alt="img"></p>
-<h2 id="17-4-Stochastic-Gradient-Descent-Convergence-随机梯度下降收敛"><a href="#17-4-Stochastic-Gradient-Descent-Convergence-随机梯度下降收敛" class="headerlink" title="17.4 Stochastic Gradient Descent Convergence(随机梯度下降收敛)"></a>17.4 Stochastic Gradient Descent Convergence(随机梯度下降收敛)</h2><p><strong>检查是否收敛</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/66.png" alt="img"></p>
-<blockquote>
-<p>每1000次迭代，取最后1000个样本的平均作为代价函数的取值，画出图像后以此来评价算法是否收敛</p>
-</blockquote>
-<p><strong>各种不同的情况：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/67.png" alt="img"></p>
-<p><strong>关于参数$ \alpha $的选择：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/68.png" alt="img"></p>
-<blockquote>
-<p>很多人不愿意用上图中的$ \alpha $公式更新$ \alpha $的原因是：const1和const2不是那么容易确定的</p>
-</blockquote>
-<h2 id="17-5-Online-Learning-在线学习"><a href="#17-5-Online-Learning-在线学习" class="headerlink" title="17.5 Online Learning(在线学习)"></a>17.5 Online Learning(在线学习)</h2><p>处理的情况是当我们有一系列的数据涌入进来，我们需要从中学习模型，比如针对用户在浏览器输入关键字(Android phone 1080p)后，浏览器给出结果，根据用户的点击不断训练模型，以此达到在用户输入Android phone 1080p，给出用户更满意的结果。</p>
-<p><strong>下面的例子是关于网站邮寄包裹的：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/69.png" alt="img"></p>
-<blockquote>
-<p>$ p(y=1| x; \theta) $的含义是在给定条件x(是一个向量，为输入，包含源地址，目的地址，给出的价格等)和参数$ \theta $的条件下，用户选择该服务(即 y = 1)的概率的大小，我们希望该值越大越好。</p>
-</blockquote>
-<h2 id="17-6-Map-Reduce-and-Data-Parallelism-映射化简和数据并行"><a href="#17-6-Map-Reduce-and-Data-Parallelism-映射化简和数据并行" class="headerlink" title="17.6 Map Reduce and Data Parallelism(映射化简和数据并行)"></a>17.6 Map Reduce and Data Parallelism(映射化简和数据并行)</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/70.png" alt="img"></p>
-<p><strong>集群：</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/71.png" alt="img"></p>
-<p><strong>多核</strong></p>
-<p><img src="/2019/09/05/machine-learning-吴恩达-随笔/72.png" alt="img"></p>
-<h2 id="18-3-Getting-Lots-of-Data-and-Artificial-Data"><a href="#18-3-Getting-Lots-of-Data-and-Artificial-Data" class="headerlink" title="18.3 Getting Lots of Data and Artificial Data"></a>18.3 Getting Lots of Data and Artificial Data</h2><p><strong>机器学习有两件事值得做：</strong></p>
-<ul>
-<li>一个是通过学习曲线做一个完整的检查，有更多的数据将会更有力</li>
-<li>获取十倍于当前的数据是否很容易</li>
-</ul>
-<p><strong>获取更多数据的方法：</strong></p>
-<ul>
-<li>人工数据合成(包括随机字体，现有例子加入失真)</li>
-<li>收集数据并自己打标签</li>
-<li>众包(就是网上付钱找人帮自己打标签)</li>
-</ul>
-<h2 id="18-4-Ceiling-Analysis-What-Part-of-the-Pipeline-to-Work-on-Next-上限分析"><a href="#18-4-Ceiling-Analysis-What-Part-of-the-Pipeline-to-Work-on-Next-上限分析" class="headerlink" title="18.4 Ceiling Analysis_ What Part of the Pipeline to Work on Next (上限分析)"></a>18.4 Ceiling Analysis_ What Part of the Pipeline to Work on Next (上限分析)</h2><p>上限分析可以告诉你流水线的哪些部分值得花时间提升性能</p>
-<h2 id="19-1-Summary-and-Thank-you"><a href="#19-1-Summary-and-Thank-you" class="headerlink" title="19.1 Summary and Thank you"></a>19.1 Summary and Thank you</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/73.png" alt="img"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">EPOCH_NUM=<span class="number">100</span>  <span class="comment">#训练轮数</span></span><br><span class="line">model_save_dir = <span class="string">"/home/aistudio/data/model_save_dir/inference.model"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> pass_id <span class="keyword">in</span> range(EPOCH_NUM):                                  <span class="comment">#训练EPOCH_NUM轮</span></span><br><span class="line">    <span class="comment"># 开始训练并输出最后一个batch的损失值</span></span><br><span class="line">    train_cost = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> batch_id, data <span class="keyword">in</span> enumerate(train_reader()):              <span class="comment">#遍历train_reader迭代器</span></span><br><span class="line">        train_cost = exe.run(program=fluid.default_main_program(),<span class="comment">#运行主程序</span></span><br><span class="line">                             feed=feeder.feed(data),              <span class="comment">#喂入一个batch的训练数据，根据feed_list和data提供的信息，将输入数据转成一种特殊的数据结构</span></span><br><span class="line">                             fetch_list=[avg_cost])     </span><br><span class="line">        <span class="comment">#print("Pass:%d, Cost:%0.5f" % (pass_id, train_cost[0][0]))    #打印最后一个batch的损失值</span></span><br><span class="line">        iter=iter+BATCH_SIZE</span><br><span class="line">        iters.append(iter)</span><br><span class="line">        train_costs.append(train_cost[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line">    <span class="comment"># 开始测试并输出最后一个batch的损失值</span></span><br><span class="line">    test_cost = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> batch_id, data <span class="keyword">in</span> enumerate(test_reader()):               <span class="comment">#遍历test_reader迭代器</span></span><br><span class="line">        test_cost= exe.run(program=test_program, <span class="comment">#运行测试cheng</span></span><br><span class="line">                            feed=feeder.feed(data),               <span class="comment">#喂入一个batch的测试数据</span></span><br><span class="line">                            fetch_list=[avg_cost])                <span class="comment">#fetch均方误差</span></span><br><span class="line">    print(<span class="string">'Test:%d, Cost:%0.5f'</span> % (pass_id, test_cost[<span class="number">0</span>][<span class="number">0</span>]))     <span class="comment">#打印最后一个batch的损失值</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#保存模型</span></span><br><span class="line">    <span class="comment"># 如果保存路径不存在就创建</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(model_save_dir):</span><br><span class="line">        os.makedirs(model_save_dir)</span><br><span class="line">    <span class="keyword">print</span> (<span class="string">'save models to %s'</span> % (model_save_dir))</span><br><span class="line">    <span class="comment">#保存训练参数到指定路径中，构建一个专门用预测的program</span></span><br><span class="line">    fluid.io.save_inference_model(model_save_dir,   <span class="comment">#保存推理model的路径</span></span><br><span class="line">                                  [<span class="string">'x'</span>],            <span class="comment">#推理（inference）需要 feed 的数据</span></span><br><span class="line">                                  [y_predict],      <span class="comment">#保存推理（inference）结果的 Variables</span></span><br><span class="line">                                  exe)              <span class="comment">#exe 保存 inference model</span></span><br><span class="line">plot_train_cost(iters,train_costs)</span><br></pre></td></tr></table></figure>
+
+<h1 id="第二阶段：-预测阶段"><a href="#第二阶段：-预测阶段" class="headerlink" title="第二阶段： 预测阶段"></a>第二阶段： 预测阶段</h1><p>我们同样可以定义一个画图的函数，把我们的预测结果展示出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#先定两个list，用来存放预测结果、真实值；</span></span><br><span class="line">infer_results=[]</span><br><span class="line">groud_truths=[]</span><br><span class="line"></span><br><span class="line"><span class="comment">#绘制真实值和预测值对比图</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_infer_result</span><span class="params">(groud_truths,infer_results)</span>:</span></span><br><span class="line">    title=<span class="string">'Boston'</span></span><br><span class="line">    plt.title(title, fontsize=<span class="number">24</span>)</span><br><span class="line">    x = np.arange(<span class="number">1</span>,<span class="number">20</span>) </span><br><span class="line">    y = x</span><br><span class="line">    plt.plot(x, y)</span><br><span class="line">    plt.xlabel(<span class="string">'ground truth'</span>, fontsize=<span class="number">14</span>)</span><br><span class="line">    plt.ylabel(<span class="string">'infer result'</span>, fontsize=<span class="number">14</span>)</span><br><span class="line">    plt.scatter(groud_truths, infer_results,color=<span class="string">'red'</span>,label=<span class="string">'training cost'</span>) </span><br><span class="line">    plt.grid()</span><br><span class="line">    plt.show()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#预测之前，我们需要创建预测用的Executor</span></span><br><span class="line">infer_exe = fluid.Executor(place)    <span class="comment">#创建推测用的executor</span></span><br><span class="line">inference_scope = fluid.core.Scope() <span class="comment">#Scope指定作用域</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> fluid.scope_guard(inference_scope):<span class="comment">#修改全局/默认作用域（scope）, 运行时的所有变量都将分配给新的scope。</span></span><br><span class="line">    <span class="comment">#从指定目录中加载 预测用的model(inference model)</span></span><br><span class="line">    [inference_program,                             <span class="comment">#推理的program</span></span><br><span class="line">     feed_target_names,                             <span class="comment">#需要在推理program中提供数据的变量名称</span></span><br><span class="line">     fetch_targets] = fluid.io.load_inference_model(<span class="comment">#fetch_targets: 推断结果</span></span><br><span class="line">                                    model_save_dir, <span class="comment">#model_save_dir:模型训练路径 </span></span><br><span class="line">                                    infer_exe)      <span class="comment">#infer_exe: 预测用executor</span></span><br><span class="line">    <span class="comment">#获取预测数据</span></span><br><span class="line">    infer_reader = paddle.batch(paddle.dataset.uci_housing.test(),  <span class="comment">#获取uci_housing的测试数据</span></span><br><span class="line">                          batch_size=<span class="number">200</span>)                           <span class="comment">#从测试数据中读取一个大小为10的batch数据</span></span><br><span class="line">    <span class="comment">#从test_reader中分割x和label</span></span><br><span class="line">    test_data = next(infer_reader())</span><br><span class="line">    test_x = np.array([data[<span class="number">0</span>] <span class="keyword">for</span> data <span class="keyword">in</span> test_data]).astype(<span class="string">"float32"</span>) <span class="comment"># 提取测试集中的x</span></span><br><span class="line">    test_y= np.array([data[<span class="number">1</span>] <span class="keyword">for</span> data <span class="keyword">in</span> test_data]).astype(<span class="string">"float32"</span>)  <span class="comment"># 提取测试集中的label</span></span><br><span class="line">    results = infer_exe.run(inference_program,                              <span class="comment">#预测模型</span></span><br><span class="line">                            feed=&#123;feed_target_names[<span class="number">0</span>]: np.array(test_x)&#125;,  <span class="comment">#喂入要预测的x值</span></span><br><span class="line">                            fetch_list=fetch_targets)                       <span class="comment">#得到推测结果 </span></span><br><span class="line">                            </span><br><span class="line">    print(<span class="string">"infer results: (House Price)"</span>)</span><br><span class="line">    <span class="keyword">for</span> idx, val <span class="keyword">in</span> enumerate(results[<span class="number">0</span>]):</span><br><span class="line">        print(<span class="string">"%d: %.2f"</span> % (idx, val))</span><br><span class="line">        infer_results.append(val)</span><br><span class="line">    print(<span class="string">"ground truth:"</span>)</span><br><span class="line">    <span class="keyword">for</span> idx, val <span class="keyword">in</span> enumerate(test_y):</span><br><span class="line">        print(<span class="string">"%d: %.2f"</span> % (idx, val))</span><br><span class="line">        groud_truths.append(val)</span><br><span class="line">    plot_infer_result(groud_truths,infer_results)</span><br></pre></td></tr></table></figure>
+
 <center>end</center>
+
 
       
 
@@ -930,7 +409,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/25/paddlepaddle使用入门/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -944,18 +423,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/07/数学公式速查-高等数学/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数学公式速查(高等数学)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/05/R语言中vector、matrix、array、dataframe、list的区别与联系/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">R语言中vector、matrix、array、dataframe、list的区别与联系</div>
+    <a href="/2019/09/22/R神经网络/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">R神经网络</div>
       <i class="icon-circle-right"></i>
     </a>
   
