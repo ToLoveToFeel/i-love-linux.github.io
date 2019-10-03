@@ -89,7 +89,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/71.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/72.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/machine-learning-吴恩达-随笔/73.png">
-<meta property="og:updated_time" content="2019-09-27T11:13:02.975Z">
+<meta property="og:updated_time" content="2019-09-30T06:17:12.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="machine-learning(吴恩达)随笔">
 <meta name="twitter:description" content="2.2 Cost Function代价函数(平方误差函数，平方误差代价函数)：$$J(\theta _ 0, \ \theta _ 1) = \frac{1}{2m}\sum_{i=1} ^ {m}\bigr(h_\theta(x ^ {(i)}) - y ^ {(i)}) ^ 2$$其中：$$h_\theta(x ^ {(i)}) = \theta _ 0 + \theta _ 1 x$$lin">
@@ -399,13 +399,13 @@
 <p>$ \lambda $称为正则化参数，其作用是在两个不同的目标中的一个平衡关系；$ \lambda $过大会导致欠拟合</p>
 </blockquote>
 <h2 id="7-3-Reguilarized-Liner-Regression-线性回归正则化"><a href="#7-3-Reguilarized-Liner-Regression-线性回归正则化" class="headerlink" title="7.3 Reguilarized Liner Regression(线性回归正则化)"></a>7.3 Reguilarized Liner Regression(线性回归正则化)</h2><p><strong>梯度下降：</strong></p>
-<p>Repeat {<br>$$<br>\theta _ 0 := \theta _ 0 - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ 0 ^ {(i)} \bigr)<br>\\<br>\theta _ j := \theta _ j (1 - \alpha \frac{\lambda}{m}) - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ j ^ {(i)} \bigr) \quad (j=1,2,3,…n)<br>$$<br>}</p>
+<p>Repeat {<br>$$<br>\theta _ 0 := \theta _ 0 - \alpha \frac{1}{m} \sum _ {i=1} ^ {m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ 0 ^ {(i)} \bigr)<br>\\<br>\theta _ j := \theta _ j (1 - \alpha \frac{\lambda}{m}) - \alpha \frac{1}{m} \sum _ {i=1} ^{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ j ^ {(i)} \bigr) \quad (j=1,2,3,…n)<br>$$<br>}</p>
 <p><strong>正规方程(Normal equation)：</strong><br>$$<br>\theta = \Biggl( X ^ T X + \lambda \begin{bmatrix}<br>0&amp;0&amp;0&amp;…&amp;0 \\<br>0&amp;1&amp;0&amp;…&amp;0 \\<br>.&amp;0&amp;1&amp;…&amp;0 \\<br>.&amp;0&amp;0&amp;…&amp;0 \\<br>.&amp;0&amp;0&amp;…&amp;1 \\<br>\end{bmatrix}  \Biggr) ^ {-1} X ^ T y<br>$$</p>
 <blockquote>
 <p>如果$ \lambda $ &gt; 0，则上式一定存在(可以求逆)</p>
 </blockquote>
 <h2 id="7-4-Reguilarized-Logistic-Regression-逻辑回归正则化"><a href="#7-4-Reguilarized-Logistic-Regression-逻辑回归正则化" class="headerlink" title="7.4 Reguilarized Logistic Regression(逻辑回归正则化)"></a>7.4 Reguilarized Logistic Regression(逻辑回归正则化)</h2><p><strong>Cost Function：</strong><br>$$<br>J(\theta) = -\frac{1}{m}[\sum _ {i=1} ^ {m} y ^ {(i)} \log h _ \theta(x ^ {(i)}) + (1 - y ^ {(i)}) \log (1 - h _ \theta (x ^ {(i)})) - \frac{\lambda}{2} \sum _ {j=1} ^ {n} \theta _ j ^ 2]<br>$$<br><strong>梯度下降：</strong></p>
-<p>Repeat{<br>$$<br>\theta _ 0 := \theta _ 0 - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ 0 ^ {(i)} \bigr)<br>\\<br>\theta _ j := \theta _ j - \alpha \bigl[ \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ j ^ {(i)} \bigr) + \frac{\lambda}{m} \theta _ j \bigr] \quad (j=1,2,3,…n)<br>$$<br>}</p>
+<p>Repeat{<br>$$<br>\theta _ 0 := \theta _ 0 - \alpha \frac{1}{m} \sum _{i=1}{m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ 0 ^ {(i)} \bigr)<br>\\<br>\theta _ j := \theta _ j - \alpha \bigl[ \frac{1}{m} \sum _ {i=1} ^ {m} \bigl( h _ \theta (x ^ {(i)} - y ^ {(i)}) x _ j ^ {(i)} \bigr) + \frac{\lambda}{m} \theta _ j \bigr] \quad (j=1,2,3,…n)<br>$$<br>}</p>
 <h2 id="8-3-Model-Representation-I"><a href="#8-3-Model-Representation-I" class="headerlink" title="8.3 Model Representation I"></a>8.3 Model Representation I</h2><p><img src="/2019/09/05/machine-learning-吴恩达-随笔/13.png" alt="img"></p>
 <blockquote>
 <p>如果神经网络在第 j 层有$ s _ j $的单元，在第 j+1 层有$ s _ {j+1} $个单元，则从第 j 层到 j+1 层的参数矩阵$ \Theta ^ {(j)} $的维度是$ s _ {j+1} \times (s _ j + 1) $.</p>
@@ -1117,7 +1117,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">R语言</a>
+                <a href="javascript:void(0)" class="js-tag color3">PS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1129,11 +1133,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+                <a href="javascript:void(0)" class="js-tag color4">R语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1157,6 +1157,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
@@ -1170,10 +1174,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">skill</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -8,14 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>R决策树 | i-love-linux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="决策树模型 决策树模型是一种简单易用的非参数分类器 它不需要对数据有任何的先验假设 计算速度较快 结果容易解释 而且稳健性强 对噪声数据和缺失数据不敏感  决策树模型的基本思路是：先从n个自变置中挑选一个，寻找最佳分割点，将数据划分为两组。针对分组后数据将上述步骤重复下去，直到满足某种条件。">
+  <meta name="description" content="决策树决策树类别 最常见的决策树有ID3，C4.5和CART决策树  各种决策树的生成过程ID3 我们希望决策树的分支节点所包含的样本尽可能属于同一类，即节点的”纯度”越高越好  信息熵：度量样本纯度最常用的一种指标，假设当前样本集合D中第k类样本所占的比例为$ p _ k \ (k = 1,2,…,\lvert y \lvert)$，则D的信息熵为：$$Ent(D) = - \sum _ {k=">
 <meta name="keywords" content="machine learning,R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="R决策树">
 <meta property="og:url" content="http://yoursite.com/2019/09/21/R决策树/index.html">
 <meta property="og:site_name" content="i-love-linux">
-<meta property="og:description" content="决策树模型 决策树模型是一种简单易用的非参数分类器 它不需要对数据有任何的先验假设 计算速度较快 结果容易解释 而且稳健性强 对噪声数据和缺失数据不敏感  决策树模型的基本思路是：先从n个自变置中挑选一个，寻找最佳分割点，将数据划分为两组。针对分组后数据将上述步骤重复下去，直到满足某种条件。">
+<meta property="og:description" content="决策树决策树类别 最常见的决策树有ID3，C4.5和CART决策树  各种决策树的生成过程ID3 我们希望决策树的分支节点所包含的样本尽可能属于同一类，即节点的”纯度”越高越好  信息熵：度量样本纯度最常用的一种指标，假设当前样本集合D中第k类样本所占的比例为$ p _ k \ (k = 1,2,…,\lvert y \lvert)$，则D的信息熵为：$$Ent(D) = - \sum _ {k=">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/09/21/R决策树/D:%5CMyBlog%5Csource_posts%5CR%E5%86%B3%E7%AD%96%E6%A0%91%5C9.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/21/R决策树/D:%5CMyBlog%5Csource_posts%5CR%E5%86%B3%E7%AD%96%E6%A0%91%5C10.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/21/R决策树/D:%5CMyBlog%5Csource_posts%5CR%E5%86%B3%E7%AD%96%E6%A0%91%5C11.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/21/R决策树/D:%5CMyBlog%5Csource_posts%5CR%E5%86%B3%E7%AD%96%E6%A0%91%5C12.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/21/R决策树/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/21/R决策树/2.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/21/R决策树/3.png">
@@ -25,11 +29,11 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/21/R决策树/7.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/21/R决策树/8.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/21/R决策树/9.jpg">
-<meta property="og:updated_time" content="2019-09-22T07:05:57.434Z">
+<meta property="og:updated_time" content="2019-10-03T10:21:23.163Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="R决策树">
-<meta name="twitter:description" content="决策树模型 决策树模型是一种简单易用的非参数分类器 它不需要对数据有任何的先验假设 计算速度较快 结果容易解释 而且稳健性强 对噪声数据和缺失数据不敏感  决策树模型的基本思路是：先从n个自变置中挑选一个，寻找最佳分割点，将数据划分为两组。针对分组后数据将上述步骤重复下去，直到满足某种条件。">
-<meta name="twitter:image" content="http://yoursite.com/2019/09/21/R决策树/1.png">
+<meta name="twitter:description" content="决策树决策树类别 最常见的决策树有ID3，C4.5和CART决策树  各种决策树的生成过程ID3 我们希望决策树的分支节点所包含的样本尽可能属于同一类，即节点的”纯度”越高越好  信息熵：度量样本纯度最常用的一种指标，假设当前样本集合D中第k类样本所占的比例为$ p _ k \ (k = 1,2,…,\lvert y \lvert)$，则D的信息熵为：$$Ent(D) = - \sum _ {k=">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/21/R决策树/D:%5CMyBlog%5Csource_posts%5CR%E5%86%B3%E7%AD%96%E6%A0%91%5C9.png">
   
     <link rel="alternative" href="/atom.xml" title="i-love-linux" type="application/atom+xml">
   
@@ -185,7 +189,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="决策树模型"><a href="#决策树模型" class="headerlink" title="决策树模型"></a>决策树模型</h2><ul>
+        <h2 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h2><h3 id="决策树类别"><a href="#决策树类别" class="headerlink" title="决策树类别"></a>决策树类别</h3><blockquote>
+<p>最常见的决策树有ID3，C4.5和CART决策树</p>
+</blockquote>
+<h3 id="各种决策树的生成过程"><a href="#各种决策树的生成过程" class="headerlink" title="各种决策树的生成过程"></a>各种决策树的生成过程</h3><h4 id="ID3"><a href="#ID3" class="headerlink" title="ID3"></a>ID3</h4><ul>
+<li>我们希望决策树的分支节点所包含的样本尽可能属于同一类，即节点的”纯度”越高越好</li>
+</ul>
+<p><font color="red">信息熵：</font>度量样本纯度最常用的一种指标，假设当前样本集合D中第k类样本所占的比例为$ p _ k \ (k = 1,2,…,\lvert y \lvert)$，则D的信息熵为：<br>$$<br>Ent(D) = - \sum _ {k=1} ^ {\lvert y \lvert} p _ k \cdot log _ 2 p _ k<br>$$</p>
+<blockquote>
+<p>信息熵越小，则样本纯度越高</p>
+<p>熵表示随机变量的不确定性</p>
+</blockquote>
+<a id="more"></a>
+
+<p><font color="red">信息增益：</font>是针对某个特征来说的，比如对于特征a，若使用该特征划分样本集合，a特征的取值为{$ a ^ 1, a ^ 2, …, a ^ V $}，划分后会产生 V 个分支节点，第 v 个分支节点所包含的样本集合为 $ D ^ v $，则信息增益为：<br>$$<br>Gain(D, a) = Ent(D) - \sum _ {v=1} ^ {V} \frac{\lvert D ^ v \lvert }{\lvert D\lvert }<br>\cdot Ent(D ^ v)<br>$$</p>
+<blockquote>
+<p>信息增益代表该特征消除的不确定度。比如明天下雨的熵（不确定度）为2，在阴天的情况下下雨的信息熵为0.01，则该特征（阴天）的信息增益为1.99，也就是说，阴天这个信息对下雨来说是很重要的！</p>
+<p>ID3(Iterative Dichotomiser/迭代二分器)就是以信息增益为准则来选择划分属性的</p>
+</blockquote>
+<p><strong>一个例子：</strong></p>
+<p><img src="/2019/09/21/R决策树/D:%5CMyBlog%5Csource_posts%5CR%E5%86%B3%E7%AD%96%E6%A0%91%5C9.png" alt="img"></p>
+<p>因为有六个特征，所以会算出6个信息增益，下面以特征<strong>色泽</strong>为例，计算其信息增益：</p>
+<p>样本总体的信息熵为：<br>$$<br>Ent(D) = - \sum _ {k=1} ^ {2} p _ k \cdot log _ 2 p _ k = -\bigl( \frac{8}{17} \cdot log _ 2 \frac{8}{17} + \frac{9}{17} \cdot log _ 2 \frac{9}{17} \bigr) = 0.998<br>$$<br>因为<strong>色泽</strong>属性有三个取值：青绿$ D ^ 1 ${1 ， 4，6 ，10 ，13 ，17}，乌黑$ D ^ 2 ${2 ，3 ，7 ，8 ，9 ，15}，浅白$ D ^ 3 ${5 ，11 ，12 ，14 ， 16}，所以三个分支的信息熵为：<br>$$<br>Ent(D ^ 1) = -\bigl( \frac{3}{6} \cdot log _ 2 \frac{3}{6} + \frac{3}{6} \cdot log _ 2 \frac{3}{6} \bigr) = 1.000 \<br>Ent(D ^ 2) = -\bigl( \frac{4}{6} \cdot log _ 2 \frac{4}{6} + \frac{2}{6} \cdot log _ 2 \frac{2}{6} \bigr) = 0.918 \<br>Ent(D ^ 3) = -\bigl( \frac{1}{5} \cdot log _ 2 \frac{1}{5} + \frac{4}{5} \cdot log _ 2 \frac{4}{5} \bigr) = 0.722<br>$$<br>所以<strong>色泽</strong>的信息增益为：<br>$$<br>\begin{eqnarray}<br>Gain(D,色泽)<br>&amp;=&amp; Ent(D) - \sum _ {v=1} ^ {3} \frac{\lvert D ^ v \lvert }{\lvert D\lvert } \cdot Ent(D ^ v) \<br>&amp;=&amp; 0.998 - \biggl( \frac{6}{17} \times 1.000 + \frac{6}{17} \times 0.918 + \frac{5}{17} \times 0.722 \biggr) \<br>&amp;=&amp; 0.109<br>\end{eqnarray}<br>$$<br>同理可以算出其他特征的信息增益：<br>$$<br>Gain(D,根蒂) = 0.143 \<br>Gain(D,敲声) = 0.141 \<br>Gain(D,纹理) = 0.381 \<br>Gain(D,脐部) = 0.289 \<br>Gain(D,触感) = 0.006<br>$$<br><img src="/2019/09/21/R决策树/D:%5CMyBlog%5Csource_posts%5CR%E5%86%B3%E7%AD%96%E6%A0%91%5C10.png" alt="img"></p>
+<p>递归求上面三个自己的子树.</p>
+<h4 id="C4-5"><a href="#C4-5" class="headerlink" title="C4.5"></a>C4.5</h4><p><img src="/2019/09/21/R决策树/D:%5CMyBlog%5Csource_posts%5CR%E5%86%B3%E7%AD%96%E6%A0%91%5C11.png" alt="img"></p>
+<h4 id="CART-Classification-and-Regression-Tree"><a href="#CART-Classification-and-Regression-Tree" class="headerlink" title="CART(Classification and Regression Tree)"></a>CART(Classification and Regression Tree)</h4><p><img src="/2019/09/21/R决策树/D:%5CMyBlog%5Csource_posts%5CR%E5%86%B3%E7%AD%96%E6%A0%91%5C12.png" alt="img"></p>
+<p><strong>一个例子：</strong>仍然以上述西瓜集为例，因为有六个特征，所以会算出6个基尼指数，下面以特征<strong>色泽</strong>为例，计算其基尼指数：<br>$$<br>Gini(D ^ 1) = 1 - \sum _ {k=1} ^ {\lvert y \lvert} p _ k ^ 2 = 1 - \bigl( (\frac{3}{6}) ^ 2 + (\frac{3}{6}) ^ 2 \bigr) = 1 - 0.5 = 0.5 \<br>Gini(D ^ 2) = 1 - \sum _ {k=1} ^ {\lvert y \lvert} p _ k ^ 2 = 1 - \bigl( (\frac{4}{6}) ^ 2 + (\frac{2}{6}) ^ 2 \bigr) = 1 - 0.556 = 0.444 \<br>Gini(D ^ 3) = 1 - \sum _ {k=1} ^ {\lvert y \lvert} p _ k ^ 2 = 1 - \bigl( (\frac{1}{5}) ^ 2 + (\frac{4}{5}) ^ 2 \bigr) = 1 - 0.68 = 0.32<br>$$<br>所以基尼指数为：<br>$$<br>GiniInex = \sum _ {v=1} ^ {3} \frac{\lvert D ^ v \lvert }{\lvert D\lvert }<br>\cdot Gini(D ^ v) = 0.5 + 0.444 + 0.32 = 1.264<br>$$</p>
+<h2 id="决策树-1"><a href="#决策树-1" class="headerlink" title="决策树"></a>决策树</h2><ul>
 <li>决策树模型是一种简单易用的非参数分类器</li>
 <li>它不需要对数据有任何的先验假设</li>
 <li>计算速度较快</li>
@@ -194,8 +224,6 @@
 <li>对噪声数据和缺失数据不敏感</li>
 </ul>
 <p>决策树模型的基本思路是：先从n个自变置中挑选一个，寻找最佳分割点，将数据划分为两组。针对分组后数据将上述步骤重复下去，直到满足某种条件。</p>
-<a id="more"></a>
-
 <p><strong>建立树模式大致分为三个步骤:</strong></p>
 <ul>
 <li>第一步是对所有自变置和所有分割点进行评估，最佳的选择是使分割后组内的数据更为“一致”，这里的“一致”是指组内数据的因变置取值变异较小。</li>
@@ -525,7 +553,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">R语言</a>
+                <a href="javascript:void(0)" class="js-tag color3">PS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -537,11 +569,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+                <a href="javascript:void(0)" class="js-tag color4">R语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -565,6 +593,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
@@ -578,10 +610,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">skill</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
               </li>
              
               <li class="article-tag-list-item">

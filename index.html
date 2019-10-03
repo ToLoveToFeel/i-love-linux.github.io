@@ -332,15 +332,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="决策树模型"><a href="#决策树模型" class="headerlink" title="决策树模型"></a>决策树模型</h2><ul>
-<li>决策树模型是一种简单易用的非参数分类器</li>
-<li>它不需要对数据有任何的先验假设</li>
-<li>计算速度较快</li>
-<li>结果容易解释</li>
-<li>而且稳健性强</li>
-<li>对噪声数据和缺失数据不敏感</li>
+        <h2 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h2><h3 id="决策树类别"><a href="#决策树类别" class="headerlink" title="决策树类别"></a>决策树类别</h3><blockquote>
+<p>最常见的决策树有ID3，C4.5和CART决策树</p>
+</blockquote>
+<h3 id="各种决策树的生成过程"><a href="#各种决策树的生成过程" class="headerlink" title="各种决策树的生成过程"></a>各种决策树的生成过程</h3><h4 id="ID3"><a href="#ID3" class="headerlink" title="ID3"></a>ID3</h4><ul>
+<li>我们希望决策树的分支节点所包含的样本尽可能属于同一类，即节点的”纯度”越高越好</li>
 </ul>
-<p>决策树模型的基本思路是：先从n个自变置中挑选一个，寻找最佳分割点，将数据划分为两组。针对分组后数据将上述步骤重复下去，直到满足某种条件。</p>
+<p><font color="red">信息熵：</font>度量样本纯度最常用的一种指标，假设当前样本集合D中第k类样本所占的比例为$ p _ k \ (k = 1,2,…,\lvert y \lvert)$，则D的信息熵为：<br>$$<br>Ent(D) = - \sum _ {k=1} ^ {\lvert y \lvert} p _ k \cdot log _ 2 p _ k<br>$$</p>
+<blockquote>
+<p>信息熵越小，则样本纯度越高</p>
+<p>熵表示随机变量的不确定性</p>
+</blockquote>
         
           <a class="article-more-a" href="/2019/09/21/R决策树/#more">more >></a>
         
@@ -1108,7 +1110,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">R语言</a>
+                <a href="javascript:void(0)" class="js-tag color3">PS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1120,11 +1126,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+                <a href="javascript:void(0)" class="js-tag color4">R语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1148,6 +1150,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
@@ -1161,10 +1167,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">skill</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
               </li>
              
               <li class="article-tag-list-item">
