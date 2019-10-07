@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="i-love-linux">
 <meta property="og:description" content="简介paddlepaddle是一款类似于tensorflow的深度学习框架，通过该框架可以很简单的搭建深度学习网络。下面以预测Boston房价预测为例，介绍paddlepaddle框架的使用。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2019/09/25/paddlepaddle使用入门/MyBlog/source/_posts/paddlepaddle使用入门/1.png">
-<meta property="og:updated_time" content="2019-09-25T10:38:12.560Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/25/paddlepaddle使用入门/D:%5CMyBlog%5Csource_posts%5Cpaddlepaddle%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8%5C1.png">
+<meta property="og:updated_time" content="2019-10-07T08:06:39.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="paddlepaddle使用入门">
 <meta name="twitter:description" content="简介paddlepaddle是一款类似于tensorflow的深度学习框架，通过该框架可以很简单的搭建深度学习网络。下面以预测Boston房价预测为例，介绍paddlepaddle框架的使用。">
-<meta name="twitter:image" content="http://yoursite.com/2019/09/25/paddlepaddle使用入门/MyBlog/source/_posts/paddlepaddle使用入门/1.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/25/paddlepaddle使用入门/D:%5CMyBlog%5Csource_posts%5Cpaddlepaddle%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8%5C1.png">
   
     <link rel="alternative" href="/atom.xml" title="i-love-linux" type="application/atom+xml">
   
@@ -231,8 +231,7 @@
 
 <h2 id="4-配置网络结构和设置参数"><a href="#4-配置网络结构和设置参数" class="headerlink" title="4 - 配置网络结构和设置参数"></a>4 - 配置网络结构和设置参数</h2><p><strong>配置网络结构:</strong></p>
 <p>线性回归的模型其实就是一个采用线性激活函数（linear activation）的全连接层（fully-connected layer，fc_layer），因此在Peddlepeddle中利用全连接层模型构造线性回归，这样一个全连接层就可以看做是一个简单的神经网络，只包含输入层和输出层即可。本次的模型由于只有一个影响参数，因此输入只含一个$X_0$。</p>
-<img src="/2019/09/25/paddlepaddle使用入门/MyBlog\source\_posts\paddlepaddle使用入门/1.png" style="width:380px;height:180px;">
-
+<p><img src="/2019/09/25/paddlepaddle使用入门/D:%5CMyBlog%5Csource_posts%5Cpaddlepaddle%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8%5C1.png" alt="img"></p>
 <p>接下来就让我们利用PaddlePaddle提供的接口，搭建我们自己的网络吧！</p>
 <p><strong>输入层:</strong>  </p>
 <p>我们可以用 x = fluid.layers.data(name=’x’, shape=[13], dtype=’float32’)来表示数据的一个输入层，其中name属性的名称为”x”，数据的shape为13维向量，这是因为本次所用的房价数据集的每条数据有13个属性，所以shape=13。</p>
@@ -313,7 +312,6 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#预测之前，我们需要创建预测用的Executor</span></span><br><span class="line">infer_exe = fluid.Executor(place)    <span class="comment">#创建推测用的executor</span></span><br><span class="line">inference_scope = fluid.core.Scope() <span class="comment">#Scope指定作用域</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> fluid.scope_guard(inference_scope):<span class="comment">#修改全局/默认作用域（scope）, 运行时的所有变量都将分配给新的scope。</span></span><br><span class="line">    <span class="comment">#从指定目录中加载 预测用的model(inference model)</span></span><br><span class="line">    [inference_program,                             <span class="comment">#推理的program</span></span><br><span class="line">     feed_target_names,                             <span class="comment">#需要在推理program中提供数据的变量名称</span></span><br><span class="line">     fetch_targets] = fluid.io.load_inference_model(<span class="comment">#fetch_targets: 推断结果</span></span><br><span class="line">                                    model_save_dir, <span class="comment">#model_save_dir:模型训练路径 </span></span><br><span class="line">                                    infer_exe)      <span class="comment">#infer_exe: 预测用executor</span></span><br><span class="line">    <span class="comment">#获取预测数据</span></span><br><span class="line">    infer_reader = paddle.batch(paddle.dataset.uci_housing.test(),  <span class="comment">#获取uci_housing的测试数据</span></span><br><span class="line">                          batch_size=<span class="number">200</span>)                           <span class="comment">#从测试数据中读取一个大小为10的batch数据</span></span><br><span class="line">    <span class="comment">#从test_reader中分割x和label</span></span><br><span class="line">    test_data = next(infer_reader())</span><br><span class="line">    test_x = np.array([data[<span class="number">0</span>] <span class="keyword">for</span> data <span class="keyword">in</span> test_data]).astype(<span class="string">"float32"</span>) <span class="comment"># 提取测试集中的x</span></span><br><span class="line">    test_y= np.array([data[<span class="number">1</span>] <span class="keyword">for</span> data <span class="keyword">in</span> test_data]).astype(<span class="string">"float32"</span>)  <span class="comment"># 提取测试集中的label</span></span><br><span class="line">    results = infer_exe.run(inference_program,                              <span class="comment">#预测模型</span></span><br><span class="line">                            feed=&#123;feed_target_names[<span class="number">0</span>]: np.array(test_x)&#125;,  <span class="comment">#喂入要预测的x值</span></span><br><span class="line">                            fetch_list=fetch_targets)                       <span class="comment">#得到推测结果 </span></span><br><span class="line">                            </span><br><span class="line">    print(<span class="string">"infer results: (House Price)"</span>)</span><br><span class="line">    <span class="keyword">for</span> idx, val <span class="keyword">in</span> enumerate(results[<span class="number">0</span>]):</span><br><span class="line">        print(<span class="string">"%d: %.2f"</span> % (idx, val))</span><br><span class="line">        infer_results.append(val)</span><br><span class="line">    print(<span class="string">"ground truth:"</span>)</span><br><span class="line">    <span class="keyword">for</span> idx, val <span class="keyword">in</span> enumerate(test_y):</span><br><span class="line">        print(<span class="string">"%d: %.2f"</span> % (idx, val))</span><br><span class="line">        groud_truths.append(val)</span><br><span class="line">    plot_infer_result(groud_truths,infer_results)</span><br></pre></td></tr></table></figure>
 
 <center>end</center>
-
 
       
 
@@ -595,19 +593,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">C</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">endian</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">R语言</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">statistics</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">C</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">endian</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -627,7 +625,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
+                <a href="javascript:void(0)" class="js-tag color5">math</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">skill</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -639,11 +641,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">math</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">skill</a>
+                <a href="javascript:void(0)" class="js-tag color3">simca-p</a>
               </li>
              
               <li class="article-tag-list-item">
